@@ -1,266 +1,318 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\",
+  "WorkspaceRootPath": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\habitaciones\\ejecutiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\ejecutiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\aspectos\\autenticador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:aspectos\\autenticador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\botella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\botella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\habitaciones\\ejecutiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\ejecutiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\bata_de_ba\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\bata_de_ba\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\core\\hotelproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\hotelproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\agua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\agua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\cartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\cartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\habitaciones\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\carta\\oferta_carta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\oferta_carta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\bienestar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\bienestar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\carta\\almuerzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\almuerzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\iservicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iservicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\enums\\tipoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:enums\\tipoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\utilidades\\lectorarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:utilidades\\lectorarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\licor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\licor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\core\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\vino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\vino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\utilidades\\reglasnegociohabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:utilidades\\reglasnegociohabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\carta\\desayuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\desayuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\servicios\\servicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\servicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\enums\\tipominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:enums\\tipominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\gesti\u00F3n\\oficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\oficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\kit_aseo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\kit_aseo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\eventoconsumominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventoconsumominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\gesti\u00F3n\\recepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\recepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\utilidades\\reglasnegocioservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:utilidades\\reglasnegocioservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\gesti\u00F3n\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\ioficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\ioficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\carta\\cena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\cena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\eventofacturagenerada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventofacturagenerada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\servicios\\restaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\restaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\enums\\tipoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:enums\\tipoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\servicios\\lavandera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\lavandera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\habitaciones\\suite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\suite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\personas\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\aspectos\\validador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:aspectos\\validador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\cama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\cama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\core\\piso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\piso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\iobservador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iobservador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\eventocheckincompletado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventocheckincompletado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\core\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\isurtidor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\isurtidor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\personas\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\utilidades\\regla_negocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:utilidades\\regla_negocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\igestionhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\igestionhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\doble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\doble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\habitaciones\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\eventobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\iproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\gaseosa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\gaseosa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\iproductominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iproductominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\eventocancelacionreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventocancelacionreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\gestornotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\gestornotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\camas\\semidoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\semidoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\consumible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\consumible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\consumible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\consumible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\semidoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\semidoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\gestornotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\gestornotificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\eventocancelacionreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventocancelacionreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\iproductominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iproductominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\productos\\gaseosa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\gaseosa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\iproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\eventos\\eventobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\habitaciones\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\doble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\doble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\igestionhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\igestionhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\utilidades\\regla_negocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:utilidades\\regla_negocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\personas\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\isurtidor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\isurtidor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\aspectos\\autenticador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:aspectos\\autenticador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\eventocheckincompletado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventocheckincompletado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\core\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\sencilla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\iobservador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iobservador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\camas\\cama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\camas\\cama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\core\\piso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\piso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\personas\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\aspectos\\validador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:aspectos\\validador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\habitaciones\\suite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\suite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\enums\\tipoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:enums\\tipoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\servicios\\lavandera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\lavandera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\eventofacturagenerada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventofacturagenerada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\servicios\\restaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\restaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\interfaces\\ioficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:interfaces\\ioficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\carta\\cena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\cena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\utilidades\\reglasnegocioservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:utilidades\\reglasnegocioservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\gesti\u00F3n\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\eventos\\eventoconsumominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:eventos\\eventoconsumominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\gesti\u00F3n\\recepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\recepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\kit_aseo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\kit_aseo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\enums\\tipominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:enums\\tipominibar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\gesti\u00F3n\\oficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\gesti\u00F3n\\oficina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\carta\\desayuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\desayuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\servicios\\servicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\servicios\\servicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\utilidades\\reglasnegociohabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:utilidades\\reglasnegociohabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\vino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\vino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\licor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\licor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\core\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\enums\\tipoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:enums\\tipoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\utilidades\\lectorarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:utilidades\\lectorarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\carta\\almuerzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\almuerzo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\interfaces\\iservicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:interfaces\\iservicio_hotelero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\bienestar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\bienestar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\reservaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\carta\\oferta_carta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\carta\\oferta_carta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\habitaciones\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\habitaciones\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\agua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\agua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\servicios\\cartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:servicios\\cartaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\bata_de_ba\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\bata_de_ba\u00F1o.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\proyecto final paradigmas\\hotel_bib\\biblioteca_hotel\\modelos\\core\\hotelproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC5D2533-47E1-468C-8520-4228A6868126}|biblioteca_hotel.csproj|solutionrelative:modelos\\core\\hotelproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\modelos\\productos\\botella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:modelos\\productos\\botella.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\mejoras_implementadas.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:mejoras_implementadas.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\estado_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:estado_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\documentacion_errores_robustez.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:documentacion_errores_robustez.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\resumen_implementacion_robustez.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:resumen_implementacion_robustez.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\quick_reference.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:quick_reference.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\referencia_tecnica.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:referencia_tecnica.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\indice_maestro.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:indice_maestro.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\implementacion_completada.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:implementacion_completada.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\banner_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:banner_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\resumen_final.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:resumen_final.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\guia_inicio_equipo.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:guia_inicio_equipo.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|c:\\users\\andre\\desktop\\repo proyecto final paradgimas\\hotel_bib - copia\\biblioteca_hotel\\resumen_visual_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BFF20A4F-E3DC-FF0B-D9BF-0747FBB9803C}|biblioteca_hotel.csproj|solutionrelative:resumen_visual_final.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -270,8 +322,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 43,
+          "SelectedChildIndex": 20,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -290,491 +346,622 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "HotelProxy.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\HotelProxy.cs",
-              "RelativeDocumentMoniker": "Modelos\\Core\\HotelProxy.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\HotelProxy.cs",
-              "RelativeToolTip": "Modelos\\Core\\HotelProxy.cs",
+              "DocumentIndex": 77,
+              "Title": "RESUMEN_VISUAL_FINAL.txt",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_VISUAL_FINAL.txt",
+              "RelativeDocumentMoniker": "RESUMEN_VISUAL_FINAL.txt",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_VISUAL_FINAL.txt",
+              "RelativeToolTip": "RESUMEN_VISUAL_FINAL.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:06.002Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-17T17:38:28.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "CartaService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\CartaService.cs",
-              "RelativeDocumentMoniker": "Servicios\\CartaService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\CartaService.cs",
-              "RelativeToolTip": "Servicios\\CartaService.cs",
+              "DocumentIndex": 76,
+              "Title": "GUIA_INICIO_EQUIPO.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\GUIA_INICIO_EQUIPO.md",
+              "RelativeDocumentMoniker": "GUIA_INICIO_EQUIPO.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\GUIA_INICIO_EQUIPO.md",
+              "RelativeToolTip": "GUIA_INICIO_EQUIPO.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:05.953Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:28.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "HabitacionService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\HabitacionService.cs",
-              "RelativeDocumentMoniker": "Servicios\\HabitacionService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\HabitacionService.cs",
-              "RelativeToolTip": "Servicios\\HabitacionService.cs",
+              "DocumentIndex": 75,
+              "Title": "RESUMEN_FINAL.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_FINAL.md",
+              "RelativeDocumentMoniker": "RESUMEN_FINAL.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_FINAL.md",
+              "RelativeToolTip": "RESUMEN_FINAL.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:05.906Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:28.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "PersonaService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\PersonaService.cs",
-              "RelativeDocumentMoniker": "Servicios\\PersonaService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\PersonaService.cs",
-              "RelativeToolTip": "Servicios\\PersonaService.cs",
+              "DocumentIndex": 74,
+              "Title": "BANNER_FINAL.txt",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\BANNER_FINAL.txt",
+              "RelativeDocumentMoniker": "BANNER_FINAL.txt",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\BANNER_FINAL.txt",
+              "RelativeToolTip": "BANNER_FINAL.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:05.859Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-17T17:38:28.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "ReservaService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\ReservaService.cs",
-              "RelativeDocumentMoniker": "Servicios\\ReservaService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\ReservaService.cs",
-              "RelativeToolTip": "Servicios\\ReservaService.cs",
+              "DocumentIndex": 73,
+              "Title": "IMPLEMENTACION_COMPLETADA.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\IMPLEMENTACION_COMPLETADA.md",
+              "RelativeDocumentMoniker": "IMPLEMENTACION_COMPLETADA.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\IMPLEMENTACION_COMPLETADA.md",
+              "RelativeToolTip": "IMPLEMENTACION_COMPLETADA.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:05.827Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:28.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Iservicio_hotelero.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\Iservicio_hotelero.cs",
-              "RelativeDocumentMoniker": "Interfaces\\Iservicio_hotelero.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\Iservicio_hotelero.cs",
-              "RelativeToolTip": "Interfaces\\Iservicio_hotelero.cs",
+              "DocumentIndex": 72,
+              "Title": "INDICE_MAESTRO.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\INDICE_MAESTRO.md",
+              "RelativeDocumentMoniker": "INDICE_MAESTRO.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\INDICE_MAESTRO.md",
+              "RelativeToolTip": "INDICE_MAESTRO.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:40:05.689Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:28.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "LectorArchivos.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\LectorArchivos.cs",
-              "RelativeDocumentMoniker": "Utilidades\\LectorArchivos.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\LectorArchivos.cs",
-              "RelativeToolTip": "Utilidades\\LectorArchivos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:25.544Z",
+              "DocumentIndex": 71,
+              "Title": "REFERENCIA_TECNICA.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\REFERENCIA_TECNICA.md",
+              "RelativeDocumentMoniker": "REFERENCIA_TECNICA.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\REFERENCIA_TECNICA.md",
+              "RelativeToolTip": "REFERENCIA_TECNICA.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:28.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Factura.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Factura.cs",
-              "RelativeDocumentMoniker": "Modelos\\Core\\Factura.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Factura.cs",
-              "RelativeToolTip": "Modelos\\Core\\Factura.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.964Z",
+              "DocumentIndex": 70,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:27.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "FacturaService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\FacturaService.cs",
-              "RelativeDocumentMoniker": "Servicios\\FacturaService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\FacturaService.cs",
-              "RelativeToolTip": "Servicios\\FacturaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.807Z",
+              "DocumentIndex": 69,
+              "Title": "QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\QUICK_REFERENCE.md",
+              "RelativeToolTip": "QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:27.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\ProductoService.cs",
-              "RelativeDocumentMoniker": "Servicios\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Servicios\\ProductoService.cs",
-              "RelativeToolTip": "Servicios\\ProductoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.734Z",
+              "DocumentIndex": 68,
+              "Title": "RESUMEN_IMPLEMENTACION_ROBUSTEZ.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_IMPLEMENTACION_ROBUSTEZ.md",
+              "RelativeDocumentMoniker": "RESUMEN_IMPLEMENTACION_ROBUSTEZ.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\RESUMEN_IMPLEMENTACION_ROBUSTEZ.md",
+              "RelativeToolTip": "RESUMEN_IMPLEMENTACION_ROBUSTEZ.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:27.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Servicio_Hotelero.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Servicio_Hotelero.cs",
-              "RelativeDocumentMoniker": "Modelos\\Servicios\\Servicio_Hotelero.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Servicio_Hotelero.cs",
-              "RelativeToolTip": "Modelos\\Servicios\\Servicio_Hotelero.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.648Z",
+              "DocumentIndex": 67,
+              "Title": "DOCUMENTACION_ERRORES_ROBUSTEZ.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\DOCUMENTACION_ERRORES_ROBUSTEZ.md",
+              "RelativeDocumentMoniker": "DOCUMENTACION_ERRORES_ROBUSTEZ.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\DOCUMENTACION_ERRORES_ROBUSTEZ.md",
+              "RelativeToolTip": "DOCUMENTACION_ERRORES_ROBUSTEZ.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:38:27.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Oficina.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Oficina.cs",
-              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Oficina.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Oficina.cs",
-              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Oficina.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.587Z",
+              "DocumentIndex": 66,
+              "Title": "ESTADO_FINAL.txt",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\ESTADO_FINAL.txt",
+              "RelativeDocumentMoniker": "ESTADO_FINAL.txt",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\ESTADO_FINAL.txt",
+              "RelativeToolTip": "ESTADO_FINAL.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-17T17:37:15.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Persona.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Persona.cs",
-              "RelativeDocumentMoniker": "Modelos\\Personas\\Persona.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Persona.cs",
-              "RelativeToolTip": "Modelos\\Personas\\Persona.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.515Z",
+              "DocumentIndex": 65,
+              "Title": "MEJORAS_IMPLEMENTADAS.md",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\MEJORAS_IMPLEMENTADAS.md",
+              "RelativeDocumentMoniker": "MEJORAS_IMPLEMENTADAS.md",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\MEJORAS_IMPLEMENTADAS.md",
+              "RelativeToolTip": "MEJORAS_IMPLEMENTADAS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-17T17:36:40.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Recepcion.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Recepcion.cs",
-              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Recepcion.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Recepcion.cs",
-              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Recepcion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Hotel.cs",
-              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Hotel.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Hotel.cs",
-              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Hotel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Cena.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Cena.cs",
-              "RelativeDocumentMoniker": "Modelos\\Carta\\Cena.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Cena.cs",
-              "RelativeToolTip": "Modelos\\Carta\\Cena.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Restaurante.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Restaurante.cs",
-              "RelativeDocumentMoniker": "Modelos\\Servicios\\Restaurante.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Restaurante.cs",
-              "RelativeToolTip": "Modelos\\Servicios\\Restaurante.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Lavandera.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Lavandera.cs",
-              "RelativeDocumentMoniker": "Modelos\\Servicios\\Lavandera.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Servicios\\Lavandera.cs",
-              "RelativeToolTip": "Modelos\\Servicios\\Lavandera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Suite.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Suite.cs",
-              "RelativeDocumentMoniker": "Modelos\\Habitaciones\\Suite.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Suite.cs",
-              "RelativeToolTip": "Modelos\\Habitaciones\\Suite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:24.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Validador.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Aspectos\\Validador.cs",
-              "RelativeDocumentMoniker": "Aspectos\\Validador.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Aspectos\\Validador.cs",
-              "RelativeToolTip": "Aspectos\\Validador.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAIBJwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Piso.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Piso.cs",
-              "RelativeDocumentMoniker": "Modelos\\Core\\Piso.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Piso.cs",
-              "RelativeToolTip": "Modelos\\Core\\Piso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IObservador.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IObservador.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IObservador.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IObservador.cs",
-              "RelativeToolTip": "Interfaces\\IObservador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Reserva.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Reserva.cs",
-              "RelativeDocumentMoniker": "Modelos\\Core\\Reserva.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Core\\Reserva.cs",
-              "RelativeToolTip": "Modelos\\Core\\Reserva.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 0,
               "Title": "Autenticador.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Aspectos\\Autenticador.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Aspectos\\Autenticador.cs",
               "RelativeDocumentMoniker": "Aspectos\\Autenticador.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Aspectos\\Autenticador.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Aspectos\\Autenticador.cs",
               "RelativeToolTip": "Aspectos\\Autenticador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkBAAAAAAAAAAAqwDgBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-11T19:36:23.724Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 2,
+              "Title": "HotelProxy.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\HotelProxy.cs",
+              "RelativeDocumentMoniker": "Modelos\\Core\\HotelProxy.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\HotelProxy.cs",
+              "RelativeToolTip": "Modelos\\Core\\HotelProxy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:06.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartaService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\CartaService.cs",
+              "RelativeDocumentMoniker": "Servicios\\CartaService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\CartaService.cs",
+              "RelativeToolTip": "Servicios\\CartaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:05.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HabitacionService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\HabitacionService.cs",
+              "RelativeDocumentMoniker": "Servicios\\HabitacionService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\HabitacionService.cs",
+              "RelativeToolTip": "Servicios\\HabitacionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:05.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonaService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\PersonaService.cs",
+              "RelativeDocumentMoniker": "Servicios\\PersonaService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\PersonaService.cs",
+              "RelativeToolTip": "Servicios\\PersonaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:05.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReservaService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\ReservaService.cs",
+              "RelativeDocumentMoniker": "Servicios\\ReservaService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\ReservaService.cs",
+              "RelativeToolTip": "Servicios\\ReservaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:05.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Iservicio_hotelero.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\Iservicio_hotelero.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Iservicio_hotelero.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\Iservicio_hotelero.cs",
+              "RelativeToolTip": "Interfaces\\Iservicio_hotelero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:40:05.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LectorArchivos.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\LectorArchivos.cs",
+              "RelativeDocumentMoniker": "Utilidades\\LectorArchivos.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\LectorArchivos.cs",
+              "RelativeToolTip": "Utilidades\\LectorArchivos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:25.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Factura.cs",
+              "RelativeDocumentMoniker": "Modelos\\Core\\Factura.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Factura.cs",
+              "RelativeToolTip": "Modelos\\Core\\Factura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FacturaService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\FacturaService.cs",
+              "RelativeDocumentMoniker": "Servicios\\FacturaService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\FacturaService.cs",
+              "RelativeToolTip": "Servicios\\FacturaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\ProductoService.cs",
+              "RelativeDocumentMoniker": "Servicios\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Servicios\\ProductoService.cs",
+              "RelativeToolTip": "Servicios\\ProductoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Servicio_Hotelero.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Servicio_Hotelero.cs",
+              "RelativeDocumentMoniker": "Modelos\\Servicios\\Servicio_Hotelero.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Servicio_Hotelero.cs",
+              "RelativeToolTip": "Modelos\\Servicios\\Servicio_Hotelero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Oficina.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Oficina.cs",
+              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Oficina.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Oficina.cs",
+              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Oficina.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Persona.cs",
+              "RelativeDocumentMoniker": "Modelos\\Personas\\Persona.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Persona.cs",
+              "RelativeToolTip": "Modelos\\Personas\\Persona.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Recepcion.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Recepcion.cs",
+              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Recepcion.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Recepcion.cs",
+              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Recepcion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Hotel.cs",
+              "RelativeDocumentMoniker": "Modelos\\Gesti\u00F3n\\Hotel.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Gesti\u00F3n\\Hotel.cs",
+              "RelativeToolTip": "Modelos\\Gesti\u00F3n\\Hotel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Cena.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Cena.cs",
+              "RelativeDocumentMoniker": "Modelos\\Carta\\Cena.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Cena.cs",
+              "RelativeToolTip": "Modelos\\Carta\\Cena.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Restaurante.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Restaurante.cs",
+              "RelativeDocumentMoniker": "Modelos\\Servicios\\Restaurante.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Restaurante.cs",
+              "RelativeToolTip": "Modelos\\Servicios\\Restaurante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Lavandera.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Lavandera.cs",
+              "RelativeDocumentMoniker": "Modelos\\Servicios\\Lavandera.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Servicios\\Lavandera.cs",
+              "RelativeToolTip": "Modelos\\Servicios\\Lavandera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Suite.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Suite.cs",
+              "RelativeDocumentMoniker": "Modelos\\Habitaciones\\Suite.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Suite.cs",
+              "RelativeToolTip": "Modelos\\Habitaciones\\Suite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Validador.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Aspectos\\Validador.cs",
+              "RelativeDocumentMoniker": "Aspectos\\Validador.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Aspectos\\Validador.cs",
+              "RelativeToolTip": "Aspectos\\Validador.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAABQwG0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Piso.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Piso.cs",
+              "RelativeDocumentMoniker": "Modelos\\Core\\Piso.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Piso.cs",
+              "RelativeToolTip": "Modelos\\Core\\Piso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IObservador.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IObservador.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IObservador.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IObservador.cs",
+              "RelativeToolTip": "Interfaces\\IObservador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Reserva.cs",
+              "RelativeDocumentMoniker": "Modelos\\Core\\Reserva.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Core\\Reserva.cs",
+              "RelativeToolTip": "Modelos\\Core\\Reserva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Cliente.cs",
               "RelativeDocumentMoniker": "Modelos\\Personas\\Cliente.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Cliente.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Cliente.cs",
               "RelativeToolTip": "Modelos\\Personas\\Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:23.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 26,
               "Title": "IGestionHotel.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IGestionHotel.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IGestionHotel.cs",
               "RelativeDocumentMoniker": "Interfaces\\IGestionHotel.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IGestionHotel.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IGestionHotel.cs",
               "RelativeToolTip": "Interfaces\\IGestionHotel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:23.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 27,
               "Title": "Sencilla.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Sencilla.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Sencilla.cs",
               "RelativeDocumentMoniker": "Modelos\\Habitaciones\\Sencilla.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Sencilla.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Sencilla.cs",
               "RelativeToolTip": "Modelos\\Habitaciones\\Sencilla.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:23.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 28,
               "Title": "EventoBase.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoBase.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoBase.cs",
               "RelativeDocumentMoniker": "Eventos\\EventoBase.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoBase.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoBase.cs",
               "RelativeToolTip": "Eventos\\EventoBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Gaseosa.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Gaseosa.cs",
-              "RelativeDocumentMoniker": "Modelos\\Productos\\Gaseosa.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Gaseosa.cs",
-              "RelativeToolTip": "Modelos\\Productos\\Gaseosa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "IProductoMinibar.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IProductoMinibar.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IProductoMinibar.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IProductoMinibar.cs",
-              "RelativeToolTip": "Interfaces\\IProductoMinibar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "GestorNotificaciones.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\GestorNotificaciones.cs",
-              "RelativeDocumentMoniker": "Eventos\\GestorNotificaciones.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\GestorNotificaciones.cs",
-              "RelativeToolTip": "Eventos\\GestorNotificaciones.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Consumible.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Consumible.cs",
-              "RelativeDocumentMoniker": "Modelos\\Productos\\Consumible.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Consumible.cs",
-              "RelativeToolTip": "Modelos\\Productos\\Consumible.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Semidoble.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Semidoble.cs",
-              "RelativeDocumentMoniker": "Modelos\\Camas\\Semidoble.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Semidoble.cs",
-              "RelativeToolTip": "Modelos\\Camas\\Semidoble.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "EventoCancelacionReserva.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoCancelacionReserva.cs",
-              "RelativeDocumentMoniker": "Eventos\\EventoCancelacionReserva.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoCancelacionReserva.cs",
-              "RelativeToolTip": "Eventos\\EventoCancelacionReserva.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Queen.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Queen.cs",
-              "RelativeDocumentMoniker": "Modelos\\Camas\\Queen.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Queen.cs",
-              "RelativeToolTip": "Modelos\\Camas\\Queen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:23.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:23.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "IProceso.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IProceso.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IProceso.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IProceso.cs",
-              "RelativeToolTip": "Interfaces\\IProceso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "Gaseosa.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Gaseosa.cs",
+              "RelativeDocumentMoniker": "Modelos\\Productos\\Gaseosa.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Gaseosa.cs",
+              "RelativeToolTip": "Modelos\\Productos\\Gaseosa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:23.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 30,
+              "Title": "IProductoMinibar.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IProductoMinibar.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IProductoMinibar.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IProductoMinibar.cs",
+              "RelativeToolTip": "Interfaces\\IProductoMinibar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GestorNotificaciones.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\GestorNotificaciones.cs",
+              "RelativeDocumentMoniker": "Eventos\\GestorNotificaciones.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\GestorNotificaciones.cs",
+              "RelativeToolTip": "Eventos\\GestorNotificaciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Consumible.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Consumible.cs",
+              "RelativeDocumentMoniker": "Modelos\\Productos\\Consumible.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Consumible.cs",
+              "RelativeToolTip": "Modelos\\Productos\\Consumible.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Semidoble.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Semidoble.cs",
+              "RelativeDocumentMoniker": "Modelos\\Camas\\Semidoble.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Semidoble.cs",
+              "RelativeToolTip": "Modelos\\Camas\\Semidoble.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EventoCancelacionReserva.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoCancelacionReserva.cs",
+              "RelativeDocumentMoniker": "Eventos\\EventoCancelacionReserva.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoCancelacionReserva.cs",
+              "RelativeToolTip": "Eventos\\EventoCancelacionReserva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Queen.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Queen.cs",
+              "RelativeDocumentMoniker": "Modelos\\Camas\\Queen.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Queen.cs",
+              "RelativeToolTip": "Modelos\\Camas\\Queen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:23.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IProceso.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IProceso.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IProceso.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IProceso.cs",
+              "RelativeToolTip": "Interfaces\\IProceso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:22.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Ejecutiva.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Ejecutiva.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Ejecutiva.cs",
               "RelativeDocumentMoniker": "Modelos\\Habitaciones\\Ejecutiva.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Ejecutiva.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Ejecutiva.cs",
               "RelativeToolTip": "Modelos\\Habitaciones\\Ejecutiva.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAcwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -783,367 +970,339 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "King.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\King.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\King.cs",
               "RelativeDocumentMoniker": "Modelos\\Camas\\King.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\King.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\King.cs",
               "RelativeToolTip": "Modelos\\Camas\\King.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "Doble.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Doble.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Doble.cs",
               "RelativeDocumentMoniker": "Modelos\\Camas\\Doble.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Doble.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Doble.cs",
               "RelativeToolTip": "Modelos\\Camas\\Doble.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
               "Title": "Regla_negocio.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\Regla_negocio.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\Regla_negocio.cs",
               "RelativeDocumentMoniker": "Utilidades\\Regla_negocio.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\Regla_negocio.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\Regla_negocio.cs",
               "RelativeToolTip": "Utilidades\\Regla_negocio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.631Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 40,
               "Title": "Isurtidor.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\Isurtidor.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\Isurtidor.cs",
               "RelativeDocumentMoniker": "Interfaces\\Isurtidor.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\Isurtidor.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\Isurtidor.cs",
               "RelativeToolTip": "Interfaces\\Isurtidor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 41,
               "Title": "EventoCheckInCompletado.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoCheckInCompletado.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoCheckInCompletado.cs",
               "RelativeDocumentMoniker": "Eventos\\EventoCheckInCompletado.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoCheckInCompletado.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoCheckInCompletado.cs",
               "RelativeToolTip": "Eventos\\EventoCheckInCompletado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 42,
               "Title": "Sencilla.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Sencilla.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Sencilla.cs",
               "RelativeDocumentMoniker": "Modelos\\Camas\\Sencilla.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Sencilla.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Sencilla.cs",
               "RelativeToolTip": "Modelos\\Camas\\Sencilla.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 43,
               "Title": "Cama.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Cama.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Cama.cs",
               "RelativeDocumentMoniker": "Modelos\\Camas\\Cama.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Camas\\Cama.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Camas\\Cama.cs",
               "RelativeToolTip": "Modelos\\Camas\\Cama.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 44,
               "Title": "Huesped.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Huesped.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Huesped.cs",
               "RelativeDocumentMoniker": "Modelos\\Personas\\Huesped.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Personas\\Huesped.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Personas\\Huesped.cs",
               "RelativeToolTip": "Modelos\\Personas\\Huesped.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 45,
               "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Producto.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Producto.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Producto.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Producto.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Producto.cs",
               "RelativeToolTip": "Modelos\\Productos\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:22.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:22.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 46,
               "Title": "TipoId.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoId.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoId.cs",
               "RelativeDocumentMoniker": "Enums\\TipoId.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoId.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoId.cs",
               "RelativeToolTip": "Enums\\TipoId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.999Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 47,
               "Title": "EventoFacturaGenerada.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoFacturaGenerada.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoFacturaGenerada.cs",
               "RelativeDocumentMoniker": "Eventos\\EventoFacturaGenerada.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoFacturaGenerada.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoFacturaGenerada.cs",
               "RelativeToolTip": "Eventos\\EventoFacturaGenerada.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 48,
               "Title": "IOficina.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IOficina.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IOficina.cs",
               "RelativeDocumentMoniker": "Interfaces\\IOficina.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Interfaces\\IOficina.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Interfaces\\IOficina.cs",
               "RelativeToolTip": "Interfaces\\IOficina.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 49,
               "Title": "ReglasNegocioServicios.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\ReglasNegocioServicios.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\ReglasNegocioServicios.cs",
               "RelativeDocumentMoniker": "Utilidades\\ReglasNegocioServicios.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\ReglasNegocioServicios.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\ReglasNegocioServicios.cs",
               "RelativeToolTip": "Utilidades\\ReglasNegocioServicios.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 50,
               "Title": "EventoConsumoMinibar.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoConsumoMinibar.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoConsumoMinibar.cs",
               "RelativeDocumentMoniker": "Eventos\\EventoConsumoMinibar.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Eventos\\EventoConsumoMinibar.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Eventos\\EventoConsumoMinibar.cs",
               "RelativeToolTip": "Eventos\\EventoConsumoMinibar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 51,
               "Title": "Kit_aseo.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Kit_aseo.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Kit_aseo.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Kit_aseo.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Kit_aseo.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Kit_aseo.cs",
               "RelativeToolTip": "Modelos\\Productos\\Kit_aseo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 52,
               "Title": "TipoMinibar.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoMinibar.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoMinibar.cs",
               "RelativeDocumentMoniker": "Enums\\TipoMinibar.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoMinibar.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoMinibar.cs",
               "RelativeToolTip": "Enums\\TipoMinibar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 53,
               "Title": "Desayuno.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Desayuno.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Desayuno.cs",
               "RelativeDocumentMoniker": "Modelos\\Carta\\Desayuno.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Desayuno.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Desayuno.cs",
               "RelativeToolTip": "Modelos\\Carta\\Desayuno.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.559Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 54,
               "Title": "ReglasNegocioHabitaciones.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\ReglasNegocioHabitaciones.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\ReglasNegocioHabitaciones.cs",
               "RelativeDocumentMoniker": "Utilidades\\ReglasNegocioHabitaciones.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Utilidades\\ReglasNegocioHabitaciones.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Utilidades\\ReglasNegocioHabitaciones.cs",
               "RelativeToolTip": "Utilidades\\ReglasNegocioHabitaciones.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 55,
               "Title": "Vino.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Vino.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Vino.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Vino.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Vino.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Vino.cs",
               "RelativeToolTip": "Modelos\\Productos\\Vino.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 56,
               "Title": "Licor.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Licor.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Licor.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Licor.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Licor.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Licor.cs",
               "RelativeToolTip": "Modelos\\Productos\\Licor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 57,
               "Title": "TipoEvento.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoEvento.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoEvento.cs",
               "RelativeDocumentMoniker": "Enums\\TipoEvento.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Enums\\TipoEvento.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Enums\\TipoEvento.cs",
               "RelativeToolTip": "Enums\\TipoEvento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 58,
               "Title": "Almuerzo.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Almuerzo.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Almuerzo.cs",
               "RelativeDocumentMoniker": "Modelos\\Carta\\Almuerzo.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Almuerzo.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Almuerzo.cs",
               "RelativeToolTip": "Modelos\\Carta\\Almuerzo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 59,
               "Title": "Bienestar.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Bienestar.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Bienestar.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Bienestar.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Bienestar.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Bienestar.cs",
               "RelativeToolTip": "Modelos\\Productos\\Bienestar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 60,
               "Title": "Oferta_carta.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Oferta_carta.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Oferta_carta.cs",
               "RelativeDocumentMoniker": "Modelos\\Carta\\Oferta_carta.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Carta\\Oferta_carta.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Carta\\Oferta_carta.cs",
               "RelativeToolTip": "Modelos\\Carta\\Oferta_carta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 61,
               "Title": "Habitacion.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Habitacion.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Habitacion.cs",
               "RelativeDocumentMoniker": "Modelos\\Habitaciones\\Habitacion.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Habitaciones\\Habitacion.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones\\Habitacion.cs",
               "RelativeToolTip": "Modelos\\Habitaciones\\Habitacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:21.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:21.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 62,
               "Title": "Agua.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Agua.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Agua.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Agua.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Agua.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Agua.cs",
               "RelativeToolTip": "Modelos\\Productos\\Agua.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:20.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:20.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 63,
               "Title": "Bata_de_ba\u00F1o.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
               "RelativeToolTip": "Modelos\\Productos\\Bata_de_ba\u00F1o.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:20.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:20.883Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 64,
               "Title": "Botella.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Botella.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Botella.cs",
               "RelativeDocumentMoniker": "Modelos\\Productos\\Botella.cs",
-              "ToolTip": "C:\\Users\\andre\\Desktop\\Proyecto final paradigmas\\Hotel_bib\\biblioteca_hotel\\Modelos\\Productos\\Botella.cs",
+              "ToolTip": "C:\\Users\\andre\\Desktop\\repo Proyecto Final Paradgimas\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Productos\\Botella.cs",
               "RelativeToolTip": "Modelos\\Productos\\Botella.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T19:36:20.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T19:36:20.807Z"
             }
           ]
         }
