@@ -1,0 +1,52 @@
+@page "/reservas/detalle/{Index:int}"
+@inject ReservaService ReservaService
+@inject ISnackbar Snackbar
+
+<PageTitle>Detalle reserva</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Detalle de reserva</h2>
+        <p class="page-subtitle">Estado y acciones de la reserva.</p>
+    </div>
+</div>
+
+@if (reserva is null)
+{
+    <MudAlert Severity="Severity.Warning">Reserva no encontrada.</MudAlert>
+}
+else
+{
+    <MudPaper Class="card">
+        <MudStack Spacing="2">
+            <MudText Typo="Typo.h6">@reserva.GetPersona().GetNombre()</MudText>
+            <MudText>Habitación: @reserva.GetHabitacion().GetType().Name</MudText>
+            <MudText>Entrada: @reserva.GetFechaEntrada()</MudText>
+            <MudText>Salida: @reserva.GetFechaSalida()</MudText>
+            <MudButton Variant="Variant.Filled" Color="Color.Warning" OnClick="Cancelar">Cancelar</MudButton>
+        </MudStack>
+    </MudPaper>
+}
+
+@code {
+    /// <summary>
+    /// Usa ReservaService y eventos de cancelación para notificar.
+    /// </summary>
+    [Parameter] public int Index { get; set; }
+    private Reserva? reserva;
+
+    protected override void OnInitialized()
+    {
+        var reservas = ReservaService.ObtenerTodas();
+        reserva = Index >= 0 && Index < reservas.Length ? reservas[Index] : null;
+    }
+
+    private void Cancelar()
+    {
+        if (reserva is null)
+            return;
+
+        _ = new EventoCancelacionReserva(reserva.GetPersona().GetId(), reserva.GetPersona().GetId());
+        Snackbar.Add("Reserva cancelada.", Severity.Warning);
+    }
+}

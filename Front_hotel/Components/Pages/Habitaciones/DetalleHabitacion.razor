@@ -1,0 +1,46 @@
+@page "/habitaciones/detalle/{Index:int}"
+@inject HabitacionService HabitacionService
+
+<PageTitle>Detalle Habitación</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Detalle de habitación</h2>
+        <p class="page-subtitle">Información completa y costo de estancia.</p>
+    </div>
+</div>
+
+@if (habitacion is null)
+{
+    <MudAlert Severity="Severity.Warning">Habitación no encontrada.</MudAlert>
+}
+else
+{
+    <MudPaper Class="card">
+        <MudStack Spacing="2">
+            <MudText Typo="Typo.h6">@habitacion.GetType().Name</MudText>
+            <MudText>Numero: @habitacion.GetNumHab()</MudText>
+            <MudText>Costo/noche: @habitacion.GetCostoNoche()</MudText>
+            <MudText>Costo estancia (estimado): @HabitacionService.ObtenerCostoEstancia(habitacion.GetNumHab())</MudText>
+            <MudText>Camas: @habitacion.GetCamas().Length</MudText>
+            @if (habitacion is biblioteca_hotel.Interfaces.Isurtidor)
+            {
+                <MudAlert Severity="Severity.Info">Esta habitación soporta minibar.</MudAlert>
+            }
+        </MudStack>
+    </MudPaper>
+}
+
+@code {
+    /// <summary>
+    /// Usa HabitacionService para obtener detalle y costo de estancia.
+    /// </summary>
+    [Parameter] public int Index { get; set; }
+    private Habitacion? habitacion;
+
+    protected override void OnInitialized()
+    {
+        var habitaciones = HabitacionService.ObtenerTodos();
+        habitacion = Index >= 0 && Index < habitaciones.Length ? habitaciones[Index] : null;
+    }
+}

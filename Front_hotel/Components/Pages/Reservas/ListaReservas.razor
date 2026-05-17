@@ -1,0 +1,55 @@
+@page "/reservas"
+@inject ReservaService ReservaService
+@inject NavigationManager Navigation
+
+<PageTitle>Reservas</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Reservas</h2>
+        <p class="page-subtitle">Control y búsqueda de reservas activas.</p>
+    </div>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => Navigation.NavigateTo("reservas/nueva"))">
+        Nueva reserva
+    </MudButton>
+</div>
+
+<MudPaper Class="card">
+    <MudDataGrid Items="reservas" Dense="true" Hover="true">
+        <Columns>
+            <PropertyColumn Property="r => r.GetPersona().GetNombre()" Title="Cliente" />
+            <PropertyColumn Property="r => r.GetHabitacion().GetType().Name" Title="Habitación" />
+            <TemplateColumn Title="Entrada">
+                <CellTemplate>@context.Item.GetFechaEntrada().ToString("dd/MM/yyyy")</CellTemplate>
+            </TemplateColumn>
+            <TemplateColumn Title="Salida">
+                <CellTemplate>@context.Item.GetFechaSalida().ToString("dd/MM/yyyy")</CellTemplate>
+            </TemplateColumn>
+            <TemplateColumn Title="Acciones">
+                <CellTemplate>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => VerDetalle(context.Item)">
+                        Ver detalle
+                    </MudButton>
+                </CellTemplate>
+            </TemplateColumn>
+        </Columns>
+    </MudDataGrid>
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa ReservaService para listar reservas y navegar a detalle.
+    /// </summary>
+    private Reserva[] reservas = Array.Empty<Reserva>();
+
+    protected override void OnInitialized()
+    {
+        reservas = ReservaService.ObtenerTodas();
+    }
+
+    private void VerDetalle(Reserva reserva)
+    {
+        var index = Array.IndexOf(reservas, reserva);
+        Navigation.NavigateTo($"reservas/detalle/{index}");
+    }
+}

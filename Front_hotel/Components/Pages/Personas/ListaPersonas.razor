@@ -1,0 +1,49 @@
+@page "/personas"
+@inject PersonaService PersonaService
+@inject NavigationManager Navigation
+
+<PageTitle>Personas</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Personas</h2>
+        <p class="page-subtitle">Clientes y huéspedes registrados.</p>
+    </div>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => Navigation.NavigateTo("personas/nueva"))">
+        Nueva persona
+    </MudButton>
+</div>
+
+<MudPaper Class="card">
+    <MudDataGrid Items="personas" Dense="true" Hover="true">
+        <Columns>
+            <PropertyColumn Property="p => p.GetNombre()" Title="Nombre" />
+            <PropertyColumn Property="p => p.GetTipoId()" Title="Tipo ID" />
+            <PropertyColumn Property="p => p.GetId()" Title="Documento" />
+            <PropertyColumn Property="p => p.GetTelefono()" Title="Teléfono" />
+            <PropertyColumn Property="p => GetRol(p)" Title="Rol" />
+        </Columns>
+    </MudDataGrid>
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa PersonaService para listar personas y mostrar su rol.
+    /// </summary>
+    private Persona[] personas = Array.Empty<Persona>();
+
+    protected override void OnInitialized()
+    {
+        personas = PersonaService.ObtenerTodos();
+    }
+
+    private static string GetRol(Persona persona)
+    {
+        return persona switch
+        {
+            Cliente => "Cliente",
+            Huesped => "Huésped",
+            _ => "Persona"
+        };
+    }
+}

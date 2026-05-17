@@ -1,0 +1,46 @@
+@page "/importacion"
+@inject LectorArchivos Lector
+@inject ISnackbar Snackbar
+
+<PageTitle>Importación</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Importación de datos</h2>
+        <p class="page-subtitle">Carga de personas desde archivo.</p>
+    </div>
+</div>
+
+<MudPaper Class="card">
+    <MudFileUpload T="IBrowserFile" FilesChanged="OnFilesChanged" />
+    @if (personas.Length > 0)
+    {
+        <MudDataGrid Items="personas" Dense="true">
+            <Columns>
+                <PropertyColumn Property="p => p.GetNombre()" Title="Nombre" />
+                <PropertyColumn Property="p => p.GetId()" Title="Documento" />
+                <PropertyColumn Property="p => p.GetTelefono()" Title="Teléfono" />
+            </Columns>
+        </MudDataGrid>
+    }
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa LectorArchivos y HotelProxy (IGestionHotel) para importar personas.
+    /// </summary>
+    private Persona[] personas = Array.Empty<Persona>();
+
+    private async Task OnFilesChanged(IBrowserFile file)
+    {
+        var path = Path.GetTempFileName();
+        await using var stream = File.Create(path);
+        await file.OpenReadStream().CopyToAsync(stream);
+
+        var lector = new LectorArchivos(path);
+        var proxy = new HotelProxy(lector);
+        proxy.cargar_datos(path);
+        personas = lector.GetPersonas();
+        Snackbar.Add("Datos importados.", Severity.Success);
+    }
+}

@@ -1,0 +1,227 @@
+@page "/servicios/minibar"
+@inject HabitacionService HabitacionService
+@inject ReservaService ReservaService
+@inject FacturaService FacturaService
+@inject ISnackbar Snackbar
+
+<PageTitle>Minibar — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Minibar</h2>
+        <p class="page-subtitle">Registro de consumos por habitación.</p>
+    </div>
+</div>
+
+@if (_habitacionesConMinibar.Length == 0)
+{
+    <div class="minibar-empty-state">
+        <div class="minibar-empty-icon">🍸</div>
+        <h3 class="minibar-empty-title">Sin habitaciones activas con minibar</h3>
+        <p class="minibar-empty-desc">
+            No hay habitaciones <strong>Ejecutiva</strong> o <strong>Suite</strong> disponibles con minibar en este momento.<br />
+            Solo aparecen aquí las habitaciones que tienen minibar habilitado.
+        </p>
+    </div>
+}
+else
+{
+    <MudGrid GutterSize="3">
+        <!-- Productos -->
+        <MudItem xs="12" md="7">
+            <div class="glass-card">
+                <div class="glass-card-inner">
+                    <div class="section-eyebrow">Productos Disponibles</div>
+                    <div class="minibar-grid">
+                        @foreach (var p in _productos)
+                        {
+                            var qty = _cantidades.ContainsKey(p.Key) ? _cantidades[p.Key] : 0;
+                            <div class="minibar-item @(qty > 0 ? "minibar-item-active" : "")">
+                                <span class="minibar-icon">@p.Value.Icon</span>
+                                <div class="minibar-info">
+                                    <div class="menu-nombre">@p.Value.Nombre</div>
+                                    <div class="menu-precio font-mono">@p.Value.Precio.ToString("C0", _col)</div>
+                                </div>
+                                <div class="lav-stepper">
+                                    <MudIconButton Size="Size.Small"
+                                                   Icon="@Icons.Material.Filled.Remove"
+                                                   OnClick="@(() => Decrementar(p.Key))"
+                                                   aria-label="@($"Reducir {p.Value.Nombre}")" />
+                                    <span class="mini-qty font-mono">@qty</span>
+                                    <MudIconButton Size="Size.Small"
+                                                   Icon="@Icons.Material.Filled.Add"
+                                                   OnClick="@(() => Incrementar(p.Key))"
+                                                   aria-label="@($"Agregar {p.Value.Nombre}")" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </MudItem>
+
+        <!-- Resumen y habitación -->
+        <MudItem xs="12" md="5">
+            <div class="glass-card">
+                <div class="glass-card-inner">
+                    <div class="section-eyebrow">Registrar Consumo</div>
+
+                    <MudSelect T="Habitacion" Label="Habitación con Minibar"
+                               @bind-Value="_habSeleccionada"
+                               Variant="Variant.Outlined" Margin="Margin.Dense" Class="obs-select"
+                               ToStringFunc="@(h => h == null ? "Seleccionar..." : $"{h.GetType().Name} N.°{h.GetNumHab()}")">
+                        @foreach (var h in _habitacionesConMinibar)
+                        {
+                            <MudSelectItem Value="@h">
+                                @h.GetType().Name N.°@h.GetNumHab()
+                            </MudSelectItem>
+                        }
+                    </MudSelect>
+
+                    <div class="glass-inner-panel mt-3">
+                        <div class="section-eyebrow" style="margin-bottom:.5rem;">Resumen</div>
+                        @if (!_cantidades.Any(k => k.Value > 0))
+                        {
+                            <div style="color:var(--silver);font-size:.8rem;text-align:center;padding:.5rem 0;">
+                                Agrega productos para ver el resumen
+                            </div>
+                        }
+                        @foreach (var kv in _cantidades.Where(k => k.Value > 0))
+                        {
+                            <div class="preview-row">
+                                <span class="preview-label">@_productos[kv.Key].Nombre ×@kv.Value</span>
+                                <span class="preview-value mono">@((_productos[kv.Key].Precio * kv.Value).ToString("C0", _col))</span>
+                            </div>
+                        }
+                        <div class="preview-divider"></div>
+                        <div class="preview-row preview-total-final">
+                            <span class="preview-label">TOTAL</span>
+                            <span class="preview-value kpi-gold-bright">@_total.ToString("C0", _col)</span>
+                        </div>
+                    </div>
+
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                               OnClick="RegistrarConsumo" Class="obs-button-glow mt-4"
+                               Disabled="@(_habSeleccionada == null || _total == 0)"
+                               FullWidth="true" StartIcon="@Icons.Material.Filled.WineBar"
+                               aria-label="Registrar consumo minibar">
+                        Registrar Consumo
+                    </MudButton>
+                </div>
+            </div>
+        </MudItem>
+    </MudGrid>
+}
+
+@code {
+    /// <summary>
+    /// Servicios: HabitacionService.
+    /// Filtrado: Solo habitaciones que implementan Isurtidor (Ejecutiva/Suite = TieneMinibar).
+    /// Si no hay ninguna, muestra EmptyState elegante.
+    /// </summary>
+    private record ProductoMinibar(string Nombre, decimal Precio, string Icon);
+
+    private Habitacion[]  _habitacionesConMinibar = Array.Empty<Habitacion>();
+    private Habitacion?   _habSeleccionada;
+    private Dictionary<string, int> _cantidades = new();
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+
+    private readonly Dictionary<string, ProductoMinibar> _productos = new()
+    {
+        ["licor"]   = new("Licor Premium",   biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_licor,    "🥃"),
+        ["vino"]    = new("Vino Tinto",      biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_vino,     "🍷"),
+        ["agua"]    = new("Agua Mineral",    biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_agua,     "💧"),
+        ["gaseosa"] = new("Gaseosa",         biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_gaseosa,  "🥤"),
+        ["kit"]     = new("Kit de Aseo",     biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_kit_aseo, "🧴"),
+        ["bata"]    = new("Bata de Baño",    biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_bata,     "🩱"),
+    };
+
+    private decimal _total => _cantidades.Sum(kv =>
+        _productos.ContainsKey(kv.Key) ? _productos[kv.Key].Precio * kv.Value : 0);
+
+    protected override void OnInitialized()
+    {
+        // CONDICIÓN: Solo habitaciones Ejecutiva/Suite (implementan Isurtidor = TieneMinibar == true)
+        _habitacionesConMinibar = HabitacionService.ObtenerTodos()
+            .Where(h => h is biblioteca_hotel.Interfaces.Isurtidor)
+            .ToArray();
+    }
+
+    private void Incrementar(string key)
+    {
+        if (!_cantidades.ContainsKey(key)) _cantidades[key] = 0;
+        _cantidades[key]++;
+    }
+
+    private void Decrementar(string key)
+    {
+        if (_cantidades.ContainsKey(key) && _cantidades[key] > 0)
+            _cantidades[key]--;
+    }
+
+    private void RegistrarConsumo()
+    {
+        if (_habSeleccionada == null || _total == 0) return;
+
+        var reservaActiva = ReservaService.ObtenerTodas()
+            .FirstOrDefault(r => r.GetHabitacion().GetNumHab() == _habSeleccionada.GetNumHab());
+
+        if (reservaActiva == null)
+        {
+            Snackbar.Add("❌ No hay nadie hospedado en esta habitación. No se puede cobrar el consumo.", Severity.Error);
+            return;
+        }
+
+        var persona = reservaActiva.GetPersona();
+
+        int totalUnidades = _cantidades.Values.Sum();
+        var ev = new EventoConsumoMinibar(_habSeleccionada.GetHashCode(), totalUnidades);
+        ev.registrarConsumo();
+
+        foreach (var kv in _cantidades.Where(k => k.Value > 0))
+        {
+            var nombre = _productos[kv.Key].Nombre;
+            var precio = _productos[kv.Key].Precio;
+            for(int i = 0; i < kv.Value; i++)
+            {
+                var p = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante($"Minibar: {nombre}", precio);
+                FacturaService.ActualizarConsumo(persona, p);
+            }
+        }
+
+        Snackbar.Add(
+            $"🍾 Consumo ({_total.ToString("C0", _col)}) asignado a la factura de {persona.GetNombre()}.",
+            Severity.Success);
+        _cantidades.Clear();
+        _habSeleccionada = null;
+    }
+}
+
+<style>
+    .minibar-empty-state {
+        max-width: 480px; margin: 4rem auto; text-align: center;
+        padding: 3rem 2rem;
+        background: rgba(8,10,15,0.6); border: 1px dashed var(--border);
+        border-radius: var(--radius);
+    }
+    .minibar-empty-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .minibar-empty-title {
+        font-family: var(--font-display); font-size: 1.3rem;
+        color: var(--platinum); margin-bottom: .75rem;
+    }
+    .minibar-empty-desc { font-size: .88rem; color: var(--silver); line-height: 1.6; }
+    .minibar-empty-desc strong { color: var(--platinum); }
+
+    .minibar-grid { display:flex; flex-direction:column; gap:.5rem; }
+    .minibar-item {
+        display:flex; align-items:center; gap:1rem; padding:.75rem 1rem;
+        border-radius:var(--radius-sm); border:1px solid var(--border);
+        background:rgba(8,10,15,0.4); transition:all 200ms;
+    }
+    .minibar-item-active { border-color:var(--gold-dim); background:var(--gold-glow); }
+    .minibar-icon { font-size:1.4rem; flex-shrink:0; }
+    .minibar-info { flex:1; }
+    .mini-qty { font-size:1rem; color:var(--gold); min-width:28px; text-align:center; }
+    .mt-3 { margin-top:.75rem !important; }
+    .mt-4 { margin-top:1rem !important; }
+</style>

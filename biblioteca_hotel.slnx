@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="biblioteca_hotel/biblioteca_hotel.csproj" />
+  <Project Path="Front_hotel/Front_hotel.csproj" />
+</Solution>

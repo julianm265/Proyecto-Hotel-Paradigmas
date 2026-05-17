@@ -1,0 +1,377 @@
+@page "/reservas/nueva"
+@inject PersonaService    PersonaService
+@inject HabitacionService HabitacionService
+@inject ReservaService    ReservaService
+@inject IGestionHotel     HotelProxy
+@inject ISnackbar         Snackbar
+@inject NavigationManager Navigation
+@inject biblioteca_hotel.Aspectos.Validador    Validador
+
+
+<PageTitle>Nueva Reserva — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Nueva Reserva</h2>
+        <p class="page-subtitle">Asistente de creación en 3 pasos.</p>
+    </div>
+</div>
+
+<!-- Wizard progress -->
+<div class="wizard-steps mb-4">
+    <div class="wizard-step">
+        <div class="step-circle @(paso >= 0 ? (paso > 0 ? "done" : "active") : "")">@(paso > 0 ? "✓" : "1")</div>
+        <div class="step-label">Huésped</div>
+    </div>
+    <div class="wizard-connector @(paso > 0 ? "done" : "")"></div>
+    <div class="wizard-step">
+        <div class="step-circle @(paso >= 1 ? (paso > 1 ? "done" : "active") : "")">@(paso > 1 ? "✓" : "2")</div>
+        <div class="step-label">Estancia</div>
+    </div>
+    <div class="wizard-connector @(paso > 1 ? "done" : "")"></div>
+    <div class="wizard-step">
+        <div class="step-circle @(paso >= 2 ? "active" : "")">3</div>
+        <div class="step-label">Confirmación</div>
+    </div>
+</div>
+
+<div class="glass-card" style="max-width:660px;margin:0 auto;">
+    <div class="glass-card-inner">
+
+        @* ── PASO 1: HUÉSPED ── *@
+        @if (paso == 0)
+        {
+            <div class="anim-slide-right">
+                <div class="section-eyebrow">Paso 1 — Buscar Huésped</div>
+
+                <!-- Live Search Input -->
+                <div class="live-search-wrapper">
+                    <span class="live-search-icon">🔍</span>
+                    <input class="live-search-input"
+                           type="text"
+                           placeholder="Nombre o número de documento..."
+                           value="@_filtro"
+                           @oninput="OnFiltroChanged"
+                           autocomplete="off"
+                           id="reserva-search-input" />
+                    @if (!string.IsNullOrEmpty(_filtro))
+                    {
+                        <button class="live-search-clear" @onclick="LimpiarFiltro" title="Limpiar">✕</button>
+                    }
+                </div>
+
+                <!-- Result Cards -->
+                @if (!string.IsNullOrWhiteSpace(_filtro))
+                {
+                    @if (_personasFiltradas.Length == 0)
+                    {
+                        <div class="empty-state mt-3">
+                            <span class="empty-icon">👤</span>
+                            <p>Sin resultados para <strong>"@_filtro"</strong></p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="persona-cards-grid mt-3">
+                            @foreach (var p in _personasFiltradas)
+                            {
+                                var isSelected = persona?.GetId() == p.GetId();
+                                <div class="persona-card @(isSelected ? "persona-card-selected" : "")"
+                                     @onclick="@(() => SeleccionarPersona(p))">
+                                    <div class="persona-card-avatar">@p.GetNombre()[0]</div>
+                                    <div class="persona-card-body">
+                                        <div class="persona-card-name">@p.GetNombre()</div>
+                                        <div class="persona-card-id font-mono">@p.GetId()</div>
+                                    </div>
+                                    @if (isSelected)
+                                    {
+                                        <div class="persona-card-check">✓</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                }
+
+                @if (persona != null)
+                {
+                    <div class="glass-inner-panel mt-4 anim-fade-in">
+                        <div class="preview-row">
+                            <span class="preview-label">Nombre</span>
+                            <span class="preview-value">@persona.GetNombre()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Tipo ID</span>
+                            <span class="preview-value">@persona.GetTipoId()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Teléfono</span>
+                            <span class="preview-value mono">@persona.GetTelefono()</span>
+                        </div>
+                        @if (persona is Cliente c)
+                        {
+                            <div class="preview-row">
+                                <span class="preview-label">Descuento</span>
+                                <span class="preview-value kpi-emerald">@((c.GetDescuento() * 100).ToString("F0"))%</span>
+                            </div>
+                        }
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                                   OnClick="@(() => paso = 1)" Class="obs-button-glow mt-4"
+                                   FullWidth="true" aria-label="Siguiente paso">
+                            Continuar →
+                        </MudButton>
+                    </div>
+                }
+            </div>
+        }
+
+        @* ── PASO 2: ESTANCIA ── *@
+        @if (paso == 1)
+        {
+            <div class="anim-slide-right">
+                <div class="section-eyebrow">Paso 2 — La Estancia</div>
+
+                <MudSelect T="Habitacion"
+                           Label="Habitación"
+                           @bind-Value="habitacionSeleccionada"
+                           Variant="Variant.Outlined"
+                           Margin="Margin.Dense"
+                           Class="obs-select"
+                           ToStringFunc="@(h => h == null ? "Seleccionar..." : $"{h.GetType().Name} N.°{h.GetNumHab()} — {h.GetCostoNoche():C0}/noche")">
+                    @foreach (var h in habitaciones)
+                    {
+                        <MudSelectItem Value="@h">
+                            @h.GetType().Name — @h.GetCostoNoche().ToString("C0", _col)/noche
+                        </MudSelectItem>
+                    }
+                </MudSelect>
+
+                <MudGrid Spacing="2" Class="mt-3">
+                    <MudItem xs="6">
+                        <MudDatePicker Label="Fecha entrada"
+                                       @bind-Date="fechaEntradaNullable"
+                                       Variant="Variant.Outlined"
+                                       Margin="Margin.Dense"
+                                       MinDate="DateTime.Today" />
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudDatePicker Label="Fecha salida"
+                                       @bind-Date="fechaSalidaNullable"
+                                       Variant="Variant.Outlined"
+                                       Margin="Margin.Dense"
+                                       MinDate="@(fechaEntrada.AddDays(1))" />
+                    </MudItem>
+                </MudGrid>
+
+                @if (habitacionSeleccionada != null && noches > 0)
+                {
+                    <div class="glass-inner-panel mt-3 anim-fade-in">
+                        <div class="preview-row">
+                            <span class="preview-label">Noches</span>
+                            <span class="preview-value kpi-gold">@noches</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Costo/noche</span>
+                            <span class="preview-value mono">@habitacionSeleccionada.GetCostoNoche().ToString("C0", _col)</span>
+                        </div>
+                        <div class="preview-divider"></div>
+                        <div class="preview-row preview-total">
+                            <span class="preview-label">Total estimado</span>
+                            <span class="preview-value kpi-gold-bright">@costoTotal.ToString("C0", _col)</span>
+                        </div>
+                    </div>
+                }
+
+                <div style="display:flex;gap:.75rem;margin-top:1.25rem;">
+                    <MudButton Variant="Variant.Outlined" OnClick="@(() => paso = 0)"
+                               Class="obs-button-ghost" aria-label="Volver">← Volver</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                               OnClick="@(() => paso = 2)" Class="obs-button-glow"
+                               Disabled="@(habitacionSeleccionada == null || noches <= 0)"
+                               aria-label="Confirmar selección">
+                        Confirmar Estancia →
+                    </MudButton>
+                </div>
+            </div>
+        }
+
+        @* ── PASO 3: CONFIRMACIÓN ── *@
+        @if (paso == 2)
+        {
+            <div class="anim-slide-right">
+                <div class="section-eyebrow">Paso 3 — Confirmación</div>
+                <div class="voucher-panel glass-inner-panel">
+                    <div class="voucher-title font-display">Voucher de Reserva</div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-row">
+                        <span class="preview-label">Huésped</span>
+                        <span class="preview-value">@persona?.GetNombre()</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Documento</span>
+                        <span class="preview-value mono">@persona?.GetId()</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Habitación</span>
+                        <span class="preview-value">@habitacionSeleccionada?.GetType().Name N.°@habitacionSeleccionada?.GetNumHab()</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Entrada</span>
+                        <span class="preview-value mono">@fechaEntrada.ToString("dd MMM yyyy")</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Salida</span>
+                        <span class="preview-value mono">@fechaSalida.ToString("dd MMM yyyy")</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Noches</span>
+                        <span class="preview-value kpi-gold">@noches</span>
+                    </div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-row preview-total-final">
+                        <span class="preview-label">TOTAL</span>
+                        <span class="preview-value kpi-gold-bright">@costoTotal.ToString("C0", _col)</span>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:.75rem;margin-top:1.25rem;">
+                    <MudButton Variant="Variant.Outlined" OnClick="@(() => paso = 1)"
+                               Class="obs-button-ghost">← Volver</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Success"
+                               OnClick="Confirmar" Class="obs-button-glow"
+                               StartIcon="@Icons.Material.Filled.CheckCircle"
+                               aria-label="Confirmar reserva">
+                        Confirmar Reserva
+                    </MudButton>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Servicios: PersonaService, HabitacionService, ReservaService, IGestionHotel (HotelProxy).
+    /// Aspectos: Validador.Advice_ValidarYPersistir, Autenticador.verificar_acceso.
+    /// Reglas: Regla_negocio.regex_id para validación de documento.
+    /// </summary>
+    private int           paso = 0;
+    private Persona?      persona;
+    private string        _filtro = string.Empty;
+    private Persona[]     _personasFiltradas = Array.Empty<Persona>();
+    private Habitacion[]  habitaciones = Array.Empty<Habitacion>();
+    private Habitacion?   habitacionSeleccionada;
+    private DateTime?     fechaEntradaNullable = DateTime.Today;
+    private DateTime?     fechaSalidaNullable  = DateTime.Today.AddDays(1);
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+
+    private DateTime fechaEntrada => fechaEntradaNullable ?? DateTime.Today;
+    private DateTime fechaSalida  => fechaSalidaNullable  ?? DateTime.Today.AddDays(1);
+    private int      noches       => Math.Max(0, (fechaSalida - fechaEntrada).Days);
+    private decimal  costoTotal   => habitacionSeleccionada != null ? habitacionSeleccionada.GetCostoNoche() * noches : 0;
+
+    protected override void OnInitialized()
+    {
+        habitaciones = HabitacionService.ObtenerTodos();
+    }
+
+    private void OnFiltroChanged(ChangeEventArgs e)
+    {
+        _filtro = e.Value?.ToString() ?? string.Empty;
+        persona = null;
+        _personasFiltradas = string.IsNullOrWhiteSpace(_filtro)
+            ? Array.Empty<Persona>()
+            : PersonaService.BuscarPorFiltro(_filtro);
+    }
+
+    private void LimpiarFiltro()
+    {
+        _filtro = string.Empty;
+        _personasFiltradas = Array.Empty<Persona>();
+        persona = null;
+    }
+
+    private void SeleccionarPersona(Persona p)
+    {
+        persona = p;
+        Snackbar.Add($"✓ {persona.GetNombre()} seleccionado.", Severity.Success);
+    }
+
+    private void Confirmar()
+    {
+        if (persona == null || habitacionSeleccionada == null) return;
+        try
+        {
+            var reserva = new Reserva(persona, habitacionSeleccionada, fechaEntrada, fechaSalida);
+            HotelProxy.gestionar_reserva(reserva);
+            ReservaService.Agregar(reserva);
+            Validador.Advice_ValidarYPersistir(reserva);
+            Snackbar.Add("✓ Reserva creada correctamente.", Severity.Success);
+            Navigation.NavigateTo("/reservas");
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"✗ Error: {ex.Message}", Severity.Error);
+        }
+    }
+}
+
+<style>
+    .mb-4 { margin-bottom: 1rem !important; }
+    .mt-4 { margin-top: 1rem !important; }
+    .mt-3 { margin-top: .75rem !important; }
+    .voucher-panel { border: 1px solid var(--gold-dim) !important; }
+    .voucher-title {
+        font-size: 1.4rem; font-weight: 600;
+        color: var(--gold); text-align: center;
+        margin-bottom: .5rem;
+    }
+
+    /* ── Live Search ── */
+    .live-search-wrapper {
+        position: relative; display: flex; align-items: center;
+        background: rgba(8,10,15,0.7); border: 1px solid var(--border);
+        border-radius: var(--radius-sm); padding: 0 1rem;
+        transition: border-color 200ms;
+    }
+    .live-search-wrapper:focus-within { border-color: var(--gold-dim); box-shadow: 0 0 0 2px rgba(196,160,80,0.15); }
+    .live-search-icon { font-size: 1rem; margin-right: .5rem; opacity: .6; flex-shrink:0; }
+    .live-search-input {
+        flex: 1; background: transparent; border: none; outline: none;
+        color: var(--platinum); font-family: var(--font-ui); font-size: .92rem;
+        padding: .75rem 0;
+    }
+    .live-search-input::placeholder { color: var(--silver); opacity: .5; }
+    .live-search-clear {
+        background: none; border: none; cursor: pointer; color: var(--silver);
+        font-size: .85rem; padding: .25rem; line-height:1; opacity:.6; transition: opacity 150ms;
+    }
+    .live-search-clear:hover { opacity: 1; color: var(--gold); }
+
+    /* ── Persona Cards Grid ── */
+    .persona-cards-grid { display: flex; flex-direction: column; gap: .55rem; }
+    .persona-card {
+        display: flex; align-items: center; gap: 1rem;
+        padding: .85rem 1rem; border-radius: var(--radius-sm);
+        background: rgba(8,10,15,0.5); border: 1px solid var(--border);
+        cursor: pointer; transition: all 200ms; position: relative;
+    }
+    .persona-card:hover { border-color: var(--gold-dim); background: rgba(196,160,80,0.05); transform: translateX(2px); }
+    .persona-card-selected { border-color: var(--gold) !important; background: rgba(196,160,80,0.1) !important; box-shadow: 0 0 12px rgba(196,160,80,0.2); }
+    .persona-card-avatar {
+        width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+        background: linear-gradient(135deg, var(--gold-dim), rgba(196,160,80,0.3));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.2rem; font-weight: 700; color: var(--gold);
+        border: 1px solid var(--gold-dim);
+    }
+    .persona-card-body { flex: 1; }
+    .persona-card-name { font-weight: 600; color: var(--platinum); font-size: .92rem; }
+    .persona-card-id { font-size: .78rem; color: var(--silver); margin-top: .1rem; }
+    .persona-card-check {
+        width: 24px; height: 24px; border-radius: 50%;
+        background: var(--gold); color: #000; font-size: .8rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center; flex-shrink:0;
+    }
+</style>

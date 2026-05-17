@@ -1,0 +1,32 @@
+@inject NotificationService Notifications
+
+<div class="toast-stack">
+    @foreach (var item in items.Take(3))
+    {
+        <div class="toast-item @item.Tone">
+            <strong>@item.Message</strong>
+            <span>@item.Timestamp:HH:mm</span>
+        </div>
+    }
+</div>
+
+@code {
+    private NotificationEntry[] items = Array.Empty<NotificationEntry>();
+
+    protected override void OnInitialized()
+    {
+        items = Notifications.GetAll();
+        Notifications.OnChanged += HandleChanged;
+    }
+
+    private void HandleChanged()
+    {
+        items = Notifications.GetAll();
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Notifications.OnChanged -= HandleChanged;
+    }
+}

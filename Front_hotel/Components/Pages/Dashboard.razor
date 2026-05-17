@@ -1,0 +1,216 @@
+@page "/"
+@inject HabitacionService HabitacionService
+@inject ReservaService    ReservaService
+@inject FacturaService    FacturaService
+@inject PersonaService    PersonaService
+@inject IGestionHotel     HotelProxy
+
+<PageTitle>Dashboard — Hotel Obsidian</PageTitle>
+
+<!-- Hero -->
+<div class="dash-hero anim-fade-up">
+    <div>
+        <h1 class="dash-greeting font-display">@_saludo, <span class="gold-text">Grand Hotel Obsidian</span></h1>
+        <p class="page-subtitle">@DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy", new System.Globalization.CultureInfo("es-CO"))</p>
+    </div>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/reservas/nueva"
+               StartIcon="@Icons.Material.Filled.Add" Class="obs-button-glow" aria-label="Nueva reserva">
+        Nueva Reserva
+    </MudButton>
+</div>
+
+<!-- Art-déco separator -->
+<div class="artdeco-sep"></div>
+
+<!-- KPI Grid -->
+<div class="kpi-grid">
+    <div class="kpi-card anim-fade-up" style="animation-delay:.05s">
+        <div class="kpi-label">Total Habitaciones</div>
+        <div class="kpi-value">@_habitaciones.Length</div>
+        <div class="kpi-icon">🏨</div>
+    </div>
+    <div class="kpi-card anim-fade-up" style="animation-delay:.10s">
+        <div class="kpi-label">Reservas Activas</div>
+        <div class="kpi-value kpi-sapphire">@_reservas.Length</div>
+        <div class="kpi-icon">📋</div>
+    </div>
+    <div class="kpi-card anim-fade-up" style="animation-delay:.15s">
+        <div class="kpi-label">Facturas Emitidas</div>
+        <div class="kpi-value kpi-amethyst">@_facturas.Length</div>
+        <div class="kpi-icon">🧾</div>
+    </div>
+    <div class="kpi-card anim-fade-up" style="animation-delay:.20s">
+        <div class="kpi-label">Personas Registradas</div>
+        <div class="kpi-value kpi-emerald">@_personas.Length</div>
+        <div class="kpi-icon">👥</div>
+    </div>
+    <div class="kpi-card anim-fade-up" style="animation-delay:.25s">
+        <div class="kpi-label">Ingresos Estimados</div>
+        <div class="kpi-value" style="font-size:1.8rem;">@_ingresos.ToString("C0", _col)</div>
+        <div class="kpi-icon">💰</div>
+    </div>
+    <div class="kpi-card anim-fade-up" style="animation-delay:.30s">
+        <div class="kpi-label">Tipos de Habitación</div>
+        <div class="kpi-value kpi-gold">@_tipos</div>
+        <div class="kpi-icon">🔑</div>
+    </div>
+</div>
+
+<!-- Floor map + right panel -->
+<MudGrid GutterSize="3" Class="anim-fade-up" Style="animation-delay:.35s">
+    <!-- Mapa de pisos -->
+    <MudItem xs="12" md="7">
+        <div class="glass-card">
+            <div class="glass-card-inner">
+                <div class="section-eyebrow">Mapa de Pisos</div>
+                <div class="floor-map">
+                    @foreach (var piso in _pisos)
+                    {
+                        <div class="floor-row">
+                            <span class="floor-label">Piso @piso.Key</span>
+                            @foreach (var hab in piso.Value)
+                            {
+                                var tipo    = hab.GetType().Name;
+                                var clase   = "hab-disponible";
+                                var tooltip = $"{tipo} · ${hab.GetCostoNoche():N0}/noche";
+                                <MudTooltip Text="@tooltip" Arrow="true">
+                                    <div class="hab-cell @clase" @onclick="@(() => VerHabitacion(hab))">
+                                        <span class="hab-num">@hab.GetNumHab()</span>
+                                        <span class="hab-tipo">@tipo[..Math.Min(3,tipo.Length)]</span>
+                                    </div>
+                                </MudTooltip>
+                            }
+                        </div>
+                    }
+                    @if (!_pisos.Any())
+                    {
+                        <p class="font-ui" style="color:var(--silver);font-size:.85rem;">Sin habitaciones registradas.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </MudItem>
+
+    <!-- Panel derecho -->
+    <MudItem xs="12" md="5">
+        <MudStack Spacing="3">
+            <!-- Últimas reservas -->
+            <div class="glass-card">
+                <div class="glass-card-inner">
+                    <div class="section-eyebrow">Últimas Reservas</div>
+                    @if (!_reservas.Any())
+                    {
+                        <p class="font-ui" style="color:var(--silver);font-size:.85rem;">Sin reservas activas.</p>
+                    }
+                    @foreach (var r in _reservas.TakeLast(4).Reverse())
+                    {
+                        <div class="reservation-row">
+                            <div class="res-avatar">@r.GetPersona().GetNombre()[0]</div>
+                            <div class="res-info">
+                                <div class="res-nombre">@r.GetPersona().GetNombre()</div>
+                                <div class="res-fechas font-mono">
+                                    @r.GetFechaEntrada().ToString("dd/MM") → @r.GetFechaSalida().ToString("dd/MM")
+                                </div>
+                            </div>
+                            <div class="res-tipo">@r.GetHabitacion().GetType().Name</div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Resumen por persona -->
+            <div class="glass-card">
+                <div class="glass-card-inner">
+                    <div class="section-eyebrow">Resumen por Persona</div>
+                    <MudExpansionPanels>
+                        @foreach (var kv in _resumen)
+                        {
+                            <MudExpansionPanel Text="@($"{kv.Key} ({kv.Value.Count} reservas)")">
+                                @foreach (var res in kv.Value)
+                                {
+                                    <div class="preview-row">
+                                        <span class="preview-label font-mono">@res.GetHabitacion().GetType().Name</span>
+                                        <span class="preview-value">@res.GetFechaEntrada().ToString("dd/MM") → @res.GetFechaSalida().ToString("dd/MM")</span>
+                                    </div>
+                                }
+                            </MudExpansionPanel>
+                        }
+                    </MudExpansionPanels>
+                </div>
+            </div>
+        </MudStack>
+    </MudItem>
+</MudGrid>
+
+@code {
+    /// <summary>
+    /// Inyecta: HabitacionService, ReservaService, FacturaService, PersonaService, IGestionHotel (HotelProxy).
+    /// Muestra KPIs reales, mapa de pisos agrupado y resumen de reservas por persona (ReservaService.ResumenPorPersona).
+    /// </summary>
+    private Habitacion[]  _habitaciones = Array.Empty<Habitacion>();
+    private Reserva[]     _reservas     = Array.Empty<Reserva>();
+    private Factura[]     _facturas     = Array.Empty<Factura>();
+    private Persona[]     _personas     = Array.Empty<Persona>();
+    private decimal       _ingresos;
+    private int           _tipos;
+    private string        _saludo = "Bienvenido";
+    private Dictionary<int, List<Habitacion>> _pisos = new();
+    private Dictionary<string, List<Reserva>> _resumen = new();
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+    [Inject] private NavigationManager Nav { get; set; } = default!;
+
+    protected override void OnInitialized()
+    {
+        _habitaciones = HabitacionService.ObtenerTodos();
+        _reservas     = ReservaService.ObtenerTodas();
+        _facturas     = FacturaService.ObtenerTodas();
+        _personas     = PersonaService.ObtenerTodos();
+
+        // KPIs derivados
+        _ingresos = _facturas.Sum(f => f.calcularTotal());
+        _tipos    = _habitaciones.Select(h => h.GetType().Name).Distinct().Count();
+        _saludo   = DateTime.Now.Hour switch { < 12 => "Buenos días", < 18 => "Buenas tardes", _ => "Buenas noches" };
+
+        // Agrupar habitaciones por piso (extraer dígito inicial del num_hab)
+        foreach (var hab in _habitaciones)
+        {
+            int piso = int.TryParse(hab.GetNumHab().Length > 0 ? hab.GetNumHab()[..1] : "0", out var p) ? p : 0;
+            if (!_pisos.ContainsKey(piso)) _pisos[piso] = new();
+            _pisos[piso].Add(hab);
+        }
+
+        _resumen = ReservaService.ResumenPorPersona();
+    }
+
+    private void VerHabitacion(Habitacion hab) => Nav.NavigateTo($"/habitaciones");
+}
+
+<style>
+    .dash-hero {
+        display: flex; align-items: flex-end; justify-content: space-between;
+        margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;
+    }
+    .dash-greeting { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; color: var(--platinum); line-height: 1.1; }
+    .gold-text { color: var(--gold); }
+    .artdeco-sep {
+        height: 1px; margin: 0 0 2rem;
+        background: linear-gradient(90deg, transparent 0%, var(--gold-dim) 30%, var(--gold) 50%, var(--gold-dim) 70%, transparent 100%);
+        opacity: .35;
+    }
+    .kpi-amethyst { color: var(--amethyst); }
+    .kpi-icon { font-size: 1.4rem; margin-top: .5rem; opacity: .6; }
+    .reservation-row {
+        display: flex; align-items: center; gap: .75rem;
+        padding: .6rem 0; border-bottom: 1px solid var(--border);
+    }
+    .reservation-row:last-child { border-bottom: none; }
+    .res-avatar {
+        width: 32px; height: 32px; border-radius: 50%;
+        background: rgba(201,169,110,0.18); color: var(--gold);
+        display: flex; align-items: center; justify-content: center;
+        font-weight: 700; font-size: .9rem; flex-shrink: 0;
+    }
+    .res-nombre  { font-size: .88rem; font-weight: 500; color: var(--platinum); }
+    .res-fechas  { font-size: .72rem; color: var(--silver); }
+    .res-tipo    { font-size: .72rem; color: var(--gold-dim); margin-left: auto; white-space: nowrap; }
+</style>

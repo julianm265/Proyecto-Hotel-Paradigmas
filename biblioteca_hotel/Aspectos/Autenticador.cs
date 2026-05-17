@@ -1,0 +1,45 @@
+namespace biblioteca_hotel.Aspectos
+{
+    public class Autenticador
+    {
+        protected string[] l_usuarios_autorizados;
+
+        public Autenticador()
+        {
+            l_usuarios_autorizados = new string[] { "admin", "recepcion", "oficina" };
+        }
+
+        public string pointcut_acceder()
+        {
+            return "Pointcut: acceder(Recepcion) | acceder(Oficina)";
+        }
+
+        public void verificar_acceso(string usuario, string contraseña)
+        {
+            bool acceso = false;
+            foreach (var user in l_usuarios_autorizados)
+            {
+                if (user == usuario && !string.IsNullOrEmpty(contraseña))
+                {
+                    acceso = true;
+                    break;
+                }
+            }
+
+            if (!acceso)
+            {
+                denegar_acceso();
+            }
+        }
+
+        protected void denegar_acceso()
+        {
+            System.Diagnostics.Debug.WriteLine("Acceso denegado");
+        }
+
+        public string definir_puntos()
+        {
+            return "Pointcut: gestionar_reserva() | procesar_factura()";
+        }
+    }
+}

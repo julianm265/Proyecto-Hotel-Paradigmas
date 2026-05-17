@@ -1,0 +1,73 @@
+@page "/personas/nueva"
+@inject PersonaService PersonaService
+@inject ISnackbar Snackbar
+@inject biblioteca_hotel.Aspectos.Validador Validador
+
+<PageTitle>Nueva persona</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Nueva persona</h2>
+        <p class="page-subtitle">Registro con validación de documento y teléfono.</p>
+    </div>
+</div>
+
+<MudPaper Class="card">
+    <MudStack Spacing="2">
+        <MudSelect T="string" Label="Tipo persona" @bind-Value="tipoPersona" Variant="Variant.Outlined" Margin="Margin.Dense">
+            <MudSelectItem Value="@("Cliente")">Cliente</MudSelectItem>
+            <MudSelectItem Value="@("Huesped")">Huésped</MudSelectItem>
+        </MudSelect>
+        <MudTextField Label="Nombre" @bind-Value="nombre" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <MudSelect T="string" Label="Tipo ID" @bind-Value="tipoId" Variant="Variant.Outlined" Margin="Margin.Dense">
+            <MudSelectItem Value="@("DNI")">DNI</MudSelectItem>
+            <MudSelectItem Value="@("PASAPORTE")">Pasaporte</MudSelectItem>
+            <MudSelectItem Value="@("CE")">CE</MudSelectItem>
+            <MudSelectItem Value="@("NIT")">NIT</MudSelectItem>
+        </MudSelect>
+        <MudTextField Label="Documento" @bind-Value="documento" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <MudTextField Label="Teléfono" @bind-Value="telefono" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        @if (tipoPersona == "Cliente")
+        {
+            <MudTextField Label="Código" @bind-Value="codigo" Variant="Variant.Outlined" Margin="Margin.Dense" />
+            <MudTextField Label="Descuento" @bind-Value="descuento" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        }
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Registrar">Registrar</MudButton>
+    </MudStack>
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa PersonaService y Validador para registrar personas con reglas de negocio.
+    /// </summary>
+    private string tipoPersona = "Cliente";
+    private string nombre = string.Empty;
+    private string tipoId = "DNI";
+    private string documento = string.Empty;
+    private string telefono = string.Empty;
+    private int codigo = 1000;
+    private float descuento = 0.05f;
+
+    private void Registrar()
+    {
+        if (!System.Text.RegularExpressions.Regex.IsMatch(documento, Regla_negocio.regex_id))
+        {
+            Snackbar.Add("Documento inválido.", Severity.Error);
+            return;
+        }
+
+        if (!System.Text.RegularExpressions.Regex.IsMatch(telefono, Regla_negocio.regex_telefono))
+        {
+            Snackbar.Add("Teléfono inválido.", Severity.Error);
+            return;
+        }
+
+        Persona persona = tipoPersona == "Cliente"
+            ? new Cliente(nombre, tipoId, documento, telefono, codigo, descuento)
+            : new Huesped(nombre, tipoId, documento, telefono);
+
+        PersonaService.Agregar(persona);
+        Validador.Advice_ValidarYPersistir(persona);
+        Snackbar.Add("Persona registrada.", Severity.Success);
+    }
+}

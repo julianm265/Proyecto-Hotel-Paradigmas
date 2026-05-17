@@ -1,0 +1,78 @@
+@page "/habitaciones"
+@inject HabitacionService HabitacionService
+@inject NavigationManager Navigation
+
+<PageTitle>Habitaciones</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Habitaciones</h2>
+        <p class="page-subtitle">Inventario y disponibilidad actual.</p>
+    </div>
+</div>
+
+<MudPaper Class="card">
+    <MudStack Spacing="2">
+        <MudSelect T="string" Label="Filtrar por tipo" @bind-Value="filtroTipo" Variant="Variant.Outlined" Margin="Margin.Dense">
+            <MudSelectItem Value="@("Todas")">Todas</MudSelectItem>
+            <MudSelectItem Value="@("Sencilla")">Sencilla</MudSelectItem>
+            <MudSelectItem Value="@("Ejecutiva")">Ejecutiva</MudSelectItem>
+            <MudSelectItem Value="@("Suite")">Suite</MudSelectItem>
+        </MudSelect>
+
+        <MudDataGrid Items="habitacionesFiltradas" Dense="true" Hover="true">
+            <Columns>
+                <PropertyColumn Property="h => h.GetNumHab()" Title="Número" />
+                <PropertyColumn Property="h => h.GetType().Name" Title="Tipo" />
+                <PropertyColumn Property="h => GetPiso(h)" Title="Piso" />
+                <PropertyColumn Property="h => h.GetCostoNoche()" Title="Costo/noche" />
+                <TemplateColumn Title="Camas">
+                    <CellTemplate>
+                        @context.Item.GetCamas().Length
+                    </CellTemplate>
+                </TemplateColumn>
+                <TemplateColumn Title="Acciones">
+                    <CellTemplate>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => VerDetalle(context.Item)">Ver detalle</MudButton>
+                        <MudButton Variant="Variant.Text" Color="Color.Secondary" OnClick="() => AsignarMinibar(context.Item)">Minibar</MudButton>
+                    </CellTemplate>
+                </TemplateColumn>
+            </Columns>
+        </MudDataGrid>
+    </MudStack>
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa HabitacionService para listar habitaciones y navegar a detalle/minibar.
+    /// </summary>
+    private Habitacion[] habitaciones = Array.Empty<Habitacion>();
+    private string filtroTipo = "Todas";
+
+    private IEnumerable<Habitacion> habitacionesFiltradas => string.Equals(filtroTipo, "Todas", StringComparison.OrdinalIgnoreCase)
+        ? habitaciones
+        : habitaciones.Where(h => h.GetType().Name.Equals(filtroTipo, StringComparison.OrdinalIgnoreCase));
+
+    protected override void OnInitialized()
+    {
+        habitaciones = HabitacionService.ObtenerTodos();
+    }
+
+    private string GetPiso(Habitacion habitacion)
+    {
+        var num = habitacion.GetNumHab();
+        return string.IsNullOrWhiteSpace(num) ? "-" : num.Substring(0, 1);
+    }
+
+    private void VerDetalle(Habitacion habitacion)
+    {
+        var index = Array.IndexOf(habitaciones, habitacion);
+        Navigation.NavigateTo($"habitaciones/detalle/{index}");
+    }
+
+    private void AsignarMinibar(Habitacion habitacion)
+    {
+        var index = Array.IndexOf(habitaciones, habitacion);
+        Navigation.NavigateTo($"habitaciones/minibar/{index}");
+    }
+}
