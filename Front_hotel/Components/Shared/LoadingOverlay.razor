@@ -1,0 +1,13 @@
+@if (Visible)
+{
+    <div class="loading-overlay">
+        <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+    </div>
+}
+
+@code {
+    /// <summary>
+    /// Muestra un overlay de carga con MudProgressCircular.
+    /// </summary>
+    [Parameter] public bool Visible { get; set; }
+}

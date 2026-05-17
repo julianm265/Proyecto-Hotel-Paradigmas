@@ -1,0 +1,84 @@
+@inject NavigationManager Navigation
+
+<div class="nav-shell">
+    <!-- Brand -->
+    <div class="nav-brand">
+        <div class="brand-icon">🏨</div>
+        <div class="brand-text" style="@(DrawerOpen ? "opacity:1" : "opacity:0;width:0;overflow:hidden")">
+            <div class="brand-name font-display">Hotel Obsidian</div>
+            <div class="brand-tagline font-ui">Grand Palace System</div>
+        </div>
+    </div>
+
+    <!-- Separador art-déco -->
+    <div class="nav-divider"></div>
+
+    <!-- Nav links -->
+    <MudNavMenu Class="nav-menu">
+        <MudNavLink Href=""       Match="NavLinkMatch.All"          Icon="@Icons.Material.Filled.Dashboard"    ActiveClass="nav-active" aria-label="Dashboard">Dashboard</MudNavLink>
+        <MudNavLink Href="habitaciones"                              Icon="@Icons.Material.Filled.Bed"          ActiveClass="nav-active" aria-label="Habitaciones">Habitaciones</MudNavLink>
+        <MudNavLink Href="habitaciones/gestion"                      Icon="@Icons.Material.Filled.AddHome"      ActiveClass="nav-active" aria-label="Gestión de Habitaciones">Gestión de Hab.</MudNavLink>
+        <MudNavLink Href="reservas"                                  Icon="@Icons.Material.Filled.EventNote"    ActiveClass="nav-active" aria-label="Reservas">Reservas</MudNavLink>
+        <MudNavLink Href="checkin"                                   Icon="@Icons.Material.Filled.Login"        ActiveClass="nav-active" aria-label="Check-In">Check-In</MudNavLink>
+        <MudNavLink Href="checkout"                                  Icon="@Icons.Material.Filled.Logout"       ActiveClass="nav-active" aria-label="Check-Out">Check-Out</MudNavLink>
+        <MudNavLink Href="personas"                                  Icon="@Icons.Material.Filled.People"       ActiveClass="nav-active" aria-label="Personas">Personas</MudNavLink>
+        <MudNavLink Href="facturacion"                               Icon="@Icons.Material.Filled.ReceiptLong"  ActiveClass="nav-active" aria-label="Facturación">Facturación</MudNavLink>
+        <div class="nav-group-label">SERVICIOS</div>
+        <MudNavLink Href="servicios/restaurante"                     Icon="@Icons.Material.Filled.Restaurant"   ActiveClass="nav-active" aria-label="Restaurante">Restaurante</MudNavLink>
+        <MudNavLink Href="servicios/lavanderia"                      Icon="@Icons.Material.Filled.LocalLaundryService" ActiveClass="nav-active" aria-label="Lavandería">Lavandería</MudNavLink>
+        <MudNavLink Href="servicios/minibar"                         Icon="@Icons.Material.Filled.WineBar"      ActiveClass="nav-active" aria-label="Minibar">Minibar</MudNavLink>
+        <div class="nav-group-label">SISTEMA</div>
+        <MudNavLink Href="importacion"                               Icon="@Icons.Material.Filled.FileUpload"   ActiveClass="nav-active" aria-label="Importación">Importación</MudNavLink>
+        <MudNavLink Href="configuracion"                             Icon="@Icons.Material.Filled.Gavel"        ActiveClass="nav-active" aria-label="Reglas de negocio">Reglas de Negocio</MudNavLink>
+    </MudNavMenu>
+
+    <div class="nav-footer">
+        <div class="font-mono" style="font-size:.65rem;color:var(--gold-dim);opacity:.6;">v1.0 · .NET 8</div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public bool DrawerOpen { get; set; } = true;
+}
+
+<style>
+    .nav-shell {
+        display: flex; flex-direction: column;
+        height: 100%; padding: 1.5rem 1rem 1rem;
+        background: rgba(8,10,15,0.95);
+    }
+    .nav-brand {
+        display: flex; align-items: center; gap: .85rem;
+        padding-bottom: 1.25rem;
+    }
+    .brand-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .brand-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem; font-weight: 600;
+        color: var(--platinum); white-space: nowrap;
+    }
+    .brand-tagline {
+        font-size: .68rem; color: var(--gold-dim);
+        letter-spacing: .06em; text-transform: uppercase;
+    }
+    .nav-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+        opacity: .3; margin-bottom: 1rem;
+    }
+    .nav-group-label {
+        font-size: .6rem; font-weight: 700;
+        letter-spacing: .12em; text-transform: uppercase;
+        color: var(--gold-dim); opacity: .6;
+        padding: .85rem .75rem .3rem;
+    }
+    .nav-menu { flex: 1; }
+    .mud-nav-link { transition: all 200ms; border-radius: 8px !important; margin-bottom: 2px; }
+    .mud-nav-link.nav-active {
+        background: rgba(201,169,110,0.13) !important;
+        color: var(--gold) !important;
+        border-left: 2px solid var(--gold) !important;
+    }
+    .mud-nav-link:hover { background: rgba(201,169,110,0.07) !important; }
+    .nav-footer { margin-top: auto; padding-top: 1rem; text-align: center; }
+</style>

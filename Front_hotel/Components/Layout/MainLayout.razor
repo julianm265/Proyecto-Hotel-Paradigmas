@@ -1,0 +1,141 @@
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+
+<MudThemeProvider Theme="@_theme" IsDarkMode="true" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout Class="hotel-layout">
+    <!-- Sidebar -->
+    <MudDrawer @bind-Open="_drawerOpen"
+               Elevation="0"
+               Variant="DrawerVariant.Responsive"
+               Class="hotel-drawer">
+        <NavMenu DrawerOpen="_drawerOpen" />
+    </MudDrawer>
+
+    <!-- Top AppBar -->
+    <MudMainContent>
+        <MudAppBar Elevation="0" Class="hotel-appbar" Dense="true">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                           Color="Color.Inherit"
+                           Edge="Edge.Start"
+                           OnClick="ToggleDrawer"
+                           aria-label="Alternar menú lateral" />
+            <div class="appbar-title font-display" style="font-size:1.15rem;letter-spacing:.04em;">
+                Hotel <span style="color:var(--gold);">Obsidian</span>
+            </div>
+            <MudSpacer />
+            <div class="appbar-clock font-mono" id="clock">@_hora</div>
+            <MudIconButton Icon="@Icons.Material.Filled.Add"
+                           Color="Color.Primary"
+                           Href="/reservas/nueva"
+                           Title="Nueva reserva"
+                           aria-label="Nueva reserva" />
+        </MudAppBar>
+
+        <div class="page-container">
+            <ErrorBoundary>
+                <ChildContent>@Body</ChildContent>
+                <ErrorContent Context="ex">
+                    <div class="glass-card" style="padding:2rem;text-align:center;max-width:500px;margin:4rem auto;">
+                        <div style="font-size:2rem;margin-bottom:1rem;">⚠️</div>
+                        <p style="color:var(--ruby);font-weight:600;margin-bottom:.5rem;">Error de renderizado</p>
+                        <p style="color:var(--silver);font-size:.85rem;">@ex.Message</p>
+                        <MudButton Variant="Variant.Outlined" Color="Color.Primary"
+                                   OnClick="@(() => Navigation.NavigateTo("/", true))"
+                                   Class="mt-4">Volver al Dashboard</MudButton>
+                    </div>
+                </ErrorContent>
+            </ErrorBoundary>
+        </div>
+    </MudMainContent>
+</MudLayout>
+
+<NotificationHub />
+
+<div id="blazor-error-ui" data-nosnippet>
+    Ocurrió un error inesperado.
+    <a href="." class="reload">Recargar</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    private bool _drawerOpen = true;
+    private string _hora = string.Empty;
+    private System.Timers.Timer? _timer;
+
+    protected override void OnInitialized()
+    {
+        _hora = DateTime.Now.ToString("HH:mm:ss");
+        _timer = new System.Timers.Timer(1000);
+        _timer.Elapsed += async (_, _) =>
+        {
+            _hora = DateTime.Now.ToString("HH:mm:ss");
+            await InvokeAsync(StateHasChanged);
+        };
+        _timer.Start();
+    }
+
+    private void ToggleDrawer() => _drawerOpen = !_drawerOpen;
+
+    public void Dispose() => _timer?.Dispose();
+
+    private MudTheme _theme = new()
+    {
+        PaletteDark = new PaletteDark
+        {
+            Black             = "#080A0F",
+            Background        = "#0F1118",
+            BackgroundGray    = "#161B26",
+            Surface           = "rgba(22,27,38,0.72)",
+            DrawerBackground  = "#0F1118",
+            DrawerText        = "#D4D8E2",
+            DrawerIcon        = "#C9A96E",
+            AppbarBackground  = "rgba(8,10,15,0.85)",
+            AppbarText        = "#D4D8E2",
+            Primary           = "#C9A96E",
+            PrimaryContrastText = "#080A0F",
+            Secondary         = "#3D7EBF",
+            Tertiary          = "#8B5CF6",
+            Success           = "#2DBF8A",
+            Error             = "#E8445A",
+            Warning           = "#F0A030",
+            Info              = "#3D7EBF",
+            TextPrimary       = "#D4D8E2",
+            TextSecondary     = "#8A90A0",
+            TextDisabled      = "rgba(138,144,160,0.45)",
+            ActionDefault     = "#D4D8E2",
+            Divider           = "#1E2535",
+            TableLines        = "#1E2535",
+            LinesDefault      = "#1E2535",
+            LinesInputs       = "#2A3245",
+            OverlayDark       = "rgba(8,10,15,0.85)",
+        },
+        Typography = new Typography
+        {
+            Default = new DefaultTypography { FontFamily = new[] { "Outfit", "sans-serif" } },
+            H1 = new H1Typography { FontFamily = new[] { "Cormorant Garamond", "serif" }, FontWeight = "600" },
+            H2 = new H2Typography { FontFamily = new[] { "Cormorant Garamond", "serif" }, FontWeight = "600" },
+            H3 = new H3Typography { FontFamily = new[] { "Cormorant Garamond", "serif" }, FontWeight = "500" },
+            H4 = new H4Typography { FontFamily = new[] { "Cormorant Garamond", "serif" }, FontWeight = "500" },
+            H5 = new H5Typography { FontFamily = new[] { "Outfit", "sans-serif" }, FontWeight = "600" },
+            H6 = new H6Typography { FontFamily = new[] { "Outfit", "sans-serif" }, FontWeight = "600" },
+            Button = new ButtonTypography { FontFamily = new[] { "Outfit", "sans-serif" }, FontWeight = "600", TextTransform = "none" },
+            Caption = new CaptionTypography { FontFamily = new[] { "Outfit", "sans-serif" } },
+        },
+        LayoutProperties = new LayoutProperties
+        {
+            DefaultBorderRadius = "10px",
+        }
+    };
+}
+
+<style>
+    .hotel-layout  { background: var(--void); min-height: 100vh; }
+    .hotel-drawer  { background: rgba(8,10,15,0.95) !important; border-right: 1px solid var(--border) !important; }
+    .hotel-appbar  { background: rgba(8,10,15,0.8) !important; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border) !important; }
+    .appbar-title  { color: var(--platinum); font-size: 1.1rem; letter-spacing: .04em; }
+    .appbar-clock  { font-size: .8rem; color: var(--gold-dim); margin-right: 1rem; opacity: .8; }
+</style>

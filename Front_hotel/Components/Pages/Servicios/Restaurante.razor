@@ -1,0 +1,350 @@
+@page "/servicios/restaurante"
+@inject CartaService CartaService
+@inject PersonaService PersonaService
+@inject FacturaService FacturaService
+@inject ISnackbar Snackbar
+@inject biblioteca_hotel.Modelos.Servicios.Restaurante RestauranteSvc
+
+<PageTitle>Restaurante — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Restaurante</h2>
+        <p class="page-subtitle">Carta del hotel y servicio a habitaciones.</p>
+    </div>
+</div>
+
+<MudGrid GutterSize="3">
+    <!-- Carta -->
+    <MudItem xs="12" md="7">
+        <div class="glass-card">
+            <div class="glass-card-inner">
+                <div class="section-eyebrow">Carta del Día</div>
+                <div class="menu-grid">
+                    <!-- Desayuno -->
+                    <div class="menu-item menu-selectable @(_tipoSeleccionado == TipoComida.Desayuno ? "menu-item-selected" : "")"
+                         @onclick="@(() => SeleccionarTipo(TipoComida.Desayuno))"
+                         id="btn-desayuno">
+                        <div class="menu-icon">🌅</div>
+                        <div class="menu-info">
+                            <div class="menu-nombre">Desayuno Continental</div>
+                            <div class="menu-desc">Selección de panadería, frutas y bebidas calientes</div>
+                        </div>
+                        <div class="menu-precio font-mono">@RestauranteSvc.GetCostoDesayuno().ToString("C0", _col)</div>
+                        @if (_tipoSeleccionado == TipoComida.Desayuno)
+                        {
+                            <div class="menu-check">✓</div>
+                        }
+                    </div>
+                    <!-- Almuerzo -->
+                    <div class="menu-item menu-selectable @(_tipoSeleccionado == TipoComida.Almuerzo ? "menu-item-selected" : "")"
+                         @onclick="@(() => SeleccionarTipo(TipoComida.Almuerzo))"
+                         id="btn-almuerzo">
+                        <div class="menu-icon">☀️</div>
+                        <div class="menu-info">
+                            <div class="menu-nombre">Almuerzo Ejecutivo</div>
+                            <div class="menu-desc">Plato principal con sopa, ensalada y postre</div>
+                        </div>
+                        <div class="menu-precio font-mono">@RestauranteSvc.GetCostoAlmuerzo().ToString("C0", _col)</div>
+                        @if (_tipoSeleccionado == TipoComida.Almuerzo)
+                        {
+                            <div class="menu-check">✓</div>
+                        }
+                    </div>
+                    <!-- Cena -->
+                    <div class="menu-item menu-selectable @(_tipoSeleccionado == TipoComida.Cena ? "menu-item-selected" : "")"
+                         @onclick="@(() => SeleccionarTipo(TipoComida.Cena))"
+                         id="btn-cena">
+                        <div class="menu-icon">🌙</div>
+                        <div class="menu-info">
+                            <div class="menu-nombre">Cena Gourmet</div>
+                            <div class="menu-desc">Menú de tres tiempos con maridaje opcional</div>
+                        </div>
+                        <div class="menu-precio font-mono">@RestauranteSvc.GetCostoCena().ToString("C0", _col)</div>
+                        @if (_tipoSeleccionado == TipoComida.Cena)
+                        {
+                            <div class="menu-check">✓</div>
+                        }
+                    </div>
+                </div>
+
+                @if (_tipoSeleccionado.HasValue)
+                {
+                    <div class="menu-selection-badge mt-3">
+                        <span>Seleccionado:</span>
+                        <strong>@NombreTipo(_tipoSeleccionado.Value)</strong>
+                        — <span class="kpi-gold">@PrecioTipo(_tipoSeleccionado.Value).ToString("C0", _col)</span>
+                    </div>
+                }
+
+                <!-- Servicio a habitación -->
+                <div class="preview-divider" style="margin:1.25rem 0;"></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div>
+                        <div class="menu-nombre">Servicio a Habitación</div>
+                        <div class="menu-desc" style="font-size:.78rem;color:var(--silver);">
+                            Recargo: @biblioteca_hotel.Utilidades.ReglasNegocioServicios.recargo_serv_habitacion.ToString("C0", _col)
+                        </div>
+                    </div>
+                    <MudSwitch @bind-Value="_servicioHab" Color="Color.Warning" aria-label="Servicio a habitación" />
+                </div>
+            </div>
+        </div>
+    </MudItem>
+
+    <!-- Ordenar -->
+    <MudItem xs="12" md="5">
+        <div class="glass-card">
+            <div class="glass-card-inner">
+                <div class="section-eyebrow">Registrar Servicio</div>
+
+                <!-- Live Search huésped -->
+                <div class="live-search-wrapper">
+                    <span class="live-search-icon">👤</span>
+                    <input class="live-search-input"
+                           type="text"
+                           placeholder="Buscar huésped..."
+                           value="@_filtroPersona"
+                           @oninput="OnFiltroPersonaChanged"
+                           autocomplete="off"
+                           id="rest-search-input" />
+                    @if (!string.IsNullOrEmpty(_filtroPersona))
+                    {
+                        <button class="live-search-clear" @onclick="LimpiarBusqueda" title="Limpiar">✕</button>
+                    }
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(_filtroPersona) && _personasFiltradas.Length > 0)
+                {
+                    <div class="persona-cards-grid mt-2">
+                        @foreach (var p in _personasFiltradas.Take(4))
+                        {
+                            var isSelected = _personaSeleccionada?.GetId() == p.GetId();
+                            <div class="persona-card @(isSelected ? "persona-card-selected" : "")"
+                                 @onclick="@(() => SeleccionarPersona(p))">
+                                <div class="persona-card-avatar" style="width:36px;height:36px;font-size:1rem;">@p.GetNombre()[0]</div>
+                                <div class="persona-card-body">
+                                    <div class="persona-card-name" style="font-size:.85rem;">@p.GetNombre()</div>
+                                    <div class="persona-card-id">@p.GetId()</div>
+                                </div>
+                                @if (isSelected) { <div class="persona-card-check">✓</div> }
+                            </div>
+                        }
+                    </div>
+                }
+
+                @if (_personaSeleccionada != null)
+                {
+                    <div class="selected-persona-chip mt-3">
+                        <span>👤 @_personaSeleccionada.GetNombre()</span>
+                        <button @onclick="LimpiarBusqueda" class="live-search-clear">✕</button>
+                    </div>
+                }
+
+                @if (!_tipoSeleccionado.HasValue)
+                {
+                    <MudAlert Severity="Severity.Info" Class="mt-3" Dense="true">
+                        Selecciona Desayuno, Almuerzo o Cena en la carta.
+                    </MudAlert>
+                }
+
+                <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                           OnClick="BrindarServicio" Class="obs-button-glow mt-4"
+                           StartIcon="@Icons.Material.Filled.Restaurant"
+                           Disabled="@(_personaSeleccionada == null || !_tipoSeleccionado.HasValue)"
+                           FullWidth="true" aria-label="Registrar servicio">
+                    Registrar @(_tipoSeleccionado.HasValue ? NombreTipo(_tipoSeleccionado.Value) : "Servicio")
+                </MudButton>
+
+                @if (_servicioHab)
+                {
+                    <MudAlert Severity="Severity.Warning" Class="mt-3">
+                        Recargo de @biblioteca_hotel.Utilidades.ReglasNegocioServicios.recargo_serv_habitacion.ToString("C0", _col) aplicado.
+                    </MudAlert>
+                }
+            </div>
+        </div>
+    </MudItem>
+</MudGrid>
+
+@code {
+    /// <summary>
+    /// Servicios: CartaService, PersonaService, FacturaService, Restaurante (Iservicio_hotelero).
+    /// Reglas: ReglasNegocioServicios (precios desde constantes estáticas).
+    /// FacturaService.ActualizarConsumo(): vincula el cargo a la factura activa del huésped.
+    /// </summary>
+
+    private enum TipoComida { Desayuno, Almuerzo, Cena }
+
+    private Persona[]  _personas            = Array.Empty<Persona>();
+    private Persona[]  _personasFiltradas   = Array.Empty<Persona>();
+    private Persona?   _personaSeleccionada;
+    private string     _filtroPersona       = string.Empty;
+    private bool       _servicioHab;
+    private TipoComida? _tipoSeleccionado;
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+
+    protected override void OnInitialized()
+    {
+        _personas = PersonaService.ObtenerTodos();
+    }
+
+    private void OnFiltroPersonaChanged(ChangeEventArgs e)
+    {
+        _filtroPersona = e.Value?.ToString() ?? string.Empty;
+        _personaSeleccionada = null;
+        _personasFiltradas = string.IsNullOrWhiteSpace(_filtroPersona)
+            ? Array.Empty<Persona>()
+            : PersonaService.BuscarPorFiltro(_filtroPersona);
+    }
+
+    private void SeleccionarPersona(Persona p)
+    {
+        _personaSeleccionada = p;
+        _filtroPersona = p.GetNombre();
+        _personasFiltradas = Array.Empty<Persona>();
+    }
+
+    private void LimpiarBusqueda()
+    {
+        _filtroPersona = string.Empty;
+        _personaSeleccionada = null;
+        _personasFiltradas = Array.Empty<Persona>();
+    }
+
+    private void SeleccionarTipo(TipoComida tipo)
+    {
+        _tipoSeleccionado = _tipoSeleccionado == tipo ? null : tipo;
+    }
+
+    private string NombreTipo(TipoComida t) => t switch
+    {
+        TipoComida.Desayuno => "Desayuno Continental",
+        TipoComida.Almuerzo => "Almuerzo Ejecutivo",
+        TipoComida.Cena     => "Cena Gourmet",
+        _                   => t.ToString()
+    };
+
+    private decimal PrecioTipo(TipoComida t) => t switch
+    {
+        TipoComida.Desayuno => RestauranteSvc.GetCostoDesayuno(),
+        TipoComida.Almuerzo => RestauranteSvc.GetCostoAlmuerzo(),
+        TipoComida.Cena     => RestauranteSvc.GetCostoCena(),
+        _                   => 0
+    };
+
+    private void BrindarServicio()
+    {
+        if (_personaSeleccionada == null || !_tipoSeleccionado.HasValue) return;
+        try
+        {
+            // 1. Brindar servicio en el modelo de negocio
+            RestauranteSvc.Brindar_servicio(_personaSeleccionada);
+            if (_servicioHab) RestauranteSvc.Servicio_hab();
+
+            // 2. Vincular cargo a la factura activa (FacturaService.ActualizarConsumo)
+            var precio = PrecioTipo(_tipoSeleccionado.Value);
+            if (_servicioHab) precio += biblioteca_hotel.Utilidades.ReglasNegocioServicios.recargo_serv_habitacion;
+            var producto = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante(NombreTipo(_tipoSeleccionado.Value), precio);
+            FacturaService.ActualizarConsumo(_personaSeleccionada, producto);
+
+            Snackbar.Add($"🍽️ {NombreTipo(_tipoSeleccionado.Value)} registrado para {_personaSeleccionada.GetNombre()}.", Severity.Success);
+            _personaSeleccionada = null;
+            _filtroPersona = string.Empty;
+            _tipoSeleccionado = null;
+            _servicioHab = false;
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"✗ {ex.Message}", Severity.Error);
+        }
+    }
+}
+
+<style>
+    .menu-grid { display: flex; flex-direction: column; gap: .5rem; }
+    .menu-item {
+        display: flex; align-items: center; gap: 1rem;
+        padding: .85rem 1rem; border-radius: var(--radius-sm);
+        background: rgba(8,10,15,0.4); border: 1px solid var(--border);
+        transition: all 200ms; position: relative;
+    }
+    .menu-selectable { cursor: pointer; }
+    .menu-selectable:hover { border-color: var(--gold-dim); background: rgba(196,160,80,0.05); }
+    .menu-item-selected {
+        border-color: var(--gold) !important;
+        background: rgba(196,160,80,0.1) !important;
+        box-shadow: 0 0 10px rgba(196,160,80,0.18);
+    }
+    .menu-check {
+        width: 22px; height: 22px; border-radius: 50%;
+        background: var(--gold); color: #000; font-size: .78rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center; flex-shrink:0;
+    }
+    .menu-icon  { font-size: 1.5rem; flex-shrink: 0; }
+    .menu-nombre { font-weight: 600; font-size: .9rem; color: var(--platinum); }
+    .menu-desc   { font-size: .75rem; color: var(--silver); margin-top: .15rem; }
+    .menu-precio { color: var(--gold); font-size: .88rem; margin-left: auto; white-space: nowrap; }
+
+    .menu-selection-badge {
+        display: flex; align-items: center; gap: .5rem;
+        padding: .5rem .85rem; border-radius: var(--radius-sm);
+        background: rgba(196,160,80,0.08); border: 1px solid var(--gold-dim);
+        font-size: .82rem; color: var(--silver);
+    }
+    .menu-selection-badge strong { color: var(--platinum); }
+
+    /* Live search (shared with check-in/out) */
+    .live-search-wrapper {
+        position: relative; display: flex; align-items: center;
+        background: rgba(8,10,15,0.7); border: 1px solid var(--border);
+        border-radius: var(--radius-sm); padding: 0 1rem;
+        transition: border-color 200ms;
+    }
+    .live-search-wrapper:focus-within { border-color: var(--gold-dim); }
+    .live-search-icon { font-size: 1rem; margin-right: .5rem; opacity:.6; flex-shrink:0; }
+    .live-search-input {
+        flex: 1; background: transparent; border: none; outline: none;
+        color: var(--platinum); font-size: .9rem; padding: .7rem 0;
+    }
+    .live-search-input::placeholder { color: var(--silver); opacity: .5; }
+    .live-search-clear {
+        background: none; border: none; cursor: pointer; color: var(--silver);
+        font-size: .82rem; padding: .2rem; opacity:.6;
+    }
+    .live-search-clear:hover { opacity: 1; color: var(--gold); }
+
+    .persona-cards-grid { display: flex; flex-direction: column; gap: .4rem; }
+    .persona-card {
+        display: flex; align-items: center; gap: .75rem; padding: .65rem .85rem;
+        border-radius: var(--radius-sm); background: rgba(8,10,15,0.5);
+        border: 1px solid var(--border); cursor: pointer; transition: all 180ms;
+    }
+    .persona-card:hover { border-color: var(--gold-dim); }
+    .persona-card-selected { border-color: var(--gold) !important; background: rgba(196,160,80,0.1) !important; }
+    .persona-card-avatar {
+        width: 36px; height: 36px; border-radius: 50%; flex-shrink:0;
+        background: linear-gradient(135deg, var(--gold-dim), rgba(196,160,80,0.3));
+        display: flex; align-items: center; justify-content: center;
+        font-size:1rem; font-weight:700; color: var(--gold); border:1px solid var(--gold-dim);
+    }
+    .persona-card-body { flex:1; }
+    .persona-card-name { font-weight:600; color:var(--platinum); font-size:.85rem; }
+    .persona-card-id { font-size:.72rem; color:var(--silver); }
+    .persona-card-check {
+        width:20px; height:20px; border-radius:50%; background:var(--gold);
+        color:#000; font-size:.72rem; font-weight:700;
+        display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+
+    .selected-persona-chip {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: .45rem .85rem; border-radius: 999px;
+        background: rgba(196,160,80,0.1); border: 1px solid var(--gold-dim);
+        font-size: .82rem; color: var(--platinum);
+    }
+
+    .mt-2 { margin-top: .5rem !important; }
+    .mt-3 { margin-top: .75rem !important; }
+    .mt-4 { margin-top: 1rem !important; }
+</style>

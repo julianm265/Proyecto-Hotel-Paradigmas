@@ -1,0 +1,284 @@
+@page "/checkin"
+@inject ReservaService ReservaService
+@inject PersonaService PersonaService
+@inject biblioteca_hotel.Modelos.Gestión.Recepcion Recepcion
+@inject ISnackbar Snackbar
+
+
+<PageTitle>Check-In — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Check-In</h2>
+        <p class="page-subtitle">Registrar entrada de huéspedes.</p>
+    </div>
+</div>
+
+<div class="glass-card" style="max-width:680px;margin:0 auto;">
+    <div class="glass-card-inner">
+
+        @if (!_checkinDone)
+        {
+            <div class="section-eyebrow">Buscar Huésped</div>
+
+            <!-- Live Search Input -->
+            <div class="live-search-wrapper">
+                <span class="live-search-icon">🔍</span>
+                <input class="live-search-input"
+                       type="text"
+                       placeholder="Nombre o número de documento..."
+                       value="@_filtro"
+                       @oninput="OnFiltroChanged"
+                       autocomplete="off"
+                       id="checkin-search-input" />
+                @if (!string.IsNullOrEmpty(_filtro))
+                {
+                    <button class="live-search-clear" @onclick="LimpiarFiltro" title="Limpiar">✕</button>
+                }
+            </div>
+
+            <!-- Result Cards -->
+            @if (!string.IsNullOrWhiteSpace(_filtro))
+            {
+                @if (_personasFiltradas.Length == 0)
+                {
+                    <div class="empty-state mt-3">
+                        <span class="empty-icon">👤</span>
+                        <p>Sin resultados para <strong>"@_filtro"</strong></p>
+                    </div>
+                }
+                else
+                {
+                    <div class="persona-cards-grid mt-3">
+                        @foreach (var p in _personasFiltradas)
+                        {
+                            var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == p.GetId());
+                            var tieneReserva = reserva != null;
+                            var isSelected = _personaSeleccionada?.GetId() == p.GetId();
+                            <div class="persona-card @(isSelected ? "persona-card-selected" : "") @(tieneReserva ? "tiene-reserva" : "")"
+                                 @onclick="@(() => SeleccionarPersona(p))"
+                                 title="@(tieneReserva ? $"Reserva: {reserva!.GetHabitacion().GetType().Name} N.°{reserva.GetHabitacion().GetNumHab()}" : "Sin reserva activa")">
+                                <div class="persona-card-avatar">@p.GetNombre()[0]</div>
+                                <div class="persona-card-body">
+                                    <div class="persona-card-name">@p.GetNombre()</div>
+                                    <div class="persona-card-id font-mono">@p.GetId()</div>
+                                    <div class="persona-card-badge @(tieneReserva ? "badge-activa" : "badge-sin")">
+                                        @(tieneReserva ? $"✓ Reserva — {reserva!.GetHabitacion().GetType().Name}" : "Sin reserva")
+                                    </div>
+                                </div>
+                                @if (isSelected)
+                                {
+                                    <div class="persona-card-check">✓</div>
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            }
+
+            <!-- Preview Panel -->
+            @if (_personaSeleccionada != null)
+            {
+                var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
+
+                @if (reserva == null)
+                {
+                    <div class="empty-state mt-4" style="border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.05);">
+                        <span class="empty-icon">⚠️</span>
+                        <p>@_personaSeleccionada.GetNombre() no tiene una reserva activa.</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="checkout-preview glass-inner-panel mt-4 anim-fade-in">
+                        <div class="preview-row">
+                            <span class="preview-label">Huésped</span>
+                            <span class="preview-value">@reserva.GetPersona().GetNombre()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Documento</span>
+                            <span class="preview-value mono">@reserva.GetPersona().GetId()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Habitación</span>
+                            <span class="preview-value">@reserva.GetHabitacion().GetType().Name N.°@reserva.GetHabitacion().GetNumHab()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Entrada</span>
+                            <span class="preview-value mono">@reserva.GetFechaEntrada().ToString("dd MMM yyyy")</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Salida</span>
+                            <span class="preview-value mono">@reserva.GetFechaSalida().ToString("dd MMM yyyy")</span>
+                        </div>
+                    </div>
+
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Success"
+                               OnClick="CompletarCheckIn"
+                               Class="obs-button-glow mt-4"
+                               StartIcon="@Icons.Material.Filled.Login"
+                               FullWidth="true"
+                               aria-label="Completar Check-In">
+                        Completar Check-In para @_personaSeleccionada.GetNombre()
+                    </MudButton>
+                }
+            }
+        }
+
+        @if (_checkinDone && _ultimaReserva != null)
+        {
+            <div class="checkin-success anim-fade-up">
+                <div class="success-icon">🗝️</div>
+                <h3 class="font-display" style="font-size:1.8rem;color:var(--gold);">
+                    Bienvenido, @_ultimaReserva.GetPersona().GetNombre()
+                </h3>
+                <p class="font-ui" style="color:var(--silver);margin-top:.5rem;">
+                    @_ultimaReserva.GetHabitacion().GetType().Name N.°@_ultimaReserva.GetHabitacion().GetNumHab() lista para recibirle.
+                </p>
+                <MudButton Variant="Variant.Outlined" Color="Color.Primary"
+                           OnClick="NuevoCheckin" Class="mt-4">
+                    Nuevo Check-In
+                </MudButton>
+            </div>
+        }
+
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Servicios: ReservaService, PersonaService, Recepcion (IProceso), Autenticador (AOP).
+    /// Live Search Cards: filtra por nombre e ID en tiempo real.
+    /// </summary>
+    private Reserva[]  _todasReservas       = Array.Empty<Reserva>();
+    private Persona[]  _personasFiltradas   = Array.Empty<Persona>();
+    private Persona?   _personaSeleccionada;
+    private Reserva?   _ultimaReserva;
+    private string     _filtro = string.Empty;
+    private bool       _checkinDone;
+
+    protected override void OnInitialized()
+    {
+        _todasReservas = ReservaService.ObtenerTodas();
+    }
+
+    private void OnFiltroChanged(ChangeEventArgs e)
+    {
+        _filtro = e.Value?.ToString() ?? string.Empty;
+        _personaSeleccionada = null;
+        _personasFiltradas = string.IsNullOrWhiteSpace(_filtro)
+            ? Array.Empty<Persona>()
+            : PersonaService.BuscarPorFiltro(_filtro);
+    }
+
+    private void LimpiarFiltro()
+    {
+        _filtro = string.Empty;
+        _personasFiltradas = Array.Empty<Persona>();
+        _personaSeleccionada = null;
+    }
+
+    private void SeleccionarPersona(Persona persona)
+    {
+        _personaSeleccionada = persona;
+    }
+
+    private void CompletarCheckIn()
+    {
+        if (_personaSeleccionada == null) return;
+        var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
+        if (reserva == null) { Snackbar.Add("⚠️ No hay reserva activa para este huésped.", Severity.Warning); return; }
+
+        try
+        {
+
+            Recepcion.Check_In(_personaSeleccionada);
+            _ = new EventoCheckInCompletado(_personaSeleccionada.GetId(), reserva.GetHabitacion());
+            _ultimaReserva = reserva;
+            _checkinDone   = true;
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error: {ex.Message}", Severity.Error);
+        }
+    }
+
+    private void NuevoCheckin()
+    {
+        _checkinDone        = false;
+        _ultimaReserva      = null;
+        _personaSeleccionada = null;
+        _filtro             = string.Empty;
+        _personasFiltradas  = Array.Empty<Persona>();
+        _todasReservas      = ReservaService.ObtenerTodas();
+    }
+}
+
+<style>
+    /* ── Live Search ── */
+    .live-search-wrapper {
+        position: relative; display: flex; align-items: center;
+        background: rgba(8,10,15,0.7); border: 1px solid var(--border);
+        border-radius: var(--radius-sm); padding: 0 1rem;
+        transition: border-color 200ms;
+    }
+    .live-search-wrapper:focus-within { border-color: var(--gold-dim); box-shadow: 0 0 0 2px rgba(196,160,80,0.15); }
+    .live-search-icon { font-size: 1rem; margin-right: .5rem; opacity: .6; flex-shrink:0; }
+    .live-search-input {
+        flex: 1; background: transparent; border: none; outline: none;
+        color: var(--platinum); font-family: var(--font-ui); font-size: .92rem;
+        padding: .75rem 0;
+    }
+    .live-search-input::placeholder { color: var(--silver); opacity: .5; }
+    .live-search-clear {
+        background: none; border: none; cursor: pointer; color: var(--silver);
+        font-size: .85rem; padding: .25rem; line-height:1; opacity:.6; transition: opacity 150ms;
+    }
+    .live-search-clear:hover { opacity: 1; color: var(--gold); }
+
+    /* ── Persona Cards Grid ── */
+    .persona-cards-grid { display: flex; flex-direction: column; gap: .55rem; }
+    .persona-card {
+        display: flex; align-items: center; gap: 1rem;
+        padding: .85rem 1rem; border-radius: var(--radius-sm);
+        background: rgba(8,10,15,0.5); border: 1px solid var(--border);
+        cursor: pointer; transition: all 200ms; position: relative;
+    }
+    .persona-card:hover { border-color: var(--gold-dim); background: rgba(196,160,80,0.05); transform: translateX(2px); }
+    .persona-card-selected { border-color: var(--gold) !important; background: rgba(196,160,80,0.1) !important; box-shadow: 0 0 12px rgba(196,160,80,0.2); }
+    .tiene-reserva { border-left: 3px solid rgba(45,191,138,0.6); }
+
+    .persona-card-avatar {
+        width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+        background: linear-gradient(135deg, var(--gold-dim), rgba(196,160,80,0.3));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.2rem; font-weight: 700; color: var(--gold);
+        border: 1px solid var(--gold-dim);
+    }
+    .persona-card-body { flex: 1; }
+    .persona-card-name { font-weight: 600; color: var(--platinum); font-size: .92rem; }
+    .persona-card-id { font-size: .78rem; color: var(--silver); margin-top: .1rem; }
+    .persona-card-badge {
+        display: inline-block; margin-top: .35rem; font-size: .72rem;
+        padding: .15rem .55rem; border-radius: 999px;
+    }
+    .badge-activa { background: rgba(45,191,138,0.15); color: #2dbf8a; border: 1px solid rgba(45,191,138,0.3); }
+    .badge-sin    { background: rgba(148,163,184,0.1); color: var(--silver); border: 1px solid var(--border); }
+    .persona-card-check {
+        width: 24px; height: 24px; border-radius: 50%;
+        background: var(--gold); color: #000; font-size: .8rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center; flex-shrink:0;
+    }
+
+    /* ── Misc ── */
+    .mt-3 { margin-top: .75rem !important; }
+    .mt-4 { margin-top: 1rem !important; }
+    .checkin-success {
+        text-align: center; padding: 2.5rem 1rem;
+        border: 1px solid rgba(45,191,138,0.25);
+        border-radius: var(--radius); margin-top: 1.5rem;
+        background: rgba(45,191,138,0.06);
+    }
+    .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+</style>

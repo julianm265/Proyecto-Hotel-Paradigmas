@@ -1,0 +1,9 @@
+<MudChip T="string" Color="@Color" Variant="Variant.Filled">@Texto</MudChip>
+
+@code {
+    /// <summary>
+    /// Muestra un badge de estado con color configurable.
+    /// </summary>
+    [Parameter] public string Texto { get; set; } = string.Empty;
+    [Parameter] public Color Color { get; set; } = Color.Default;
+}

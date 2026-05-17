@@ -1,0 +1,46 @@
+namespace biblioteca_hotel.Modelos.Habitaciones
+{
+    public class Ejecutiva : Habitacion, Interfaces.Isurtidor
+    {
+        protected Core.Minibar minibar;
+
+        public Ejecutiva(decimal costo_noche, string tipo_cama)
+            : base(costo_noche)
+        {
+            minibar = new Core.Minibar(Enums.TipoMinibar.Ejecutivo);
+            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
+        }
+
+        public Ejecutiva(decimal costo_noche, string tipo_cama, string numHab)
+            : base(costo_noche)
+        {
+            num_hab = numHab;
+            minibar = new Core.Minibar(Enums.TipoMinibar.Ejecutivo);
+            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
+        }
+
+        public void LLenar(Enums.TipoMinibar tipo_habitacion)
+        {
+            minibar.LLenar(tipo_habitacion);
+        }
+
+        public void Llenar(Core.Minibar minibar)
+        {
+            this.minibar = minibar;
+        }
+
+        private Camas.Cama CrearCama(string tipo)
+        {
+            return tipo?.ToLower() switch
+            {
+                "doble" => new Camas.Doble(),
+                "semidoble" => new Camas.Semidoble(),
+                "queen" => new Camas.Queen(),
+                "king" => new Camas.King(),
+                _ => new Camas.Sencilla()
+            };
+        }
+
+        public Core.Minibar GetMinibar() => minibar;
+    }
+}

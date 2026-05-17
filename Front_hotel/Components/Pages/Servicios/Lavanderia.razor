@@ -1,0 +1,147 @@
+@page "/servicios/lavanderia"
+@inject PersonaService PersonaService
+@inject FacturaService FacturaService
+@inject ISnackbar Snackbar
+@inject biblioteca_hotel.Modelos.Servicios.Lavandera LavanderiaSvc
+
+<PageTitle>Lavandería — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Lavandería</h2>
+        <p class="page-subtitle">Servicio de lavado y planchado de prendas.</p>
+    </div>
+</div>
+
+<MudGrid GutterSize="3">
+    <MudItem xs="12" md="6">
+        <div class="glass-card">
+            <div class="glass-card-inner">
+                <div class="section-eyebrow">Configurar Servicio</div>
+
+                <MudSelect T="Persona" Label="Huésped"
+                           @bind-Value="_persona"
+                           Variant="Variant.Outlined" Margin="Margin.Dense" Class="obs-select"
+                           ToStringFunc="@(p => p == null ? "Seleccionar..." : p.GetNombre())">
+                    @foreach (var p in _personas)
+                    {
+                        <MudSelectItem Value="@p">@p.GetNombre()</MudSelectItem>
+                    }
+                </MudSelect>
+
+                <div class="lav-counter mt-4">
+                    <span class="lav-label">Prendas a lavar</span>
+                    <div class="lav-stepper">
+                        <MudIconButton Icon="@Icons.Material.Filled.Remove"
+                                       OnClick="@(() => prendas = Math.Max(0, prendas - 1))"
+                                       aria-label="Reducir prendas" />
+                        <span class="lav-count font-kpi">@prendas</span>
+                        <MudIconButton Icon="@Icons.Material.Filled.Add"
+                                       OnClick="@(() => prendas++)"
+                                       aria-label="Agregar prenda" />
+                    </div>
+                </div>
+
+                <div class="lav-toggle mt-3">
+                    <MudSwitch @bind-Value="conPlanchado" Color="Color.Info" Label="Incluir planchado" aria-label="Incluir planchado" />
+                </div>
+
+                <div class="glass-inner-panel mt-3">
+                    <div class="preview-row">
+                        <span class="preview-label">Lavado (@prendas prendas)</span>
+                        <span class="preview-value mono">@costoLavado.ToString("C0", _col)</span>
+                    </div>
+                    @if (conPlanchado && prendas > 0)
+                    {
+                        <div class="preview-row">
+                            <span class="preview-label">Planchado (@prendas prendas)</span>
+                            <span class="preview-value mono">@costoPlanchado.ToString("C0", _col)</span>
+                        </div>
+                    }
+                    <div class="preview-divider"></div>
+                    <div class="preview-row preview-total">
+                        <span class="preview-label">Total</span>
+                        <span class="preview-value kpi-gold-bright">@total.ToString("C0", _col)</span>
+                    </div>
+                </div>
+
+                <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                           OnClick="Registrar" Class="obs-button-glow mt-4"
+                           Disabled="@(_persona == null || prendas == 0)"
+                           StartIcon="@Icons.Material.Filled.LocalLaundryService"
+                           FullWidth="true" aria-label="Registrar servicio de lavandería">
+                    Registrar Servicio
+                </MudButton>
+            </div>
+        </div>
+    </MudItem>
+
+    <MudItem xs="12" md="6">
+        <div class="glass-card">
+            <div class="glass-card-inner">
+                <div class="section-eyebrow">Tarifas — Lavandería</div>
+                <div class="menu-item" style="margin-bottom:.5rem;">
+                    <div class="menu-icon">👕</div>
+                    <div class="menu-info">
+                        <div class="menu-nombre">Precio por prenda</div>
+                        <div class="menu-desc">Lavado estándar</div>
+                    </div>
+                    <div class="menu-precio font-mono">@LavanderiaSvc.GetPrecioPorPrenda().ToString("C0", _col)</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🧲</div>
+                    <div class="menu-info">
+                        <div class="menu-nombre">Planchado por prenda</div>
+                        <div class="menu-desc">Acabado profesional</div>
+                    </div>
+                    <div class="menu-precio font-mono">@LavanderiaSvc.GetPrecioPlanchada().ToString("C0", _col)</div>
+                </div>
+            </div>
+        </div>
+    </MudItem>
+</MudGrid>
+
+@code {
+    /// <summary>
+    /// Servicios: PersonaService, Lavandera (Iservicio_hotelero).
+    /// Reglas: ReglasNegocioServicios.Precio_por_prenda_lavand, precio_planchada.
+    /// </summary>
+    private Persona[]  _personas = Array.Empty<Persona>();
+    private Persona?   _persona;
+    private int        prendas;
+    private bool       conPlanchado;
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+
+    private decimal costoLavado    => prendas * LavanderiaSvc.GetPrecioPorPrenda();
+    private decimal costoPlanchado => conPlanchado ? prendas * LavanderiaSvc.GetPrecioPlanchada() : 0;
+    private decimal total         => costoLavado + costoPlanchado;
+
+    protected override void OnInitialized()
+    {
+        _personas = PersonaService.ObtenerTodos();
+    }
+
+    private void Registrar()
+    {
+        if (_persona == null || prendas == 0) return;
+        LavanderiaSvc.Brindar_servicio(_persona);
+        
+        var productoLavado = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante(
+            conPlanchado ? $"Lavandería y Planchado ({prendas} prendas)" : $"Lavandería ({prendas} prendas)", 
+            total);
+        FacturaService.ActualizarConsumo(_persona, productoLavado);
+
+        Snackbar.Add($"✓ Lavandería registrada y cargada a la factura de {_persona.GetNombre()}.", Severity.Success);
+        prendas = 0; conPlanchado = false; _persona = null;
+    }
+}
+
+<style>
+    .lav-counter { display:flex; align-items:center; justify-content:space-between; }
+    .lav-label   { color:var(--silver); font-size:.85rem; }
+    .lav-stepper { display:flex; align-items:center; gap:.75rem; }
+    .lav-count   { font-size:1.8rem; color:var(--gold); min-width:40px; text-align:center; }
+    .lav-toggle  { padding:.5rem 0; }
+    .mt-3 { margin-top:.75rem !important; }
+    .mt-4 { margin-top:1rem !important; }
+</style>

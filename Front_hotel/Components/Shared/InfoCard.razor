@@ -1,0 +1,24 @@
+@using Microsoft.AspNetCore.Components
+
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h3>@Title</h3>
+            <div class="stat-label">@Subtitle</div>
+        </div>
+        @if (!string.IsNullOrWhiteSpace(Badge))
+        {
+            <span class="badge">@Badge</span>
+        }
+    </div>
+    <div class="list-stack">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public string Subtitle { get; set; } = string.Empty;
+    [Parameter] public string? Badge { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

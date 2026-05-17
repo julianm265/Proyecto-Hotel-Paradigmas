@@ -1,0 +1,40 @@
+@page "/checkout/resumen/{Codigo}"
+@inject FacturaService FacturaService
+
+<PageTitle>Resumen factura</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Resumen de factura</h2>
+        <p class="page-subtitle">Desglose de consumos e impuestos.</p>
+    </div>
+</div>
+
+@if (factura is null)
+{
+    <MudAlert Severity="Severity.Warning">Factura no encontrada.</MudAlert>
+}
+else
+{
+    <MudPaper Class="card">
+        <MudStack Spacing="2">
+            <MudText Typo="Typo.h6">@factura.GetPersona().GetNombre()</MudText>
+            <MudText>Subtotal: @factura.CalcularSubtotal()</MudText>
+            <MudText>Impuestos: @factura.CalcularImpuestos(true)</MudText>
+            <MudText>Total: @factura.calcularTotal()</MudText>
+        </MudStack>
+    </MudPaper>
+}
+
+@code {
+    /// <summary>
+    /// Usa FacturaService para mostrar el desglose de factura.
+    /// </summary>
+    [Parameter] public string Codigo { get; set; } = string.Empty;
+    private Factura? factura;
+
+    protected override void OnInitialized()
+    {
+        factura = FacturaService.BuscarPorCodigo(Codigo);
+    }
+}

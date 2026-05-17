@@ -1,0 +1,48 @@
+@page "/facturacion"
+@inject FacturaService FacturaService
+@inject NavigationManager Navigation
+
+<PageTitle>Facturación</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Facturación</h2>
+        <p class="page-subtitle">Listado de facturas emitidas.</p>
+    </div>
+</div>
+
+<MudPaper Class="card">
+    <MudDataGrid Items="facturas" Dense="true" Hover="true">
+        <Columns>
+            <PropertyColumn Property="f => f.GetPersona().GetNombre()" Title="Cliente" />
+            <PropertyColumn Property="f => f.GetProductos().Length" Title="Productos" />
+            <TemplateColumn Title="Total">
+                <CellTemplate>@context.Item.calcularTotal()</CellTemplate>
+            </TemplateColumn>
+            <TemplateColumn Title="Acciones">
+                <CellTemplate>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="() => VerDetalle(context.Item)">
+                        Ver detalle
+                    </MudButton>
+                </CellTemplate>
+            </TemplateColumn>
+        </Columns>
+    </MudDataGrid>
+</MudPaper>
+
+@code {
+    /// <summary>
+    /// Usa FacturaService para listar facturas y navegar a su detalle.
+    /// </summary>
+    private Factura[] facturas = Array.Empty<Factura>();
+
+    protected override void OnInitialized()
+    {
+        facturas = FacturaService.ObtenerTodas();
+    }
+
+    private void VerDetalle(Factura factura)
+    {
+        Navigation.NavigateTo($"facturacion/detalle/{factura.GetHashCode()}");
+    }
+}

@@ -1,0 +1,17 @@
+@using Microsoft.AspNetCore.Components
+
+<div class="card stat-card @Tone">
+    <div class="stat-label">@Title</div>
+    <div class="stat-value">@Value</div>
+    @if (!string.IsNullOrWhiteSpace(Subtitle))
+    {
+        <div class="stat-label">@Subtitle</div>
+    }
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public string Value { get; set; } = string.Empty;
+    [Parameter] public string? Subtitle { get; set; }
+    [Parameter] public string Tone { get; set; } = string.Empty;
+}

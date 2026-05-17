@@ -1,0 +1,36 @@
+@implements biblioteca_hotel.Interfaces.IObservador
+@implements IDisposable
+@inject GestorNotificaciones Gestor
+@inject ISnackbar Snackbar
+
+@* NotificationHub: observador global del patrón Observer.
+   Escucha: CheckInCompletado, FacturaGenerada, CancelacionReserva, ConsumoMinibar *@
+
+@code {
+    protected override void OnInitialized() => Gestor.suscribir(this);
+
+    public void actualizar(TipoEvento evento)
+    {
+        var (msg, sev, icon) = evento switch
+        {
+            TipoEvento.CheckInCompletado  => ("🗝️  Check-in completado",      Severity.Success, Icons.Material.Filled.Login),
+            TipoEvento.FacturaGenerada    => ("📜  Factura generada",          Severity.Info,    Icons.Material.Filled.ReceiptLong),
+            TipoEvento.CancelacionReserva => ("⚠️  Reserva cancelada",         Severity.Warning, Icons.Material.Filled.EventBusy),
+            TipoEvento.ConsumoMinibar     => ("🍾  Consumo de minibar",        Severity.Normal,  Icons.Material.Filled.WineBar),
+            _                             => ("ℹ️  Evento registrado",         Severity.Normal,  Icons.Material.Filled.Notifications),
+        };
+
+        InvokeAsync(() =>
+        {
+            Snackbar.Add(msg, sev, cfg =>
+            {
+                cfg.Icon = icon;
+                cfg.VisibleStateDuration = 4000;
+                cfg.ShowCloseIcon = true;
+            });
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => Gestor.desuscribir(this);
+}

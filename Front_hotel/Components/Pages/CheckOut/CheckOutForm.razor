@@ -1,0 +1,278 @@
+@page "/checkout"
+@inject ReservaService ReservaService
+@inject PersonaService PersonaService
+@inject FacturaService FacturaService
+@inject biblioteca_hotel.Modelos.Gestión.Recepcion Recepcion
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+@inject biblioteca_hotel.Aspectos.Validador Validador
+
+<PageTitle>Check-Out — Hotel Obsidian</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Check-Out</h2>
+        <p class="page-subtitle">Generar factura y cerrar estancia.</p>
+    </div>
+</div>
+
+<div class="glass-card checkout-card" style="max-width:680px;margin:0 auto;">
+    <div class="glass-card-inner">
+
+        <div class="section-eyebrow">Buscar Huésped</div>
+
+        <!-- Live Search Input -->
+        <div class="live-search-wrapper">
+            <span class="live-search-icon">🔍</span>
+            <input class="live-search-input"
+                   type="text"
+                   placeholder="Nombre o número de documento..."
+                   value="@_filtro"
+                   @oninput="OnFiltroChanged"
+                   autocomplete="off"
+                   id="checkout-search-input" />
+            @if (!string.IsNullOrEmpty(_filtro))
+            {
+                <button class="live-search-clear" @onclick="LimpiarFiltro" title="Limpiar">✕</button>
+            }
+        </div>
+
+        <!-- Result Cards -->
+        @if (!string.IsNullOrWhiteSpace(_filtro))
+        {
+            @if (_personasFiltradas.Length == 0)
+            {
+                <div class="empty-state mt-3">
+                    <span class="empty-icon">👤</span>
+                    <p>Sin resultados para <strong>"@_filtro"</strong></p>
+                </div>
+            }
+            else
+            {
+                <div class="persona-cards-grid mt-3">
+                    @foreach (var p in _personasFiltradas)
+                    {
+                        var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == p.GetId());
+                        var tieneReserva = reserva != null;
+                        var isSelected = _personaSeleccionada?.GetId() == p.GetId();
+                        <div class="persona-card @(isSelected ? "persona-card-selected" : "") @(tieneReserva ? "tiene-reserva" : "")"
+                             @onclick="@(() => SeleccionarPersona(p))"
+                             title="@(tieneReserva ? $"Reserva activa en {reserva!.GetHabitacion().GetType().Name}" : "Sin reserva activa")">
+                            <div class="persona-card-avatar">@p.GetNombre()[0]</div>
+                            <div class="persona-card-body">
+                                <div class="persona-card-name">@p.GetNombre()</div>
+                                <div class="persona-card-id font-mono">@p.GetId()</div>
+                                <div class="persona-card-badge @(tieneReserva ? "badge-activa" : "badge-sin")">
+                                    @(tieneReserva ? $"✓ {reserva!.GetHabitacion().GetType().Name} N.°{reserva.GetHabitacion().GetNumHab()}" : "Sin reserva activa")
+                                </div>
+                            </div>
+                            @if (isSelected)
+                            {
+                                <div class="persona-card-check">✓</div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        }
+
+        <!-- Preview Panel when person selected -->
+        @if (_personaSeleccionada != null)
+        {
+            var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
+
+            @if (reserva == null)
+            {
+                <div class="empty-state mt-4" style="border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.05);">
+                    <span class="empty-icon">⚠️</span>
+                    <p>@_personaSeleccionada.GetNombre() no tiene una reserva activa para check-out.</p>
+                </div>
+            }
+            else
+            {
+                var noches = (reserva.GetFechaSalida() - reserva.GetFechaEntrada()).Days;
+                var subtotal = reserva.GetHabitacion().GetCostoNoche() * noches;
+                var impuesto = esColombiano
+                    ? subtotal * (decimal)biblioteca_hotel.Utilidades.Regla_negocio.valor_IVA
+                    : subtotal * (decimal)biblioteca_hotel.Utilidades.Regla_negocio.seguro_hotelero;
+                var total = subtotal + impuesto;
+
+                <div class="checkout-preview glass-inner-panel mt-4 anim-fade-in">
+                    <div class="preview-row">
+                        <span class="preview-label">Huésped</span>
+                        <span class="preview-value">@reserva.GetPersona().GetNombre()</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Habitación</span>
+                        <span class="preview-value">@reserva.GetHabitacion().GetType().Name — N.° @reserva.GetHabitacion().GetNumHab()</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Entrada</span>
+                        <span class="preview-value mono">@reserva.GetFechaEntrada().ToString("dd MMM yyyy")</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Salida</span>
+                        <span class="preview-value mono">@reserva.GetFechaSalida().ToString("dd MMM yyyy")</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Noches</span>
+                        <span class="preview-value kpi-gold">@noches</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Costo/noche</span>
+                        <span class="preview-value mono">@reserva.GetHabitacion().GetCostoNoche().ToString("C0", _col)</span>
+                    </div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-row preview-total">
+                        <span class="preview-label">Subtotal</span>
+                        <span class="preview-value kpi-gold">@subtotal.ToString("C0", _col)</span>
+                    </div>
+                    <div class="checkout-toggle">
+                        <MudSwitch @bind-Value="esColombiano" Color="Color.Success" Label="¿Huésped colombiano? (IVA 19%)" />
+                    </div>
+                    <div class="preview-row preview-taxes">
+                        <span class="preview-label">@(esColombiano ? "IVA 19%" : "Seguro hotelero 2%")</span>
+                        <span class="preview-value">@impuesto.ToString("C0", _col)</span>
+                    </div>
+                    <div class="preview-row preview-total-final">
+                        <span class="preview-label">TOTAL</span>
+                        <span class="preview-value kpi-gold-bright">@total.ToString("C0", _col)</span>
+                    </div>
+                </div>
+
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           OnClick="GenerarFactura"
+                           Class="obs-button-glow mt-4"
+                           StartIcon="@Icons.Material.Filled.ReceiptLong"
+                           FullWidth="true">
+                    Generar Factura y Completar Check-Out
+                </MudButton>
+            }
+        }
+
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Servicios: ReservaService, PersonaService, FacturaService, Recepcion (IProceso), Validador (AOP).
+    /// Live Search Cards: filtra por nombre e ID en tiempo real.
+    /// </summary>
+    private Reserva[]  _todasReservas      = Array.Empty<Reserva>();
+    private Persona[]  _personasFiltradas  = Array.Empty<Persona>();
+    private Persona?   _personaSeleccionada;
+    private string     _filtro = string.Empty;
+    private bool       esColombiano = true;
+
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
+
+    protected override void OnInitialized()
+    {
+        _todasReservas = ReservaService.ObtenerTodas();
+    }
+
+    private void OnFiltroChanged(ChangeEventArgs e)
+    {
+        _filtro = e.Value?.ToString() ?? string.Empty;
+        _personaSeleccionada = null;
+        _personasFiltradas = string.IsNullOrWhiteSpace(_filtro)
+            ? Array.Empty<Persona>()
+            : PersonaService.BuscarPorFiltro(_filtro);
+    }
+
+    private void LimpiarFiltro()
+    {
+        _filtro = string.Empty;
+        _personasFiltradas = Array.Empty<Persona>();
+        _personaSeleccionada = null;
+    }
+
+    private void SeleccionarPersona(Persona persona)
+    {
+        _personaSeleccionada = persona;
+    }
+
+    private void GenerarFactura()
+    {
+        if (_personaSeleccionada == null) return;
+        var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
+        if (reserva == null) { Snackbar.Add("⚠️ No hay reserva activa.", Severity.Warning); return; }
+
+        try
+        {
+            var factura = Recepcion.Check_Out(_personaSeleccionada);
+            Validador.Advice_ValidarYPersistir(factura);
+            FacturaService.Agregar(factura);
+            _ = new EventoFacturaGenerada(factura.GetHashCode().ToString(), factura.calcularTotal());
+
+            Snackbar.Add("📜 Factura generada correctamente.", Severity.Success);
+            Navigation.NavigateTo("/facturacion");
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error al generar factura: {ex.Message}", Severity.Error);
+        }
+    }
+}
+
+<style>
+    /* ── Live Search ── */
+    .live-search-wrapper {
+        position: relative; display: flex; align-items: center;
+        background: rgba(8,10,15,0.7); border: 1px solid var(--border);
+        border-radius: var(--radius-sm); padding: 0 1rem;
+        transition: border-color 200ms;
+    }
+    .live-search-wrapper:focus-within { border-color: var(--gold-dim); box-shadow: 0 0 0 2px rgba(196,160,80,0.15); }
+    .live-search-icon { font-size: 1rem; margin-right: .5rem; opacity: .6; flex-shrink:0; }
+    .live-search-input {
+        flex: 1; background: transparent; border: none; outline: none;
+        color: var(--platinum); font-family: var(--font-ui); font-size: .92rem;
+        padding: .75rem 0;
+    }
+    .live-search-input::placeholder { color: var(--silver); opacity: .5; }
+    .live-search-clear {
+        background: none; border: none; cursor: pointer; color: var(--silver);
+        font-size: .85rem; padding: .25rem; line-height:1; opacity:.6; transition: opacity 150ms;
+    }
+    .live-search-clear:hover { opacity: 1; color: var(--gold); }
+
+    /* ── Persona Cards Grid ── */
+    .persona-cards-grid { display: flex; flex-direction: column; gap: .55rem; }
+    .persona-card {
+        display: flex; align-items: center; gap: 1rem;
+        padding: .85rem 1rem; border-radius: var(--radius-sm);
+        background: rgba(8,10,15,0.5); border: 1px solid var(--border);
+        cursor: pointer; transition: all 200ms; position: relative;
+    }
+    .persona-card:hover { border-color: var(--gold-dim); background: rgba(196,160,80,0.05); transform: translateX(2px); }
+    .persona-card-selected { border-color: var(--gold) !important; background: rgba(196,160,80,0.1) !important; box-shadow: 0 0 12px rgba(196,160,80,0.2); }
+    .tiene-reserva { border-left: 3px solid rgba(45,191,138,0.6); }
+
+    .persona-card-avatar {
+        width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+        background: linear-gradient(135deg, var(--gold-dim), rgba(196,160,80,0.3));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.2rem; font-weight: 700; color: var(--gold);
+        border: 1px solid var(--gold-dim);
+    }
+    .persona-card-body { flex: 1; }
+    .persona-card-name { font-weight: 600; color: var(--platinum); font-size: .92rem; }
+    .persona-card-id { font-size: .78rem; color: var(--silver); margin-top: .1rem; }
+    .persona-card-badge {
+        display: inline-block; margin-top: .35rem; font-size: .72rem;
+        padding: .15rem .55rem; border-radius: 999px;
+    }
+    .badge-activa { background: rgba(45,191,138,0.15); color: #2dbf8a; border: 1px solid rgba(45,191,138,0.3); }
+    .badge-sin    { background: rgba(148,163,184,0.1); color: var(--silver); border: 1px solid var(--border); }
+    .persona-card-check {
+        width: 24px; height: 24px; border-radius: 50%;
+        background: var(--gold); color: #000; font-size: .8rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center; flex-shrink:0;
+    }
+
+    .mt-3 { margin-top: .75rem !important; }
+    .mt-4 { margin-top: 1rem !important; }
+    .checkout-toggle { margin: .75rem 0; }
+</style>
