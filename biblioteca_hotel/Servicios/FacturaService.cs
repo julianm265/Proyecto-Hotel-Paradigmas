@@ -62,5 +62,15 @@ namespace biblioteca_hotel.Servicios
             }
             return factura;
         }
+
+        public void CargarDatos(IEnumerable<Modelos.Core.Factura> datos)
+        {
+            _facturas.Clear();
+            if (datos != null)
+            {
+                _facturas.AddRange(datos);
+            }
+            l_facturas = _facturas.ToArray();
+        }
     }
 }

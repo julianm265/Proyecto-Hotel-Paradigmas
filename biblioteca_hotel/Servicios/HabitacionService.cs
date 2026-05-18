@@ -31,5 +31,12 @@ namespace biblioteca_hotel.Servicios
         {
             return l_habitaciones.Count > 0 ? l_habitaciones[0].GetCostoNoche() : 0;
         }
+
+        public void CargarDatos(IEnumerable<Modelos.Habitaciones.Habitacion> datos)
+        {
+            l_habitaciones.Clear();
+            if (datos != null)
+                l_habitaciones.AddRange(datos);
+        }
     }
 }

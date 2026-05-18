@@ -47,5 +47,15 @@ namespace biblioteca_hotel.Servicios
             }
             return resumen;
         }
+
+        public void CargarDatos(IEnumerable<Modelos.Core.Reserva> datos)
+        {
+            _reservas.Clear();
+            if (datos != null)
+            {
+                _reservas.AddRange(datos);
+            }
+            l_reserva = _reservas.ToArray();
+        }
     }
 }

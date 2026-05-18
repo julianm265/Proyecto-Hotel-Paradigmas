@@ -49,11 +49,16 @@ builder.Services.AddSingleton<GestorNotificaciones>(provider =>
     return gestor;
 });
 
+// Registro de persistencia y autoguardado local
+builder.Services.AddSingleton<PersistenceService>();
+builder.Services.AddHostedService<AutoSaveWorker>();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    DataSeeder.Seed(scope.ServiceProvider);
+    var persistence = scope.ServiceProvider.GetRequiredService<PersistenceService>();
+    persistence.LoadData(scope.ServiceProvider);
 }
 
 // Configure the HTTP request pipeline.

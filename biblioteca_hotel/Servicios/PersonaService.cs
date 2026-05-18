@@ -44,5 +44,12 @@ namespace biblioteca_hotel.Servicios
                     p.GetId().Contains(filtro, System.StringComparison.OrdinalIgnoreCase))
                 .ToArray();
         }
+
+        public void CargarDatos(IEnumerable<Modelos.Personas.Persona> datos)
+        {
+            l_personas.Clear();
+            if (datos != null)
+                l_personas.AddRange(datos);
+        }
     }
 }

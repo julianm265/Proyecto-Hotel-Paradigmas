@@ -26,5 +26,12 @@ namespace biblioteca_hotel.Servicios
         {
             return l_oferta_carta.FirstOrDefault(o => o.GetType().Name == nombre);
         }
+
+        public void CargarDatos(IEnumerable<Modelos.Carta.Oferta_carta> datos)
+        {
+            l_oferta_carta.Clear();
+            if (datos != null)
+                l_oferta_carta.AddRange(datos);
+        }
     }
 }
