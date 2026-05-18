@@ -1,5 +1,4 @@
-using System;
-using System.Globalization;
+﻿using System;
 
 namespace biblioteca_hotel.Modelos.Personas
 {
@@ -42,48 +41,15 @@ namespace biblioteca_hotel.Modelos.Personas
         }
 
         /// <summary>
-        /// Genera un descuento aleatorio que cambia cada semana
-        /// El descuento varía entre 0% y 20% basándose en el número de semana del año
+        /// Genera un descuento aleatorio entre 0% y 20%
         /// </summary>
         private static float GenerarDescuentoCliente()
         {
-            // Obtener la semana actual del año
-            int semanaActual = ObtenerSemanaDelAno();
-
-            // Usar la semana como semilla para generar un valor consistente
-            // pero diferente cada semana
-            Random randomSemanal = new Random(semanaActual);
-
-            // Descuento entre 0 y 0.20 (0% a 20%)
-            return (float)(randomSemanal.NextDouble() * 0.20);
-        }
-
-        /// <summary>
-        /// Obtiene el número de la semana del año actual según ISO 8601
-        /// </summary>
-        private static int ObtenerSemanaDelAno()
-        {
-            DateTime hoy = DateTime.Now;
-
-            // Usar ISO 8601 para el cálculo de la semana
-            CultureInfo ci = CultureInfo.CurrentCulture;
-            Calendar cal = ci.Calendar;
-
-            CalendarWeekRule regla = CalendarWeekRule.FirstFourDayWeek;
-            DayOfWeek primerDia = ci.DateTimeFormat.FirstDayOfWeek;
-
-            int semana = cal.GetWeekOfYear(hoy, regla, primerDia);
-
-            return semana;
-        }
-
-        /// <summary>
-        /// Recalcula el descuento basándose en la semana actual
-        /// Útil si el cliente se mantiene activo durante múltiples semanas
-        /// </summary>
-        public void ActualizarDescuentoSemanal()
-        {
-            this.descuento = GenerarDescuentoCliente();
+            lock (lockObject)
+            {
+                // Descuento entre 0 y 0.20 (0% a 20%)
+                return (float)(random.NextDouble() * 0.20);
+            }
         }
 
         public int GetCodigo() => código;
