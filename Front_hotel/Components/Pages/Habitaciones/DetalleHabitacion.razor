@@ -1,12 +1,15 @@
-@page "/habitaciones/detalle/{Index:int}"
+@page "/habitaciones/detalle/{NumHab}"
+@using System.Reflection
+@using biblioteca_hotel.Modelos.Camas
 @inject HabitacionService HabitacionService
+@inject ISnackbar Snackbar
 
 <PageTitle>Detalle Habitación</PageTitle>
 
 <div class="page-header">
     <div>
-        <h2 class="page-title">Detalle de habitación</h2>
-        <p class="page-subtitle">Información completa y costo de estancia.</p>
+        <h2 class="page-title">Detalle de habitación N.° @NumHab</h2>
+        <p class="page-subtitle">Información técnica y configuración de camas.</p>
     </div>
 </div>
 
@@ -16,18 +19,57 @@
 }
 else
 {
-    <MudPaper Class="card">
-        <MudStack Spacing="2">
-            <MudText Typo="Typo.h6">@habitacion.GetType().Name</MudText>
-            <MudText>Numero: @habitacion.GetNumHab()</MudText>
-            <MudText>Costo/noche: @habitacion.GetCostoNoche()</MudText>
-            <MudText>Costo estancia (estimado): @HabitacionService.ObtenerCostoEstancia(habitacion.GetNumHab())</MudText>
-            <MudText>Camas: @habitacion.GetCamas().Length</MudText>
-            @if (habitacion is biblioteca_hotel.Interfaces.Isurtidor)
-            {
-                <MudAlert Severity="Severity.Info">Esta habitación soporta minibar.</MudAlert>
-            }
-        </MudStack>
+    <MudPaper Class="card p-4">
+        <MudGrid>
+            <!-- Info Panel -->
+            <MudItem xs="12" md="6">
+                <MudText Typo="Typo.h6" Class="mb-3">Información General</MudText>
+                <div style="display:flex; flex-direction:column; gap:.5rem;">
+                    <div><strong>Tipo:</strong> @habitacion.GetType().Name</div>
+                    <div><strong>Número:</strong> <span class="mono">@habitacion.GetNumHab()</span></div>
+                    <div><strong>Costo por noche:</strong> <span class="mono kpi-gold">@habitacion.GetCostoNoche().ToString("C0", _col)</span></div>
+                    
+                    @if (habitacion is biblioteca_hotel.Interfaces.Isurtidor)
+                    {
+                        <div class="mt-2"><MudChip T="string" Color="Color.Secondary" Size="Size.Small">🍸 Soporta Minibar</MudChip></div>
+                    }
+                </div>
+            </MudItem>
+
+            <!-- Bed Editor Panel -->
+            <MudItem xs="12" md="6">
+                <MudText Typo="Typo.h6" Class="mb-3">Distribución de Camas</MudText>
+                <div style="background:rgba(8,10,15,0.4); padding:1rem; border-radius:8px; border:1px solid var(--border);">
+                    <div style="margin-bottom:.5rem; font-size:.9rem; color:var(--silver);">Camas actuales (@habitacion.GetCamas().Length):</div>
+                    <div style="display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom: 1rem;">
+                        @foreach (var c in habitacion.GetCamas())
+                        {
+                            <MudChip T="string" Color="Color.Info" Variant="Variant.Outlined">🛏️ @c.GetType().Name</MudChip>
+                        }
+                    </div>
+
+                    <MudDivider Class="my-3" />
+                    
+                    <div style="display:flex; align-items:center; gap:1rem;">
+                        <MudSelect T="string" Label="Añadir cama" @bind-Value="nuevaCamaTipo" Variant="Variant.Outlined" Margin="Margin.Dense" Class="obs-select">
+                            <MudSelectItem Value="@("Sencilla")">Sencilla</MudSelectItem>
+                            <MudSelectItem Value="@("Doble")">Doble</MudSelectItem>
+                            <MudSelectItem Value="@("Semidoble")">Semidoble</MudSelectItem>
+                            <MudSelectItem Value="@("Queen")">Queen</MudSelectItem>
+                            <MudSelectItem Value="@("King")">King</MudSelectItem>
+                        </MudSelect>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AgregarCama" Class="obs-button-glow" Style="margin-top:4px;">
+                            Agregar
+                        </MudButton>
+                    </div>
+                    <div style="margin-top: .5rem;">
+                        <MudButton Variant="Variant.Text" Color="Color.Error" OnClick="LimpiarCamas" Size="Size.Small">
+                            Limpiar todas las camas
+                        </MudButton>
+                    </div>
+                </div>
+            </MudItem>
+        </MudGrid>
     </MudPaper>
 }
 
@@ -35,12 +77,55 @@ else
     /// <summary>
     /// Usa HabitacionService para obtener detalle y costo de estancia.
     /// </summary>
-    [Parameter] public int Index { get; set; }
+    [Parameter] public string NumHab { get; set; } = string.Empty;
     private Habitacion? habitacion;
+    private string nuevaCamaTipo = "Sencilla";
+    private static readonly System.Globalization.CultureInfo _col = new("es-CO");
 
     protected override void OnInitialized()
     {
-        var habitaciones = HabitacionService.ObtenerTodos();
-        habitacion = Index >= 0 && Index < habitaciones.Length ? habitaciones[Index] : null;
+        habitacion = HabitacionService.BuscarPornumero(NumHab);
+    }
+
+    private void ActualizarCamasEnModelo(Cama[] nuevasCamas)
+    {
+        if (habitacion == null) return;
+        var field = typeof(Habitacion).GetField("l_camas", BindingFlags.NonPublic | BindingFlags.Instance);
+        if (field != null)
+        {
+            field.SetValue(habitacion, nuevasCamas);
+            Snackbar.Add("Distribución de camas actualizada.", Severity.Success);
+        }
+        else
+        {
+            Snackbar.Add("Error interno al actualizar camas.", Severity.Error);
+        }
+    }
+
+    private void AgregarCama()
+    {
+        if (habitacion == null) return;
+        
+        Cama? nueva = nuevaCamaTipo switch
+        {
+            "Sencilla"  => new biblioteca_hotel.Modelos.Camas.Sencilla(),
+            "Doble"     => new biblioteca_hotel.Modelos.Camas.Doble(),
+            "Semidoble" => new biblioteca_hotel.Modelos.Camas.Semidoble(),
+            "Queen"     => new biblioteca_hotel.Modelos.Camas.Queen(),
+            "King"      => new biblioteca_hotel.Modelos.Camas.King(),
+            _ => null
+        };
+
+        if (nueva != null)
+        {
+            var actual = habitacion.GetCamas().ToList();
+            actual.Add(nueva);
+            ActualizarCamasEnModelo(actual.ToArray());
+        }
+    }
+
+    private void LimpiarCamas()
+    {
+        ActualizarCamasEnModelo(Array.Empty<Cama>());
     }
 }

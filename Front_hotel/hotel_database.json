@@ -94,17 +94,6 @@
     {
       "$id": "16",
       "persona": {
-        "$ref": "2"
-      },
-      "habitacion": {
-        "$ref": "5"
-      },
-      "fecha_entrada": "2026-05-17T00:00:00-05:00",
-      "fecha_salida": "2026-05-20T00:00:00-05:00"
-    },
-    {
-      "$id": "17",
-      "persona": {
         "$ref": "3"
       },
       "habitacion": {
@@ -116,20 +105,20 @@
   ],
   "<Facturas>k__BackingField": [
     {
-      "$id": "18",
+      "$id": "17",
       "productos_consumidos": [
         {
-          "$id": "19",
+          "$id": "18",
           "$type": "biblioteca_hotel.Modelos.Productos.Agua, biblioteca_hotel",
           "costo": 5000.0
         },
         {
-          "$id": "20",
+          "$id": "19",
           "$type": "biblioteca_hotel.Modelos.Productos.Vino, biblioteca_hotel",
           "costo": 28000.0
         },
         {
-          "$id": "21",
+          "$id": "20",
           "$type": "biblioteca_hotel.Modelos.Productos.Kit_aseo, biblioteca_hotel",
           "costo": 15000.0
         }
@@ -140,15 +129,24 @@
       "es_colombiano": true,
       "l_servicios_consumidos": [
         {
-          "$id": "22",
+          "$id": "21",
           "restaurante": {
-            "$id": "23"
+            "$id": "22"
           },
           "lavanderia": {
-            "$id": "24"
+            "$id": "23"
           }
         }
       ]
+    },
+    {
+      "$id": "24",
+      "productos_consumidos": [],
+      "persona": {
+        "$ref": "2"
+      },
+      "es_colombiano": false,
+      "l_servicios_consumidos": []
     }
   ],
   "<Carta>k__BackingField": [

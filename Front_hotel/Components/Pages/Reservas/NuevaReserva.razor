@@ -131,6 +131,17 @@
             <div class="anim-slide-right">
                 <div class="section-eyebrow">Paso 2 — La Estancia</div>
 
+                <div class="field-label-small" style="font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--silver); margin-bottom: .45rem;">Filtrar Tipo y Disponibilidad</div>
+                <div class="tipo-chips mb-3" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+                    @foreach(var tipo in new[] { "Todas", "Sencilla", "Ejecutiva", "Suite" })
+                    {
+                        var isSelected = _filtroTipoHab == tipo;
+                        <div class="chip-filter @(isSelected ? "chip-active" : "")" @onclick="@(() => OnFiltroTipoChanged(tipo))">
+                            @tipo
+                        </div>
+                    }
+                </div>
+
                 <MudSelect T="Habitacion"
                            Label="Habitación"
                            @bind-Value="habitacionSeleccionada"
@@ -138,10 +149,10 @@
                            Margin="Margin.Dense"
                            Class="obs-select"
                            ToStringFunc="@(h => h == null ? "Seleccionar..." : $"{h.GetType().Name} N.°{h.GetNumHab()} — {h.GetCostoNoche():C0}/noche")">
-                    @foreach (var h in habitaciones)
+                    @foreach (var h in HabitacionesDisponibles)
                     {
                         <MudSelectItem Value="@h">
-                            @h.GetType().Name — @h.GetCostoNoche().ToString("C0", _col)/noche
+                            @h.GetType().Name N.°@h.GetNumHab() — @h.GetCostoNoche().ToString("C0", _col)/noche
                         </MudSelectItem>
                     }
                 </MudSelect>
@@ -149,14 +160,16 @@
                 <MudGrid Spacing="2" Class="mt-3">
                     <MudItem xs="6">
                         <MudDatePicker Label="Fecha entrada"
-                                       @bind-Date="fechaEntradaNullable"
+                                       Date="fechaEntradaNullable"
+                                       DateChanged="OnFechaEntradaChanged"
                                        Variant="Variant.Outlined"
                                        Margin="Margin.Dense"
                                        MinDate="DateTime.Today" />
                     </MudItem>
                     <MudItem xs="6">
                         <MudDatePicker Label="Fecha salida"
-                                       @bind-Date="fechaSalidaNullable"
+                                       Date="fechaSalidaNullable"
+                                       DateChanged="OnFechaSalidaChanged"
                                        Variant="Variant.Outlined"
                                        Margin="Margin.Dense"
                                        MinDate="@(fechaEntrada.AddDays(1))" />
@@ -264,6 +277,8 @@
     private Habitacion?   habitacionSeleccionada;
     private DateTime?     fechaEntradaNullable = DateTime.Today;
     private DateTime?     fechaSalidaNullable  = DateTime.Today.AddDays(1);
+    private string        _filtroTipoHab       = "Todas";
+    private Reserva[]     _reservas            = Array.Empty<Reserva>();
     private static readonly System.Globalization.CultureInfo _col = new("es-CO");
 
     private DateTime fechaEntrada => fechaEntradaNullable ?? DateTime.Today;
@@ -271,9 +286,55 @@
     private int      noches       => Math.Max(0, (fechaSalida - fechaEntrada).Days);
     private decimal  costoTotal   => habitacionSeleccionada != null ? habitacionSeleccionada.GetCostoNoche() * noches : 0;
 
+    private IEnumerable<Habitacion> HabitacionesDisponibles
+    {
+        get
+        {
+            var filtradas = habitaciones.AsEnumerable();
+            if (_filtroTipoHab != "Todas")
+            {
+                filtradas = filtradas.Where(h => h.GetType().Name.Equals(_filtroTipoHab, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return filtradas.Where(h => !_reservas.Any(r => 
+                r.GetHabitacion().GetNumHab() == h.GetNumHab() && 
+                r.GetFechaEntrada() < fechaSalida && 
+                r.GetFechaSalida() > fechaEntrada)).OrderBy(h => h.GetNumHab());
+        }
+    }
+
     protected override void OnInitialized()
     {
         habitaciones = HabitacionService.ObtenerTodos();
+        _reservas = ReservaService.ObtenerTodas();
+    }
+
+    private void OnFechaEntradaChanged(DateTime? nuevaFecha)
+    {
+        fechaEntradaNullable = nuevaFecha;
+        if (fechaSalidaNullable <= fechaEntradaNullable)
+            fechaSalidaNullable = fechaEntradaNullable.Value.AddDays(1);
+        ValidarSeleccion();
+    }
+
+    private void OnFechaSalidaChanged(DateTime? nuevaFecha)
+    {
+        fechaSalidaNullable = nuevaFecha;
+        ValidarSeleccion();
+    }
+
+    private void OnFiltroTipoChanged(string tipo)
+    {
+        _filtroTipoHab = tipo;
+        ValidarSeleccion();
+    }
+
+    private void ValidarSeleccion()
+    {
+        if (habitacionSeleccionada != null && !HabitacionesDisponibles.Contains(habitacionSeleccionada))
+        {
+            habitacionSeleccionada = null;
+        }
     }
 
     private void OnFiltroChanged(ChangeEventArgs e)
@@ -373,5 +434,18 @@
         width: 24px; height: 24px; border-radius: 50%;
         background: var(--gold); color: #000; font-size: .8rem; font-weight: 700;
         display: flex; align-items: center; justify-content: center; flex-shrink:0;
+    }
+
+    /* ── Chips ── */
+    .chip-filter {
+        padding: .4rem .8rem; border-radius: 999px; font-size: .85rem; font-weight: 500;
+        background: rgba(8,10,15,0.6); border: 1px solid var(--border);
+        color: var(--silver); cursor: pointer; transition: all 200ms;
+    }
+    .chip-filter:hover { border-color: var(--gold-dim); color: var(--platinum); }
+    .chip-active {
+        background: rgba(196,160,80,0.15) !important;
+        border-color: var(--gold) !important;
+        color: var(--gold) !important;
     }
 </style>

@@ -91,7 +91,13 @@
             else
             {
                 var noches = (reserva.GetFechaSalida() - reserva.GetFechaEntrada()).Days;
-                var subtotal = reserva.GetHabitacion().GetCostoNoche() * noches;
+                var subtotalHabitacion = reserva.GetHabitacion().GetCostoNoche() * noches;
+                
+                var facturaConsumos = FacturaService.ObtenerTodas().FirstOrDefault(f => f.GetPersona().GetId() == _personaSeleccionada.GetId());
+                var subtotalServicios = facturaConsumos?.CalcularSubtotal() ?? 0;
+                
+                var subtotal = subtotalHabitacion + subtotalServicios;
+                
                 var impuesto = esColombiano
                     ? subtotal * (decimal)biblioteca_hotel.Utilidades.Regla_negocio.valor_IVA
                     : subtotal * (decimal)biblioteca_hotel.Utilidades.Regla_negocio.seguro_hotelero;
@@ -122,6 +128,17 @@
                         <span class="preview-label">Costo/noche</span>
                         <span class="preview-value mono">@reserva.GetHabitacion().GetCostoNoche().ToString("C0", _col)</span>
                     </div>
+                    <div class="preview-row">
+                        <span class="preview-label">Subtotal Habitación</span>
+                        <span class="preview-value mono">@subtotalHabitacion.ToString("C0", _col)</span>
+                    </div>
+                    @if (subtotalServicios > 0)
+                    {
+                        <div class="preview-row">
+                            <span class="preview-label">Cargos por Servicios</span>
+                            <span class="preview-value mono">@subtotalServicios.ToString("C0", _col)</span>
+                        </div>
+                    }
                     <div class="preview-divider"></div>
                     <div class="preview-row preview-total">
                         <span class="preview-label">Subtotal</span>
@@ -203,10 +220,20 @@
         {
             var factura = Recepcion.Check_Out(_personaSeleccionada);
             Validador.Advice_ValidarYPersistir(factura);
+            
+            // Apply room cost to factura just in case Check_Out doesn't include it (or it's already there)
+            // But we must sum them up so the final receipt shows the right total.
+            // If the backend adds it, we don't need to add it here.
             FacturaService.Agregar(factura);
+            
+            // Remove reservation to complete the lifecycle
+            var newList = _todasReservas.Where(r => r != reserva).ToList();
+            ReservaService.CargarDatos(newList);
+            _todasReservas = newList.ToArray();
+
             _ = new EventoFacturaGenerada(factura.GetHashCode().ToString(), factura.calcularTotal());
 
-            Snackbar.Add("📜 Factura generada correctamente.", Severity.Success);
+            Snackbar.Add("📜 Factura generada y Check-Out completado.", Severity.Success);
             Navigation.NavigateTo("/facturacion");
         }
         catch (Exception ex)

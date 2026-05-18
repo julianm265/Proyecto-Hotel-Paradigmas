@@ -1,5 +1,6 @@
 @page "/habitaciones/gestion"
 @inject HabitacionService HabitacionService
+@inject ReservaService ReservaService
 @inject biblioteca_hotel.Aspectos.Validador Validador
 @inject ISnackbar Snackbar
 
@@ -148,9 +149,22 @@
                                     <div class="hab-nombre">@h.GetType().Name</div>
                                     <div class="hab-meta">
                                         N.° <span class="mono">@h.GetNumHab()</span>
+                                        <span style="margin: 0 .4rem;">|</span>
+                                        <span>🛏️ @string.Join(", ", h.GetCamas().GroupBy(c => c.GetType().Name).Select(g => $"{g.Key} x{g.Count()}"))</span>
                                         @if (esMinibar)
                                         {
-                                            <span class="hab-badge badge-minibar">🍸 Minibar</span>
+                                            <span class="hab-badge badge-minibar" style="margin-left: .4rem;">🍸 Minibar</span>
+                                        }
+                                        @{
+                                            var reservada = _reservasActivas.Any(r => r.GetHabitacion().GetNumHab() == h.GetNumHab());
+                                        }
+                                        @if (reservada)
+                                        {
+                                            <span class="hab-badge badge-ocupada" style="margin-left: .4rem;">Ocupada/Reservada</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="hab-badge badge-disponible" style="margin-left: .4rem;">Disponible</span>
                                         }
                                     </div>
                                 </div>
@@ -174,6 +188,7 @@
     private enum TipoHab { Sencilla, Ejecutiva, Suite }
 
     private Habitacion[] _habitaciones = Array.Empty<Habitacion>();
+    private Reserva[] _reservasActivas = Array.Empty<Reserva>();
     private string _numHab    = string.Empty;
     private int    _piso      = 1;
     private decimal _precioBase = biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.costo_noche_hab_sencilla;
@@ -204,6 +219,7 @@
     private void RefrescarLista()
     {
         _habitaciones = HabitacionService.ObtenerTodos();
+        _reservasActivas = ReservaService.ObtenerTodas();
     }
 
     private void CrearHabitacion()
@@ -311,5 +327,7 @@
         border-radius: 999px;
     }
     .badge-minibar { background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+    .badge-ocupada { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+    .badge-disponible { background: rgba(45,191,138,0.15); color: #2dbf8a; border: 1px solid rgba(45,191,138,0.3); }
     .hab-precio { color: var(--gold); font-size: .85rem; white-space: nowrap; }
 </style>

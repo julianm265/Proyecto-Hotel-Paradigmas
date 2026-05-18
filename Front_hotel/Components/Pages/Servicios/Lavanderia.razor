@@ -33,28 +33,40 @@
                     <span class="lav-label">Prendas a lavar</span>
                     <div class="lav-stepper">
                         <MudIconButton Icon="@Icons.Material.Filled.Remove"
-                                       OnClick="@(() => prendas = Math.Max(0, prendas - 1))"
-                                       aria-label="Reducir prendas" />
-                        <span class="lav-count font-kpi">@prendas</span>
+                                       OnClick="@(() => prendasLavado = Math.Max(0, prendasLavado - 1))"
+                                       aria-label="Reducir prendas lavado" />
+                        <span class="lav-count font-kpi">@prendasLavado</span>
                         <MudIconButton Icon="@Icons.Material.Filled.Add"
-                                       OnClick="@(() => prendas++)"
-                                       aria-label="Agregar prenda" />
+                                       OnClick="@(() => prendasLavado++)"
+                                       aria-label="Agregar prenda lavado" />
                     </div>
                 </div>
 
-                <div class="lav-toggle mt-3">
-                    <MudSwitch @bind-Value="conPlanchado" Color="Color.Info" Label="Incluir planchado" aria-label="Incluir planchado" />
+                <div class="lav-counter mt-3">
+                    <span class="lav-label">Prendas a planchar</span>
+                    <div class="lav-stepper">
+                        <MudIconButton Icon="@Icons.Material.Filled.Remove"
+                                       OnClick="@(() => prendasPlanchado = Math.Max(0, prendasPlanchado - 1))"
+                                       aria-label="Reducir prendas planchado" />
+                        <span class="lav-count font-kpi">@prendasPlanchado</span>
+                        <MudIconButton Icon="@Icons.Material.Filled.Add"
+                                       OnClick="@(() => prendasPlanchado++)"
+                                       aria-label="Agregar prenda planchado" />
+                    </div>
                 </div>
 
                 <div class="glass-inner-panel mt-3">
-                    <div class="preview-row">
-                        <span class="preview-label">Lavado (@prendas prendas)</span>
-                        <span class="preview-value mono">@costoLavado.ToString("C0", _col)</span>
-                    </div>
-                    @if (conPlanchado && prendas > 0)
+                    @if (prendasLavado > 0)
                     {
                         <div class="preview-row">
-                            <span class="preview-label">Planchado (@prendas prendas)</span>
+                            <span class="preview-label">Lavado (@prendasLavado prendas)</span>
+                            <span class="preview-value mono">@costoLavado.ToString("C0", _col)</span>
+                        </div>
+                    }
+                    @if (prendasPlanchado > 0)
+                    {
+                        <div class="preview-row">
+                            <span class="preview-label">Planchado (@prendasPlanchado prendas)</span>
                             <span class="preview-value mono">@costoPlanchado.ToString("C0", _col)</span>
                         </div>
                     }
@@ -67,7 +79,7 @@
 
                 <MudButton Variant="Variant.Filled" Color="Color.Primary"
                            OnClick="Registrar" Class="obs-button-glow mt-4"
-                           Disabled="@(_persona == null || prendas == 0)"
+                           Disabled="@(_persona == null || (prendasLavado == 0 && prendasPlanchado == 0))"
                            StartIcon="@Icons.Material.Filled.LocalLaundryService"
                            FullWidth="true" aria-label="Registrar servicio de lavandería">
                     Registrar Servicio
@@ -108,12 +120,12 @@
     /// </summary>
     private Persona[]  _personas = Array.Empty<Persona>();
     private Persona?   _persona;
-    private int        prendas;
-    private bool       conPlanchado;
+    private int        prendasLavado;
+    private int        prendasPlanchado;
     private static readonly System.Globalization.CultureInfo _col = new("es-CO");
 
-    private decimal costoLavado    => prendas * LavanderiaSvc.GetPrecioPorPrenda();
-    private decimal costoPlanchado => conPlanchado ? prendas * LavanderiaSvc.GetPrecioPlanchada() : 0;
+    private decimal costoLavado    => prendasLavado * LavanderiaSvc.GetPrecioPorPrenda();
+    private decimal costoPlanchado => prendasPlanchado * LavanderiaSvc.GetPrecioPlanchada();
     private decimal total         => costoLavado + costoPlanchado;
 
     protected override void OnInitialized()
@@ -123,16 +135,20 @@
 
     private void Registrar()
     {
-        if (_persona == null || prendas == 0) return;
+        if (_persona == null || (prendasLavado == 0 && prendasPlanchado == 0)) return;
         LavanderiaSvc.Brindar_servicio(_persona);
         
+        var desc = new List<string>();
+        if (prendasLavado > 0) desc.Add($"Lavado ({prendasLavado} prendas)");
+        if (prendasPlanchado > 0) desc.Add($"Planchado ({prendasPlanchado} prendas)");
+
         var productoLavado = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante(
-            conPlanchado ? $"Lavandería y Planchado ({prendas} prendas)" : $"Lavandería ({prendas} prendas)", 
-            total);
+            string.Join(" y ", desc), total);
+            
         FacturaService.ActualizarConsumo(_persona, productoLavado);
 
-        Snackbar.Add($"✓ Lavandería registrada y cargada a la factura de {_persona.GetNombre()}.", Severity.Success);
-        prendas = 0; conPlanchado = false; _persona = null;
+        Snackbar.Add($"✓ Servicio registrado y cargado a la factura de {_persona.GetNombre()}.", Severity.Success);
+        prendasLavado = 0; prendasPlanchado = 0; _persona = null;
     }
 }
 
