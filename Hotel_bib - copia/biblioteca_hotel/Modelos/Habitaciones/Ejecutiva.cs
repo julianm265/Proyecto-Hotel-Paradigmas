@@ -1,12 +1,16 @@
+using biblioteca_hotel.Utilidades;
+
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
     public class Ejecutiva : Habitacion, Interfaces.Isurtidor
     {
         protected Core.Minibar minibar;
 
-        public Ejecutiva(decimal costo_noche, string tipo_cama)
-            : base(costo_noche)
+        public Ejecutiva(string numero_habitacion, string tipo_cama, int piso)
+            : base(ReglasNegocioHabitaciones.costo_noche_hab_ejecutiva)
         {
+            ValidarNumeroHabitacion(numero_habitacion, piso);
+            num_hab = numero_habitacion;
             minibar = new Core.Minibar(Enums.TipoMinibar.Ejecutivo);
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }

@@ -1,11 +1,14 @@
+using biblioteca_hotel.Utilidades;
+
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
     public class Sencilla : Habitacion
     {
-        public Sencilla(decimal costo_noche, string tipo_cama, int piso)
-            : base(costo_noche)
+        public Sencilla(string numero_habitacion, string tipo_cama, int piso)
+            : base(ReglasNegocioHabitaciones.costo_noche_hab_sencilla)
         {
-            num_hab = $"{piso}01";
+            ValidarNumeroHabitacion(numero_habitacion, piso);
+            num_hab = numero_habitacion;
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }
 

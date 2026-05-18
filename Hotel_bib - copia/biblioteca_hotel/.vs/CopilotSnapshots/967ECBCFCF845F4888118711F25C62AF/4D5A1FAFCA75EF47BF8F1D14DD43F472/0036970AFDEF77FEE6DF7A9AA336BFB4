@@ -1,0 +1,32 @@
+﻿using biblioteca_hotel.Utilidades;
+
+namespace biblioteca_hotel.Modelos.Habitaciones
+{
+    public abstract class Habitacion
+    {
+        protected Camas.Cama[] l_camas;
+        protected string num_hab;
+
+        public Habitacion()
+        {
+            l_camas = new Camas.Cama[0];
+            num_hab = string.Empty;
+        }
+
+        /// <summary>
+        /// Obtiene el costo por noche desde las Reglas de Negocio según el tipo de habitación
+        /// </summary>
+        public abstract decimal GetCostoNoche();
+
+        /// <summary>
+        /// Calcula el costo total basado en el costo por noche y número de camas
+        /// </summary>
+        public virtual double calcularCosto()
+        {
+            return (double)(GetCostoNoche() * l_camas.Length);
+        }
+
+        public string GetNumHab() => num_hab;
+        public Camas.Cama[] GetCamas() => l_camas;
+    }
+}

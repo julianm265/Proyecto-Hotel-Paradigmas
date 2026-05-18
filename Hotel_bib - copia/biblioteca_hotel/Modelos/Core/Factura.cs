@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using biblioteca_hotel.Utilidades;
 
 namespace biblioteca_hotel.Modelos.Core
 {
@@ -8,6 +10,9 @@ namespace biblioteca_hotel.Modelos.Core
         protected Personas.Persona persona;
         protected bool es_colombiano;
         protected List<Servicios.Servicio_Hotelero> l_servicios_consumidos;
+        protected Habitaciones.Habitacion habitacion;
+        protected DateTime fecha_entrada;
+        protected DateTime fecha_salida;
 
         public Factura(Personas.Persona persona, bool es_colombiano)
         {
@@ -17,23 +22,91 @@ namespace biblioteca_hotel.Modelos.Core
             l_servicios_consumidos = new List<Servicios.Servicio_Hotelero>();
         }
 
+        /// <summary>
+        /// Constructor que incluye la habitación y fechas para calcular costo de hospedaje
+        /// </summary>
+        public Factura(Personas.Persona persona, bool es_colombiano, 
+                       Habitaciones.Habitacion habitacion, DateTime fecha_entrada, DateTime fecha_salida)
+        {
+            if (persona == null)
+                throw new ArgumentNullException(nameof(persona), "La persona no puede ser nula");
+
+            if (habitacion == null)
+                throw new ArgumentNullException(nameof(habitacion), "La habitación no puede ser nula");
+
+            if (fecha_salida <= fecha_entrada)
+                throw new ArgumentException("La fecha de salida debe ser posterior a la de entrada");
+
+            this.persona = persona;
+            this.es_colombiano = es_colombiano;
+            this.habitacion = habitacion;
+            this.fecha_entrada = fecha_entrada;
+            this.fecha_salida = fecha_salida;
+
+            productos_consumidos = new List<Productos.Producto>();
+            l_servicios_consumidos = new List<Servicios.Servicio_Hotelero>();
+        }
+
         public void AgregarProducto(Productos.Producto producto)
         {
+            if (producto == null)
+                throw new ArgumentNullException(nameof(producto), "El producto no puede ser nulo");
+
             productos_consumidos.Add(producto);
         }
 
         public void AgregarServicio(Servicios.Servicio_Hotelero servicio)
         {
+            if (servicio == null)
+                throw new ArgumentNullException(nameof(servicio), "El servicio no puede ser nulo");
+
             l_servicios_consumidos.Add(servicio);
+        }
+
+        /// <summary>
+        /// Calcula el número de noches de estadía
+        /// </summary>
+        protected int ObtenerNochesEstadia()
+        {
+            if (habitacion == null)
+                throw new InvalidOperationException("La habitación no puede ser nula para calcular el costo de hospedaje");
+
+            if (fecha_entrada == DateTime.MinValue || fecha_salida == DateTime.MinValue)
+                return 0;
+
+            TimeSpan diferencia = fecha_salida - fecha_entrada;
+            return (int)diferencia.TotalDays;
+        }
+
+        /// <summary>
+        /// Calcula el costo total de hospedaje basado en noches y tipo de habitación
+        /// </summary>
+        protected decimal CalcularCostoHospedaje()
+        {
+            if (habitacion == null)
+                return 0;
+
+            int noches = ObtenerNochesEstadia();
+            if (noches <= 0)
+                return 0;
+
+            decimal costoPorNoche = habitacion.GetCostoNoche();
+            return costoPorNoche * noches;
         }
 
         public decimal CalcularSubtotal()
         {
             decimal subtotal = 0;
+
+            // Agregar costo de hospedaje
+            subtotal += CalcularCostoHospedaje();
+
+            // Agregar productos consumidos
             foreach (var producto in productos_consumidos)
             {
                 subtotal += producto.GetCosto();
             }
+
             return subtotal;
         }
 
@@ -42,11 +115,11 @@ namespace biblioteca_hotel.Modelos.Core
             decimal subtotal = CalcularSubtotal();
             if (es_colombiano)
             {
-                return subtotal * (decimal)Utilidades.Regla_negocio.valor_IVA;
+                return subtotal * (decimal)Regla_negocio.valor_IVA;
             }
             else
             {
-                return subtotal * (decimal)Utilidades.Regla_negocio.seguro_hotelero;
+                return subtotal * (decimal)Regla_negocio.seguro_hotelero;
             }
         }
 

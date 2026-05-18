@@ -1,12 +1,16 @@
+using biblioteca_hotel.Utilidades;
+
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
     public class Suite : Habitacion, Interfaces.Isurtidor
     {
         protected Core.Minibar minibar;
 
-        public Suite(decimal costo_noche, string tipo_cama)
-            : base(costo_noche)
+        public Suite(string numero_habitacion, string tipo_cama, int piso)
+            : base(ReglasNegocioHabitaciones.costo_noche_suite)
         {
+            ValidarNumeroHabitacion(numero_habitacion, piso);
+            num_hab = numero_habitacion;
             minibar = new Core.Minibar(Enums.TipoMinibar.Suite);
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }

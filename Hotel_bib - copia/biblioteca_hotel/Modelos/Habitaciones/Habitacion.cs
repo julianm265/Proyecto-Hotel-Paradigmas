@@ -1,3 +1,5 @@
+using System;
+
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
     public abstract class Habitacion
@@ -13,6 +15,38 @@ namespace biblioteca_hotel.Modelos.Habitaciones
             num_hab = string.Empty;
         }
 
+        /// <summary>
+        /// Valida que el número de habitación sea coherente con el piso
+        /// </summary>
+        protected void ValidarNumeroHabitacion(string numero, int piso)
+        {
+            if (string.IsNullOrWhiteSpace(numero))
+                throw new ArgumentException("El número de habitación no puede estar vacío o nulo");
+
+            if (!int.TryParse(numero, out int numHab))
+                throw new ArgumentException($"El número de habitación '{numero}' no es válido");
+
+            if (numHab < 100 || numHab > 9999)
+                throw new ArgumentException("El número de habitación debe estar entre 100 y 9999");
+
+            // Extraer el piso del número de habitación (primeros dígitos)
+            int pisoDelNumero = int.Parse(numero.Substring(0, numero.Length - 2));
+
+            if (pisoDelNumero != piso)
+                throw new ArgumentException(
+                    $"La habitación {numero} no corresponde al piso {piso}. " +
+                    $"La habitación debe comenzar con {piso}");
+
+            // Verificar que los dos últimos dígitos sean válidos (01-99)
+            int numeroUnidad = int.Parse(numero.Substring(numero.Length - 2));
+            if (numeroUnidad < 1 || numeroUnidad > 99)
+                throw new ArgumentException(
+                    $"El número de unidad (últimos 2 dígitos) debe estar entre 01 y 99");
+        }
+
+        /// <summary>
+        /// Calcula el costo total basado en el costo por noche y número de camas
+        /// </summary>
         public virtual double calcularCosto()
         {
             return (double)(Costo_noche * l_camas.Length);

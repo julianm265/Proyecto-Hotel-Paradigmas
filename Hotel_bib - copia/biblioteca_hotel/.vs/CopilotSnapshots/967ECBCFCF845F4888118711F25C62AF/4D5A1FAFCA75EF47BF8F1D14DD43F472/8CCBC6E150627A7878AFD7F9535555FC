@@ -1,0 +1,30 @@
+﻿using biblioteca_hotel.Utilidades;
+
+namespace biblioteca_hotel.Modelos.Habitaciones
+{
+    public class Sencilla : Habitacion
+    {
+        public Sencilla(string tipo_cama, int piso)
+        {
+            num_hab = $"{piso}01";
+            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
+        }
+
+        public override decimal GetCostoNoche()
+        {
+            return ReglasNegocioHabitaciones.costo_noche_hab_sencilla;
+        }
+
+        private Camas.Cama CrearCama(string tipo)
+        {
+            return tipo?.ToLower() switch
+            {
+                "doble" => new Camas.Doble(),
+                "semidoble" => new Camas.Semidoble(),
+                "queen" => new Camas.Queen(),
+                "king" => new Camas.King(),
+                _ => new Camas.Sencilla()
+            };
+        }
+    }
+}
