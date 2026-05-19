@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+6vPSkctF24=",
+  "dgSpecHash": "8IPja2+02Co=",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
+  "projectFilePath": "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.7\\microsoft.aspnetcore.app.internal.assets.10.0.7.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\mudblazor\\9.4.0\\mudblazor.9.4.0.nupkg.sha512",

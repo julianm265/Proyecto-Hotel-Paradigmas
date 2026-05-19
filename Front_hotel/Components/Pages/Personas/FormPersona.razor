@@ -18,15 +18,28 @@
             <MudSelectItem Value="@("Cliente")">Cliente</MudSelectItem>
             <MudSelectItem Value="@("Huesped")">Huésped</MudSelectItem>
         </MudSelect>
-        <MudTextField Label="Nombre" @bind-Value="nombre" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <MudTextField Label="Nombre" 
+                      @bind-Value="nombre" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense"
+                      HelperText="Solo letras y espacios, máximo 100 caracteres" />
         <MudSelect T="string" Label="Tipo ID" @bind-Value="tipoId" Variant="Variant.Outlined" Margin="Margin.Dense">
             <MudSelectItem Value="@("DNI")">DNI</MudSelectItem>
             <MudSelectItem Value="@("PASAPORTE")">Pasaporte</MudSelectItem>
-            <MudSelectItem Value="@("CE")">CE</MudSelectItem>
+            <MudSelectItem Value="@("CE")">Carnet de Extranjería</MudSelectItem>
             <MudSelectItem Value="@("NIT")">NIT</MudSelectItem>
         </MudSelect>
-        <MudTextField Label="Documento" @bind-Value="documento" Variant="Variant.Outlined" Margin="Margin.Dense" />
-        <MudTextField Label="Teléfono" @bind-Value="telefono" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <MudTextField Label="Documento" 
+                      @bind-Value="documento" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense"
+                      HelperText="@ObtenerMensajeDocumento()" />
+        <MudTextField Label="Teléfono" 
+                      @bind-Value="telefono" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense"
+                      InputType="InputType.Number"
+                      HelperText="Mínimo 10 dígitos. Ej: 3015234567" />
         @if (tipoPersona == "Cliente")
         {
             <MudAlert Severity="Severity.Info" Class="mt-2">El código de cliente y el descuento semanal se generarán automáticamente.</MudAlert>
@@ -45,33 +58,42 @@
     private string documento = string.Empty;
     private string telefono = string.Empty;
 
+    private string ObtenerMensajeDocumento()
+    {
+        return tipoId switch
+        {
+            "DNI" or "NIT" => "Solo números. Entre 5 y 20 caracteres.",
+            "PASAPORTE" or "CE" => "Números y letras. Entre 5 y 20 caracteres.",
+            _ => "Entre 5 y 20 caracteres."
+        };
+    }
+
     private void Registrar()
     {
-        if (!System.Text.RegularExpressions.Regex.IsMatch(documento, Regla_negocio.regex_id))
+        try
         {
-            Snackbar.Add("Documento inválido.", Severity.Error);
-            return;
-        }
+            Persona persona = tipoPersona == "Cliente"
+                ? new Cliente(nombre, tipoId, documento, telefono)
+                : new Huesped(nombre, tipoId, documento, telefono);
 
-        if (!System.Text.RegularExpressions.Regex.IsMatch(telefono, Regla_negocio.regex_telefono))
-        {
-            Snackbar.Add("Teléfono inválido.", Severity.Error);
-            return;
+            PersonaService.Agregar(persona);
+            Validador.Advice_ValidarYPersistir(persona);
+            if (persona is Cliente c)
+            {
+                Snackbar.Add($"Cliente registrado. Código: {c.GetCodigo()}, Descuento: {c.GetDescuento():P}", Severity.Success);
+            }
+            else
+            {
+                Snackbar.Add("Persona registrada.", Severity.Success);
+            }
         }
-
-        Persona persona = tipoPersona == "Cliente"
-            ? new Cliente(nombre, tipoId, documento, telefono)
-            : new Huesped(nombre, tipoId, documento, telefono);
-
-        PersonaService.Agregar(persona);
-        Validador.Advice_ValidarYPersistir(persona);
-        if (persona is Cliente c)
+        catch (ArgumentException ex)
         {
-            Snackbar.Add($"Cliente registrado. Código: {c.GetCodigo()}, Descuento: {c.GetDescuento():P}", Severity.Success);
+            Snackbar.Add(ex.Message, Severity.Error);
         }
-        else
+        catch (Exception ex)
         {
-            Snackbar.Add("Persona registrada.", Severity.Success);
+            Snackbar.Add($"Error al registrar: {ex.Message}", Severity.Error);
         }
     }
 }
