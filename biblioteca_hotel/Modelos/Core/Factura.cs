@@ -8,6 +8,9 @@ namespace biblioteca_hotel.Modelos.Core
         protected Personas.Persona persona;
         protected bool es_colombiano;
         protected List<Servicios.Servicio_Hotelero> l_servicios_consumidos;
+        protected decimal costo_estancia;
+        protected Habitaciones.Habitacion habitacion;
+        protected int noches;
 
         public Factura(Personas.Persona persona, bool es_colombiano)
         {
@@ -15,6 +18,14 @@ namespace biblioteca_hotel.Modelos.Core
             this.es_colombiano = es_colombiano;
             productos_consumidos = new List<Productos.Producto>();
             l_servicios_consumidos = new List<Servicios.Servicio_Hotelero>();
+            costo_estancia = 0;
+        }
+
+        public void SetDetallesEstancia(Habitaciones.Habitacion habitacion, int noches, decimal costo_estancia)
+        {
+            this.habitacion = habitacion;
+            this.noches = noches;
+            this.costo_estancia = costo_estancia;
         }
 
         public void AgregarProducto(Productos.Producto producto)
@@ -29,10 +40,14 @@ namespace biblioteca_hotel.Modelos.Core
 
         public decimal CalcularSubtotal()
         {
-            decimal subtotal = 0;
+            decimal subtotal = costo_estancia;
             foreach (var producto in productos_consumidos)
             {
                 subtotal += producto.GetCosto();
+            }
+            foreach (var servicio in l_servicios_consumidos)
+            {
+                subtotal += servicio.GetCosto();
             }
             return subtotal;
         }

@@ -29,8 +29,7 @@
         <MudTextField Label="Teléfono" @bind-Value="telefono" Variant="Variant.Outlined" Margin="Margin.Dense" />
         @if (tipoPersona == "Cliente")
         {
-            <MudTextField Label="Código" @bind-Value="codigo" Variant="Variant.Outlined" Margin="Margin.Dense" />
-            <MudTextField Label="Descuento" @bind-Value="descuento" Variant="Variant.Outlined" Margin="Margin.Dense" />
+            <MudAlert Severity="Severity.Info" Class="mt-2">El código de cliente y el descuento semanal se generarán automáticamente.</MudAlert>
         }
         <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Registrar">Registrar</MudButton>
     </MudStack>
@@ -45,8 +44,6 @@
     private string tipoId = "DNI";
     private string documento = string.Empty;
     private string telefono = string.Empty;
-    private int codigo = 1000;
-    private float descuento = 0.05f;
 
     private void Registrar()
     {
@@ -63,11 +60,18 @@
         }
 
         Persona persona = tipoPersona == "Cliente"
-            ? new Cliente(nombre, tipoId, documento, telefono, codigo, descuento)
+            ? new Cliente(nombre, tipoId, documento, telefono)
             : new Huesped(nombre, tipoId, documento, telefono);
 
         PersonaService.Agregar(persona);
         Validador.Advice_ValidarYPersistir(persona);
-        Snackbar.Add("Persona registrada.", Severity.Success);
+        if (persona is Cliente c)
+        {
+            Snackbar.Add($"Cliente registrado. Código: {c.GetCodigo()}, Descuento: {c.GetDescuento():P}", Severity.Success);
+        }
+        else
+        {
+            Snackbar.Add("Persona registrada.", Severity.Success);
+        }
     }
 }

@@ -1,6 +1,7 @@
 @page "/reservas/detalle/{Index:int}"
 @inject ReservaService ReservaService
 @inject ISnackbar Snackbar
+@inject NavigationManager Navigation
 
 <PageTitle>Detalle reserva</PageTitle>
 
@@ -43,10 +44,14 @@ else
 
     private void Cancelar()
     {
-        if (reserva is null)
-            return;
+        if (reserva is null) return;
 
-        _ = new EventoCancelacionReserva(reserva.GetPersona().GetId(), reserva.GetPersona().GetId());
-        Snackbar.Add("Reserva cancelada.", Severity.Warning);
+        _ = new EventoCancelacionReserva(reserva.GetHabitacion().GetNumHab(), reserva.GetPersona().GetId());
+        
+        var all = ReservaService.ObtenerTodas().ToList();
+        all.Remove(reserva);
+        ReservaService.CargarDatos(all);
+
+        Navigation.NavigateTo("reservas");
     }
 }

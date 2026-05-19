@@ -1,5 +1,8 @@
 @page "/importacion"
-@inject LectorArchivos Lector
+@inject HabitacionService HabitacionService
+@inject PersonaService PersonaService
+@inject ReservaService ReservaService
+@inject FacturaService FacturaService
 @inject ISnackbar Snackbar
 
 <PageTitle>Importación</PageTitle>
@@ -12,7 +15,8 @@
 </div>
 
 <MudPaper Class="card">
-    <MudFileUpload T="IBrowserFile" FilesChanged="OnFilesChanged" />
+    <MudText Typo="Typo.h6" Class="mt-4 mb-2">Importar Personas</MudText>
+    <MudFileUpload T="IBrowserFile" FilesChanged="OnPersonasFilesChanged" />
     @if (personas.Length > 0)
     {
         <MudDataGrid Items="personas" Dense="true">
@@ -23,24 +27,80 @@
             </Columns>
         </MudDataGrid>
     }
+
+    <MudText Typo="Typo.h6" Class="mt-6 mb-2">Importar Habitaciones (txt/csv)</MudText>
+    <MudText Typo="Typo.body2" Class="mb-2">Formato: Tipo,Numero,Piso,PrecioBase,TipoCama (Ej: Sencilla,101,1,100000,queen)</MudText>
+    <MudFileUpload T="IBrowserFile" FilesChanged="OnHabitacionesFilesChanged" />
+    @if (habitaciones.Length > 0)
+    {
+        <MudDataGrid Items="habitaciones" Dense="true" Class="mt-3">
+            <Columns>
+                <PropertyColumn Property="h => h.GetNumHab()" Title="Número" />
+                <PropertyColumn Property="h => h.GetType().Name" Title="Tipo" />
+                <PropertyColumn Property="h => h.GetCostoNoche()" Title="Costo/Noche" />
+            </Columns>
+        </MudDataGrid>
+    }
 </MudPaper>
 
 @code {
     /// <summary>
-    /// Usa LectorArchivos y HotelProxy (IGestionHotel) para importar personas.
+    /// Importa personas y habitaciones desde archivos temporales sin usar proxies intermedios.
     /// </summary>
     private Persona[] personas = Array.Empty<Persona>();
+    private Habitacion[] habitaciones = Array.Empty<Habitacion>();
+    private bool _datosLimpiados;
 
-    private async Task OnFilesChanged(IBrowserFile file)
+    private async Task OnPersonasFilesChanged(IBrowserFile file)
     {
         var path = Path.GetTempFileName();
-        await using var stream = File.Create(path);
-        await file.OpenReadStream().CopyToAsync(stream);
+        await using (var stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
+        {
+            await file.OpenReadStream().CopyToAsync(stream);
+        }
 
         var lector = new LectorArchivos(path);
-        var proxy = new HotelProxy(lector);
-        proxy.cargar_datos(path);
+        PrepararImportacion();
+        lector.cargar_datos(path);
         personas = lector.GetPersonas();
-        Snackbar.Add("Datos importados.", Severity.Success);
+        PersonaService.CargarDatos(personas);
+        Snackbar.Add("Personas importadas.", Severity.Success);
+    }
+
+    private async Task OnHabitacionesFilesChanged(IBrowserFile file)
+    {
+        try {
+            var path = Path.GetTempFileName();
+            await using (var stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                await file.OpenReadStream().CopyToAsync(stream);
+            }
+
+            var lectorHabitaciones = new biblioteca_hotel.Utilidades.LectorHabitaciones(path);
+            PrepararImportacion();
+            lectorHabitaciones.cargar_datos(path);
+
+            habitaciones = lectorHabitaciones.GetHabitaciones();
+            HabitacionService.CargarDatos(habitaciones);
+            Snackbar.Add($"{habitaciones.Length} Habitaciones importadas.", Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error al importar: {ex.Message}", Severity.Error);
+        }
+    }
+
+    private void PrepararImportacion()
+    {
+        if (_datosLimpiados)
+            return;
+
+        PersonaService.CargarDatos(Array.Empty<Persona>());
+        HabitacionService.CargarDatos(Array.Empty<Habitacion>());
+        ReservaService.CargarDatos(Array.Empty<Reserva>());
+        FacturaService.CargarDatos(Array.Empty<Factura>());
+        personas = Array.Empty<Persona>();
+        habitaciones = Array.Empty<Habitacion>();
+        _datosLimpiados = true;
     }
 }

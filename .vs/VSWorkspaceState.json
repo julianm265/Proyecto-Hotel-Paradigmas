@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Front_hotel",
-    "\\Hotel_bib - copia\\biblioteca_hotel\\Modelos",
-    "\\Hotel_bib - copia\\biblioteca_hotel\\Modelos\\Habitaciones"
+    "\\Front_hotel\\Components",
+    "\\Front_hotel\\Components\\Pages",
+    "\\Front_hotel\\Components\\Pages\\Habitaciones",
+    "\\Front_hotel\\Components\\Pages\\Reservas",
+    "\\Front_hotel\\Imports",
+    "\\Front_hotel\\Services"
   ],
-  "SelectedNode": "\\Front_hotel\\Front_hotel.slnx",
+  "SelectedNode": "\\Front_hotel\\Components\\Pages\\Habitaciones\\DetalleHabitacion.razor",
   "PreviewInSolutionExplorer": false
 }

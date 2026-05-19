@@ -29,6 +29,14 @@ else
                 </Columns>
             </MudDataGrid>
             <MudDivider />
+            <MudText Typo="Typo.subtitle2">Servicios</MudText>
+            <MudDataGrid Items="servicios" Dense="true">
+                <Columns>
+                    <PropertyColumn Property="s => s.Descripcion" Title="Servicio" />
+                    <PropertyColumn Property="s => s.Costo" Title="Costo" />
+                </Columns>
+            </MudDataGrid>
+            <MudDivider />
             <MudText>Subtotal: @factura.CalcularSubtotal()</MudText>
             <MudText>Impuestos: @factura.CalcularImpuestos(true)</MudText>
             <MudText>Total: @factura.calcularTotal()</MudText>
@@ -43,6 +51,7 @@ else
     [Parameter] public string Codigo { get; set; } = string.Empty;
     private Factura? factura;
     private List<ItemProducto> productos = new();
+    private List<ItemServicio> servicios = new();
 
     protected override void OnInitialized()
     {
@@ -51,11 +60,22 @@ else
             return;
 
         productos = factura.GetProductos().Select(p => new ItemProducto(
-            p.GetType().Name,
+            p switch
+            {
+                biblioteca_hotel.Modelos.Productos.ProductoRestaurante pr => pr.GetNombreProducto(),
+                biblioteca_hotel.Modelos.Productos.ConsumoMinibar cm => cm.GetNombreProducto(),
+                _ => p.GetType().Name
+            },
             p is IProductoMinibar minibar ? minibar.Mostrar_cod(p) : p.GetHashCode().ToString(),
             p.GetCosto()
+        )).ToList();
+
+        servicios = factura.GetServicios().Select(s => new ItemServicio(
+            string.IsNullOrWhiteSpace(s.GetDescripcion()) ? s.GetType().Name : s.GetDescripcion(),
+            s.GetCosto()
         )).ToList();
     }
 
     private record ItemProducto(string Nombre, string Codigo, decimal Costo);
+    private record ItemServicio(string Descripcion, decimal Costo);
 }

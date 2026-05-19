@@ -3,11 +3,9 @@
   "<Personas>k__BackingField": [
     {
       "$id": "2",
-      "$type": "biblioteca_hotel.Modelos.Personas.Cliente, biblioteca_hotel",
-      "código": 1201,
-      "descuento": 0.1,
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
       "nombre": "Ana Torres",
-      "id": "123456",
+      "id": "100001",
       "tipo_id": 0,
       "número_telefono": 0
     },
@@ -15,155 +13,839 @@
       "$id": "3",
       "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
       "nombre": "Luis Paredes",
-      "id": "A92133",
+      "id": "100002",
       "tipo_id": 1,
       "número_telefono": 0
     },
     {
       "$id": "4",
       "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
-      "nombre": "Marina Díaz",
-      "id": "445566",
+      "nombre": "Marina Diaz",
+      "id": "100003",
+      "tipo_id": 2,
+      "número_telefono": 0
+    },
+    {
+      "$id": "5",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Carlos Rojas",
+      "id": "100004",
+      "tipo_id": 0,
+      "número_telefono": 0
+    },
+    {
+      "$id": "6",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Juliana Mejia",
+      "id": "100005",
+      "tipo_id": 0,
+      "número_telefono": 0
+    },
+    {
+      "$id": "7",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Sofia Lopez",
+      "id": "100006",
+      "tipo_id": 2,
+      "número_telefono": 0
+    },
+    {
+      "$id": "8",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Daniel Ruiz",
+      "id": "100007",
+      "tipo_id": 1,
+      "número_telefono": 0
+    },
+    {
+      "$id": "9",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Valeria Gomez",
+      "id": "100008",
+      "tipo_id": 0,
+      "número_telefono": 0
+    },
+    {
+      "$id": "10",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Miguel Castro",
+      "id": "100009",
+      "tipo_id": 0,
+      "número_telefono": 0
+    },
+    {
+      "$id": "11",
+      "$type": "biblioteca_hotel.Modelos.Personas.Huesped, biblioteca_hotel",
+      "nombre": "Paula Herrera",
+      "id": "100010",
       "tipo_id": 2,
       "número_telefono": 0
     }
   ],
   "<Habitaciones>k__BackingField": [
     {
-      "$id": "5",
+      "$id": "12",
       "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
       "l_camas": [
         {
-          "$id": "6",
+          "$id": "13",
           "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        },
+        {
+          "$id": "14",
+          "$type": "biblioteca_hotel.Modelos.Camas.Sencilla, biblioteca_hotel"
         }
       ],
-      "Costo_noche": 150000.0,
+      "Costo_noche": 120000.0,
       "num_hab": "101"
     },
     {
-      "$id": "7",
-      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
-      "minibar": {
-        "$id": "8",
-        "tipo": 0
-      },
+      "$id": "15",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
       "l_camas": [
         {
-          "$id": "9",
-          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+          "$id": "16",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
         }
       ],
-      "Costo_noche": 280000.0,
-      "num_hab": ""
-    },
-    {
-      "$id": "10",
-      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
-      "minibar": {
-        "$id": "11",
-        "tipo": 1
-      },
-      "l_camas": [
-        {
-          "$id": "12",
-          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
-        }
-      ],
-      "Costo_noche": 500000.0,
-      "num_hab": ""
-    },
-    {
-      "$id": "13",
-      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
-      "minibar": {
-        "$id": "14",
-        "tipo": 1
-      },
-      "l_camas": [
-        {
-          "$id": "15",
-          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
-        }
-      ],
-      "Costo_noche": 1000000.0,
+      "Costo_noche": 120000.0,
       "num_hab": "102"
-    }
-  ],
-  "<Reservas>k__BackingField": [
-    {
-      "$id": "16",
-      "persona": {
-        "$ref": "3"
-      },
-      "habitacion": {
-        "$ref": "7"
-      },
-      "fecha_entrada": "2026-05-18T00:00:00-05:00",
-      "fecha_salida": "2026-05-19T00:00:00-05:00"
-    }
-  ],
-  "<Facturas>k__BackingField": [
+    },
     {
       "$id": "17",
-      "productos_consumidos": [
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
         {
           "$id": "18",
-          "$type": "biblioteca_hotel.Modelos.Productos.Agua, biblioteca_hotel",
-          "costo": 5000.0
-        },
-        {
-          "$id": "19",
-          "$type": "biblioteca_hotel.Modelos.Productos.Vino, biblioteca_hotel",
-          "costo": 28000.0
-        },
-        {
-          "$id": "20",
-          "$type": "biblioteca_hotel.Modelos.Productos.Kit_aseo, biblioteca_hotel",
-          "costo": 15000.0
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
         }
       ],
-      "persona": {
-        "$ref": "2"
-      },
-      "es_colombiano": true,
-      "l_servicios_consumidos": [
-        {
-          "$id": "21",
-          "restaurante": {
-            "$id": "22"
-          },
-          "lavanderia": {
-            "$id": "23"
-          }
-        }
-      ]
+      "Costo_noche": 120000.0,
+      "num_hab": "103"
     },
     {
-      "$id": "24",
-      "productos_consumidos": [],
-      "persona": {
-        "$ref": "2"
-      },
-      "es_colombiano": false,
-      "l_servicios_consumidos": []
-    }
-  ],
-  "<Carta>k__BackingField": [
+      "$id": "19",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "20",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "104"
+    },
+    {
+      "$id": "21",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "22",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "105"
+    },
+    {
+      "$id": "23",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "24",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "106"
+    },
     {
       "$id": "25",
-      "$type": "biblioteca_hotel.Modelos.Carta.Desayuno, biblioteca_hotel",
-      "Costo": 25000.0
-    },
-    {
-      "$id": "26",
-      "$type": "biblioteca_hotel.Modelos.Carta.Almuerzo, biblioteca_hotel",
-      "Costo": 40000.0
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "26",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "107"
     },
     {
       "$id": "27",
-      "$type": "biblioteca_hotel.Modelos.Carta.Cena, biblioteca_hotel",
-      "Costo": 45000.0
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "28",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "108"
+    },
+    {
+      "$id": "29",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "30",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "109"
+    },
+    {
+      "$id": "31",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "32",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "110"
+    },
+    {
+      "$id": "33",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [],
+      "Costo_noche": 120000.0,
+      "num_hab": "111"
+    },
+    {
+      "$id": "34",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "35",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "112"
+    },
+    {
+      "$id": "36",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "37",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "113"
+    },
+    {
+      "$id": "38",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "39",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "114"
+    },
+    {
+      "$id": "40",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Sencilla, biblioteca_hotel",
+      "l_camas": [
+        {
+          "$id": "41",
+          "$type": "biblioteca_hotel.Modelos.Camas.Queen, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 120000.0,
+      "num_hab": "115"
+    },
+    {
+      "$id": "42",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "43",
+        "tipo": 0,
+        "inventario": {
+          "$id": "44"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "45",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "201"
+    },
+    {
+      "$id": "46",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "47",
+        "tipo": 0,
+        "inventario": {
+          "$id": "48"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "49",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "202"
+    },
+    {
+      "$id": "50",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "51",
+        "tipo": 0,
+        "inventario": {
+          "$id": "52"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "53",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "203"
+    },
+    {
+      "$id": "54",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "55",
+        "tipo": 0,
+        "inventario": {
+          "$id": "56"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "57",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "204"
+    },
+    {
+      "$id": "58",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "59",
+        "tipo": 0,
+        "inventario": {
+          "$id": "60"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "61",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "205"
+    },
+    {
+      "$id": "62",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "63",
+        "tipo": 0,
+        "inventario": {
+          "$id": "64"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "65",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "206"
+    },
+    {
+      "$id": "66",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "67",
+        "tipo": 0,
+        "inventario": {
+          "$id": "68"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "69",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "207"
+    },
+    {
+      "$id": "70",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "71",
+        "tipo": 0,
+        "inventario": {
+          "$id": "72"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "73",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "208"
+    },
+    {
+      "$id": "74",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "75",
+        "tipo": 0,
+        "inventario": {
+          "$id": "76"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "77",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "209"
+    },
+    {
+      "$id": "78",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "79",
+        "tipo": 0,
+        "inventario": {
+          "$id": "80"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "81",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "210"
+    },
+    {
+      "$id": "82",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "83",
+        "tipo": 0,
+        "inventario": {
+          "$id": "84"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "85",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "211"
+    },
+    {
+      "$id": "86",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "87",
+        "tipo": 0,
+        "inventario": {
+          "$id": "88"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "89",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "212"
+    },
+    {
+      "$id": "90",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "91",
+        "tipo": 0,
+        "inventario": {
+          "$id": "92"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "93",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "213"
+    },
+    {
+      "$id": "94",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "95",
+        "tipo": 0,
+        "inventario": {
+          "$id": "96"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "97",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "214"
+    },
+    {
+      "$id": "98",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Ejecutiva, biblioteca_hotel",
+      "minibar": {
+        "$id": "99",
+        "tipo": 0,
+        "inventario": {
+          "$id": "100"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "101",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 180000.0,
+      "num_hab": "215"
+    },
+    {
+      "$id": "102",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "103",
+        "tipo": 1,
+        "inventario": {
+          "$id": "104"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "105",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "301"
+    },
+    {
+      "$id": "106",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "107",
+        "tipo": 1,
+        "inventario": {
+          "$id": "108"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "109",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "302"
+    },
+    {
+      "$id": "110",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "111",
+        "tipo": 1,
+        "inventario": {
+          "$id": "112"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "113",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "303"
+    },
+    {
+      "$id": "114",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "115",
+        "tipo": 1,
+        "inventario": {
+          "$id": "116"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "117",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "304"
+    },
+    {
+      "$id": "118",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "119",
+        "tipo": 1,
+        "inventario": {
+          "$id": "120"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "121",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "305"
+    },
+    {
+      "$id": "122",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "123",
+        "tipo": 1,
+        "inventario": {
+          "$id": "124"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "125",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "306"
+    },
+    {
+      "$id": "126",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "127",
+        "tipo": 1,
+        "inventario": {
+          "$id": "128"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "129",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "307"
+    },
+    {
+      "$id": "130",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "131",
+        "tipo": 1,
+        "inventario": {
+          "$id": "132"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "133",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "308"
+    },
+    {
+      "$id": "134",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "135",
+        "tipo": 1,
+        "inventario": {
+          "$id": "136"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "137",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        },
+        {
+          "$id": "138",
+          "$type": "biblioteca_hotel.Modelos.Camas.Semidoble, biblioteca_hotel"
+        },
+        {
+          "$id": "139",
+          "$type": "biblioteca_hotel.Modelos.Camas.Semidoble, biblioteca_hotel"
+        },
+        {
+          "$id": "140",
+          "$type": "biblioteca_hotel.Modelos.Camas.Semidoble, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "309"
+    },
+    {
+      "$id": "141",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "142",
+        "tipo": 1,
+        "inventario": {
+          "$id": "143"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "144",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "310"
+    },
+    {
+      "$id": "145",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "146",
+        "tipo": 1,
+        "inventario": {
+          "$id": "147"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "148",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "311"
+    },
+    {
+      "$id": "149",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "150",
+        "tipo": 1,
+        "inventario": {
+          "$id": "151"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "152",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "312"
+    },
+    {
+      "$id": "153",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "154",
+        "tipo": 1,
+        "inventario": {
+          "$id": "155"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "156",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "313"
+    },
+    {
+      "$id": "157",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "158",
+        "tipo": 1,
+        "inventario": {
+          "$id": "159"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "160",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "314"
+    },
+    {
+      "$id": "161",
+      "$type": "biblioteca_hotel.Modelos.Habitaciones.Suite, biblioteca_hotel",
+      "minibar": {
+        "$id": "162",
+        "tipo": 1,
+        "inventario": {
+          "$id": "163"
+        }
+      },
+      "l_camas": [
+        {
+          "$id": "164",
+          "$type": "biblioteca_hotel.Modelos.Camas.King, biblioteca_hotel"
+        }
+      ],
+      "Costo_noche": 260000.0,
+      "num_hab": "315"
     }
-  ]
+  ],
+  "<Reservas>k__BackingField": [],
+  "<Facturas>k__BackingField": [],
+  "<Carta>k__BackingField": []
 }

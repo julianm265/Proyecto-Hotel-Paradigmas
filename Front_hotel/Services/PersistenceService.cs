@@ -110,8 +110,11 @@ namespace Front_hotel.Services
             }
             else
             {
-                // Si no existe el archivo, usamos el seeder por defecto y guardamos el estado
-                DataSeeder.Seed(services);
+                _personaService.CargarDatos(Array.Empty<biblioteca_hotel.Modelos.Personas.Persona>());
+                _habitacionService.CargarDatos(Array.Empty<biblioteca_hotel.Modelos.Habitaciones.Habitacion>());
+                _reservaService.CargarDatos(Array.Empty<biblioteca_hotel.Modelos.Core.Reserva>());
+                _facturaService.CargarDatos(Array.Empty<biblioteca_hotel.Modelos.Core.Factura>());
+                _cartaService.CargarDatos(Array.Empty<biblioteca_hotel.Modelos.Carta.Oferta_carta>());
                 SaveData();
             }
         }

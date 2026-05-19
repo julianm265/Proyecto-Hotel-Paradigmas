@@ -142,10 +142,10 @@
         if (prendasLavado > 0) desc.Add($"Lavado ({prendasLavado} prendas)");
         if (prendasPlanchado > 0) desc.Add($"Planchado ({prendasPlanchado} prendas)");
 
-        var productoLavado = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante(
+        var servicioLavanderia = new biblioteca_hotel.Modelos.Servicios.ServicioLavanderia(
             string.Join(" y ", desc), total);
-            
-        FacturaService.ActualizarConsumo(_persona, productoLavado);
+
+        FacturaService.ActualizarServicio(_persona, servicioLavanderia);
 
         Snackbar.Add($"✓ Servicio registrado y cargado a la factura de {_persona.GetNombre()}.", Severity.Success);
         prendasLavado = 0; prendasPlanchado = 0; _persona = null;

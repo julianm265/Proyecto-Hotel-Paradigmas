@@ -5,6 +5,7 @@ namespace biblioteca_hotel.Servicios
 {
     public class PersonaService
     {
+        private static readonly System.Random _random = new();
         protected List<Modelos.Personas.Persona> l_personas;
 
         public PersonaService()
@@ -50,6 +51,17 @@ namespace biblioteca_hotel.Servicios
             l_personas.Clear();
             if (datos != null)
                 l_personas.AddRange(datos);
+        }
+
+        public static int GenerarCodigoCliente()
+        {
+            return _random.Next(1000, 9999);
+        }
+
+        public static float GenerarDescuentoSemanal(System.DateTime? fecha = null)
+        {
+            var fechaEvaluacion = fecha ?? System.DateTime.Now;
+            return fechaEvaluacion.DayOfWeek == System.DayOfWeek.Wednesday ? 0.15f : 0f;
         }
     }
 }

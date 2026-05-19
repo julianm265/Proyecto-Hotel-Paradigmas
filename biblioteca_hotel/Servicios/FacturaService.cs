@@ -51,6 +51,18 @@ namespace biblioteca_hotel.Servicios
             factura.AgregarProducto(producto);
         }
 
+        public void ActualizarServicio(Modelos.Personas.Persona persona, Modelos.Servicios.Servicio_Hotelero servicio)
+        {
+            var factura = _facturas.FirstOrDefault(f => f.GetPersona().GetId() == persona.GetId());
+            if (factura == null)
+            {
+                factura = new Modelos.Core.Factura(persona, true);
+                _facturas.Add(factura);
+                l_facturas = _facturas.ToArray();
+            }
+            factura.AgregarServicio(servicio);
+        }
+
         public Modelos.Core.Factura ObtenerOCrearFactura(Modelos.Personas.Persona persona, bool esColombiano = true)
         {
             var factura = _facturas.FirstOrDefault(f => f.GetPersona().GetId() == persona.GetId());

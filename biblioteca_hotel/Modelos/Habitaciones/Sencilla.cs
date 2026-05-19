@@ -9,6 +9,13 @@ namespace biblioteca_hotel.Modelos.Habitaciones
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }
 
+        public Sencilla(decimal costo_noche, string tipo_cama, string numHab)
+            : base(costo_noche)
+        {
+            num_hab = numHab;
+            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
+        }
+
         private Camas.Cama CrearCama(string tipo)
         {
             return tipo?.ToLower() switch

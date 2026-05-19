@@ -79,9 +79,7 @@
         <!-- Preview Panel when person selected -->
         @if (_personaSeleccionada != null)
         {
-            var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
-
-            @if (reserva == null)
+            @if (_reservasSeleccionadas.Count == 0)
             {
                 <div class="empty-state mt-4" style="border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.05);">
                     <span class="empty-icon">⚠️</span>
@@ -90,13 +88,40 @@
             }
             else
             {
-                var noches = (reserva.GetFechaSalida() - reserva.GetFechaEntrada()).Days;
-                var subtotalHabitacion = reserva.GetHabitacion().GetCostoNoche() * noches;
-                
+                var reservasUsuario = _reservasSeleccionadas.Where(r => r.Seleccionada).Select(r => r.Reserva).ToList();
                 var facturaConsumos = FacturaService.ObtenerTodas().FirstOrDefault(f => f.GetPersona().GetId() == _personaSeleccionada.GetId());
                 var subtotalServicios = facturaConsumos?.CalcularSubtotal() ?? 0;
-                
-                var subtotal = subtotalHabitacion + subtotalServicios;
+
+                decimal subtotalHabitaciones = 0;
+                <div class="section-eyebrow mt-4">Reservas Encontradas (@_reservasSeleccionadas.Count)</div>
+                @foreach (var item in _reservasSeleccionadas)
+                {
+                    var reserva = item.Reserva;
+                    var noches = (reserva.GetFechaSalida() - reserva.GetFechaEntrada()).Days;
+                    if(noches <= 0) noches = 1;
+                    var costoHab = reserva.GetHabitacion().GetCostoNoche() * noches;
+                    if (item.Seleccionada)
+                        subtotalHabitaciones += costoHab;
+                    <div class="checkout-preview glass-inner-panel mt-2 anim-fade-in">
+                        <div class="preview-row">
+                            <span class="preview-label">Habitación</span>
+                            <span class="preview-value">@reserva.GetHabitacion().GetType().Name — N.° @reserva.GetHabitacion().GetNumHab()</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Estancia</span>
+                            <span class="preview-value mono">@noches noche(s)</span>
+                        </div>
+                        <div class="preview-row">
+                            <span class="preview-label">Subtotal Hab.</span>
+                            <span class="preview-value mono">@costoHab.ToString("C0", _col)</span>
+                        </div>
+                        <div class="preview-row">
+                            <MudCheckBox T="bool" @bind-Value="item.Seleccionada" Label="Procesar esta habitación" Color="Color.Primary" />
+                        </div>
+                    </div>
+                }
+
+                var subtotal = subtotalHabitaciones + (reservasUsuario.Any() ? subtotalServicios : 0);
                 
                 var impuesto = esColombiano
                     ? subtotal * (decimal)biblioteca_hotel.Utilidades.Regla_negocio.valor_IVA
@@ -106,31 +131,11 @@
                 <div class="checkout-preview glass-inner-panel mt-4 anim-fade-in">
                     <div class="preview-row">
                         <span class="preview-label">Huésped</span>
-                        <span class="preview-value">@reserva.GetPersona().GetNombre()</span>
+                        <span class="preview-value">@_personaSeleccionada.GetNombre()</span>
                     </div>
                     <div class="preview-row">
-                        <span class="preview-label">Habitación</span>
-                        <span class="preview-value">@reserva.GetHabitacion().GetType().Name — N.° @reserva.GetHabitacion().GetNumHab()</span>
-                    </div>
-                    <div class="preview-row">
-                        <span class="preview-label">Entrada</span>
-                        <span class="preview-value mono">@reserva.GetFechaEntrada().ToString("dd MMM yyyy")</span>
-                    </div>
-                    <div class="preview-row">
-                        <span class="preview-label">Salida</span>
-                        <span class="preview-value mono">@reserva.GetFechaSalida().ToString("dd MMM yyyy")</span>
-                    </div>
-                    <div class="preview-row">
-                        <span class="preview-label">Noches</span>
-                        <span class="preview-value kpi-gold">@noches</span>
-                    </div>
-                    <div class="preview-row">
-                        <span class="preview-label">Costo/noche</span>
-                        <span class="preview-value mono">@reserva.GetHabitacion().GetCostoNoche().ToString("C0", _col)</span>
-                    </div>
-                    <div class="preview-row">
-                        <span class="preview-label">Subtotal Habitación</span>
-                        <span class="preview-value mono">@subtotalHabitacion.ToString("C0", _col)</span>
+                        <span class="preview-label">Subtotal Habitaciones</span>
+                        <span class="preview-value mono">@subtotalHabitaciones.ToString("C0", _col)</span>
                     </div>
                     @if (subtotalServicios > 0)
                     {
@@ -162,8 +167,9 @@
                            OnClick="GenerarFactura"
                            Class="obs-button-glow mt-4"
                            StartIcon="@Icons.Material.Filled.ReceiptLong"
-                           FullWidth="true">
-                    Generar Factura y Completar Check-Out
+                           FullWidth="true"
+                           Disabled="@(reservasUsuario.Count == 0)">
+                    Generar @reservasUsuario.Count Factura(s) y Completar Check-Out
                 </MudButton>
             }
         }
@@ -181,6 +187,7 @@
     private Persona?   _personaSeleccionada;
     private string     _filtro = string.Empty;
     private bool       esColombiano = true;
+    private readonly List<ReservaSeleccion> _reservasSeleccionadas = new();
 
     private static readonly System.Globalization.CultureInfo _col = new("es-CO");
 
@@ -193,6 +200,7 @@
     {
         _filtro = e.Value?.ToString() ?? string.Empty;
         _personaSeleccionada = null;
+        _reservasSeleccionadas.Clear();
         _personasFiltradas = string.IsNullOrWhiteSpace(_filtro)
             ? Array.Empty<Persona>()
             : PersonaService.BuscarPorFiltro(_filtro);
@@ -203,43 +211,79 @@
         _filtro = string.Empty;
         _personasFiltradas = Array.Empty<Persona>();
         _personaSeleccionada = null;
+        _reservasSeleccionadas.Clear();
     }
 
     private void SeleccionarPersona(Persona persona)
     {
         _personaSeleccionada = persona;
+        _reservasSeleccionadas.Clear();
+        _reservasSeleccionadas.AddRange(
+            _todasReservas
+                .Where(r => r.GetPersona().GetId() == persona.GetId() && r.GetCheckInRealizado())
+                .Select(r => new ReservaSeleccion(r))
+        );
     }
 
     private void GenerarFactura()
     {
         if (_personaSeleccionada == null) return;
-        var reserva = _todasReservas.FirstOrDefault(r => r.GetPersona().GetId() == _personaSeleccionada.GetId());
-        if (reserva == null) { Snackbar.Add("⚠️ No hay reserva activa.", Severity.Warning); return; }
+        var reservasUsuario = _reservasSeleccionadas.Where(r => r.Seleccionada).Select(r => r.Reserva).ToList();
+        if (!reservasUsuario.Any()) { Snackbar.Add("⚠️ Selecciona al menos una reserva.", Severity.Warning); return; }
 
         try
         {
-            var factura = Recepcion.Check_Out(_personaSeleccionada);
-            Validador.Advice_ValidarYPersistir(factura);
-            
-            // Apply room cost to factura just in case Check_Out doesn't include it (or it's already there)
-            // But we must sum them up so the final receipt shows the right total.
-            // If the backend adds it, we don't need to add it here.
-            FacturaService.Agregar(factura);
-            
-            // Remove reservation to complete the lifecycle
-            var newList = _todasReservas.Where(r => r != reserva).ToList();
+            var facturaConsumos = FacturaService.ObtenerTodas().FirstOrDefault(f => f.GetPersona().GetId() == _personaSeleccionada.GetId());
+            if (facturaConsumos != null) {
+                var allFacturas = FacturaService.ObtenerTodas().ToList();
+                allFacturas.Remove(facturaConsumos);
+                FacturaService.CargarDatos(allFacturas);
+            }
+
+            var consumosAplicados = false;
+            for (int i = 0; i < reservasUsuario.Count; i++) {
+                var reserva = reservasUsuario[i];
+                var factura = new biblioteca_hotel.Modelos.Core.Factura(_personaSeleccionada, esColombiano);
+                
+                var noches = (reserva.GetFechaSalida() - reserva.GetFechaEntrada()).Days;
+                if(noches <= 0) noches = 1;
+                var costoHab = reserva.GetHabitacion().GetCostoNoche() * noches;
+                
+                factura.SetDetallesEstancia(reserva.GetHabitacion(), noches, costoHab);
+
+                if (!consumosAplicados && facturaConsumos != null) {
+                    foreach (var p in facturaConsumos.GetProductos()) factura.AgregarProducto(p);
+                    foreach (var s in facturaConsumos.GetServicios()) factura.AgregarServicio(s);
+                    consumosAplicados = true;
+                }
+
+                Validador.Advice_ValidarYPersistir(factura);
+                FacturaService.Agregar(factura);
+                _ = new EventoFacturaGenerada(factura.GetHashCode().ToString(), factura.calcularTotal());
+            }
+
+            var newList = _todasReservas.Where(r => !reservasUsuario.Contains(r)).ToList();
             ReservaService.CargarDatos(newList);
             _todasReservas = newList.ToArray();
 
-            _ = new EventoFacturaGenerada(factura.GetHashCode().ToString(), factura.calcularTotal());
-
-            Snackbar.Add("📜 Factura generada y Check-Out completado.", Severity.Success);
+            Snackbar.Add($"\U0001F4DC {reservasUsuario.Count} Factura(s) generada(s) y Check-Out completado.", Severity.Success);
             Navigation.NavigateTo("/facturacion");
         }
         catch (Exception ex)
         {
             Snackbar.Add($"Error al generar factura: {ex.Message}", Severity.Error);
         }
+    }
+
+    private sealed class ReservaSeleccion
+    {
+        public ReservaSeleccion(Reserva reserva)
+        {
+            Reserva = reserva;
+        }
+
+        public Reserva Reserva { get; }
+        public bool Seleccionada { get; set; }
     }
 }
 

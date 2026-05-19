@@ -67,7 +67,7 @@ else
                     <div class="section-eyebrow">Registrar Consumo</div>
 
                     <MudSelect T="Habitacion" Label="Habitación con Minibar"
-                               @bind-Value="_habSeleccionada"
+                               @bind-Value="_habSeleccionada" @bind-Value:after="OnHabitacionSeleccionada"
                                Variant="Variant.Outlined" Margin="Margin.Dense" Class="obs-select"
                                ToStringFunc="@(h => h == null ? "Seleccionar..." : $"{h.GetType().Name} N.°{h.GetNumHab()}")">
                         @foreach (var h in _habitacionesConMinibar)
@@ -136,8 +136,20 @@ else
         ["bata"]    = new("Bata de Baño",    biblioteca_hotel.Utilidades.ReglasNegocioHabitaciones.precio_bata,     "🩱"),
     };
 
+    private readonly Dictionary<string, string> _mapaInventario = new()
+    {
+        ["licor"] = "Licor",
+        ["vino"] = "Vino",
+        ["agua"] = "Agua",
+        ["gaseosa"] = "Gaseosa",
+        ["kit"] = "Kit aseo",
+        ["bata"] = "Bata"
+    };
+
+
     private decimal _total => _cantidades.Sum(kv =>
         _productos.ContainsKey(kv.Key) ? _productos[kv.Key].Precio * kv.Value : 0);
+
 
     protected override void OnInitialized()
     {
@@ -149,6 +161,24 @@ else
 
     private void Incrementar(string key)
     {
+        if (_habSeleccionada == null)
+        {
+            Snackbar.Add("Selecciona una habitación para validar stock.", Severity.Warning);
+            return;
+        }
+
+        var minibar = ObtenerMinibar(_habSeleccionada);
+        if (minibar == null) return;
+
+
+        var stock = minibar.GetStock(_mapaInventario[key]);
+        var actual = _cantidades.ContainsKey(key) ? _cantidades[key] : 0;
+        if (actual + 1 > stock)
+        {
+            Snackbar.Add("No hay stock suficiente en el minibar.", Severity.Error);
+            return;
+        }
+
         if (!_cantidades.ContainsKey(key)) _cantidades[key] = 0;
         _cantidades[key]++;
     }
@@ -174,6 +204,29 @@ else
 
         var persona = reservaActiva.GetPersona();
 
+        var minibar = ObtenerMinibar(_habSeleccionada);
+        if (minibar == null)
+        {
+            Snackbar.Add("La habitación no tiene minibar activo.", Severity.Error);
+            return;
+        }
+
+        foreach (var kv in _cantidades.Where(k => k.Value > 0))
+        {
+            var inventarioKey = _mapaInventario[kv.Key];
+            if (minibar.GetStock(inventarioKey) < kv.Value)
+            {
+                Snackbar.Add("Stock insuficiente para completar el consumo.", Severity.Error);
+                return;
+            }
+        }
+
+        foreach (var kv in _cantidades.Where(k => k.Value > 0))
+        {
+            var inventarioKey = _mapaInventario[kv.Key];
+            minibar.Consumir(inventarioKey, kv.Value);
+        }
+
         int totalUnidades = _cantidades.Values.Sum();
         var ev = new EventoConsumoMinibar(_habSeleccionada.GetHashCode(), totalUnidades);
         ev.registrarConsumo();
@@ -184,7 +237,7 @@ else
             var precio = _productos[kv.Key].Precio;
             for(int i = 0; i < kv.Value; i++)
             {
-                var p = new biblioteca_hotel.Modelos.Productos.ProductoRestaurante($"Minibar: {nombre}", precio);
+                var p = new biblioteca_hotel.Modelos.Productos.ConsumoMinibar($"Minibar: {nombre}", precio);
                 FacturaService.ActualizarConsumo(persona, p);
             }
         }
@@ -195,6 +248,28 @@ else
         _cantidades.Clear();
         _habSeleccionada = null;
     }
+
+    private void OnHabitacionSeleccionada()
+    {
+        _cantidades.Clear();
+        if (_habSeleccionada == null) return;
+
+        var minibar = ObtenerMinibar(_habSeleccionada);
+        if (minibar == null) return;
+
+        minibar.LLenar(minibar.GetTipo());
+    }
+
+    private biblioteca_hotel.Modelos.Core.Minibar? ObtenerMinibar(Habitacion habitacion)
+    {
+        return habitacion switch
+        {
+            biblioteca_hotel.Modelos.Habitaciones.Ejecutiva ej => ej.GetMinibar(),
+            biblioteca_hotel.Modelos.Habitaciones.Suite suite => suite.GetMinibar(),
+            _ => null
+        };
+    }
+
 }
 
 <style>
