@@ -1,11 +1,17 @@
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace biblioteca_hotel.Servicios
 {
+    /// <summary>
+    /// Servicio para gestionar personas (clientes, huéspedes) con generación de códigos y descuentos.
+    /// </summary>
     public class PersonaService
     {
-        private static readonly System.Random _random = new();
+        private static readonly Random _random = new();
+        private static readonly object _lockObject = new object();
         protected List<Modelos.Personas.Persona> l_personas;
 
         public PersonaService()
@@ -32,7 +38,7 @@ namespace biblioteca_hotel.Servicios
         {
             if (string.IsNullOrWhiteSpace(nombre)) return l_personas.ToArray();
             return l_personas
-                .Where(p => p.GetNombre().Contains(nombre, System.StringComparison.OrdinalIgnoreCase))
+                .Where(p => p.GetNombre().Contains(nombre, StringComparison.OrdinalIgnoreCase))
                 .ToArray();
         }
 
@@ -41,8 +47,8 @@ namespace biblioteca_hotel.Servicios
             if (string.IsNullOrWhiteSpace(filtro)) return l_personas.ToArray();
             return l_personas
                 .Where(p =>
-                    p.GetNombre().Contains(filtro, System.StringComparison.OrdinalIgnoreCase) ||
-                    p.GetId().Contains(filtro, System.StringComparison.OrdinalIgnoreCase))
+                    p.GetNombre().Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                    p.GetId().Contains(filtro, StringComparison.OrdinalIgnoreCase))
                 .ToArray();
         }
 
@@ -53,15 +59,47 @@ namespace biblioteca_hotel.Servicios
                 l_personas.AddRange(datos);
         }
 
+        /// <summary>
+        /// Genera un código de cliente único entre 1000 y 999998.
+        /// Thread-safe mediante lock.
+        /// </summary>
         public static int GenerarCodigoCliente()
         {
-            return _random.Next(1000, 9999);
+            lock (_lockObject)
+            {
+                return _random.Next(1000, 999999);
+            }
         }
 
-        public static float GenerarDescuentoSemanal(System.DateTime? fecha = null)
+        /// <summary>
+        /// Obtiene el número de semana del año actual según ISO 8601.
+        /// </summary>
+        private static int ObtenerSemanaDelAno(DateTime? fecha = null)
         {
-            var fechaEvaluacion = fecha ?? System.DateTime.Now;
-            return fechaEvaluacion.DayOfWeek == System.DayOfWeek.Wednesday ? 0.15f : 0f;
+            DateTime hoy = fecha ?? DateTime.Now;
+            CultureInfo ci = CultureInfo.CurrentCulture;
+            Calendar cal = ci.Calendar;
+
+            CalendarWeekRule regla = CalendarWeekRule.FirstFourDayWeek;
+            DayOfWeek primerDia = ci.DateTimeFormat.FirstDayOfWeek;
+
+            return cal.GetWeekOfYear(hoy, regla, primerDia);
+        }
+
+        /// <summary>
+        /// Genera un descuento semanal consistente entre 0 y 0.20 (0% a 20%).
+        /// El descuento es el mismo durante toda la semana y varía cada semana.
+        /// Utiliza la semana actual como semilla para reproducibilidad.
+        /// </summary>
+        public static float GenerarDescuentoSemanal(DateTime? fecha = null)
+        {
+            int semanaActual = ObtenerSemanaDelAno(fecha);
+
+            // Usar la semana como semilla para generar un valor consistente
+            Random randomSemanal = new Random(semanaActual);
+
+            // Descuento entre 0 y 0.20 (0% a 20%)
+            return (float)(randomSemanal.NextDouble() * 0.20);
         }
     }
 }

@@ -1,20 +1,22 @@
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
+    /// <summary>
+    /// Habitación ejecutiva con minibar y costo definido en reglas de negocio.
+    /// El costo se establece automáticamente de ReglasNegocioHabitaciones.costo_noche_hab_ejecutiva.
+    /// </summary>
     public class Ejecutiva : Habitacion, Interfaces.Isurtidor
     {
         protected Core.Minibar minibar;
 
-        public Ejecutiva(decimal costo_noche, string tipo_cama)
-            : base(costo_noche)
+        /// <summary>
+        /// Constructor único que valida el número de habitación.
+        /// El costo se obtiene automáticamente de las reglas de negocio.
+        /// </summary>
+        public Ejecutiva(string numero_habitacion, string tipo_cama, int piso)
+            : base(Utilidades.ReglasNegocioHabitaciones.costo_noche_hab_ejecutiva)
         {
-            minibar = new Core.Minibar(Enums.TipoMinibar.Ejecutivo);
-            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
-        }
-
-        public Ejecutiva(decimal costo_noche, string tipo_cama, string numHab)
-            : base(costo_noche)
-        {
-            num_hab = numHab;
+            ValidarNumeroHabitacion(numero_habitacion, piso);
+            num_hab = numero_habitacion;
             minibar = new Core.Minibar(Enums.TipoMinibar.Ejecutivo);
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }

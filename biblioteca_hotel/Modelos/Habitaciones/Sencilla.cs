@@ -1,18 +1,20 @@
 namespace biblioteca_hotel.Modelos.Habitaciones
 {
+    /// <summary>
+    /// Habitación sencilla con una cama y costo definido en reglas de negocio.
+    /// El costo se establece automáticamente de ReglasNegocioHabitaciones.costo_noche_hab_sencilla.
+    /// </summary>
     public class Sencilla : Habitacion
     {
-        public Sencilla(decimal costo_noche, string tipo_cama, int piso)
-            : base(costo_noche)
+        /// <summary>
+        /// Constructor único que valida el número de habitación.
+        /// El costo se obtiene automáticamente de las reglas de negocio.
+        /// </summary>
+        public Sencilla(string numero_habitacion, string tipo_cama, int piso)
+            : base(Utilidades.ReglasNegocioHabitaciones.costo_noche_hab_sencilla)
         {
-            num_hab = $"{piso}01";
-            l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
-        }
-
-        public Sencilla(decimal costo_noche, string tipo_cama, string numHab)
-            : base(costo_noche)
-        {
-            num_hab = numHab;
+            ValidarNumeroHabitacion(numero_habitacion, piso);
+            num_hab = numero_habitacion;
             l_camas = new Camas.Cama[] { CrearCama(tipo_cama) };
         }
 

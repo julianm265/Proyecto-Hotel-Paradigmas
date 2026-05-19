@@ -36,14 +36,13 @@ namespace biblioteca_hotel.Utilidades
             var tipo = partes[0].Trim().ToLower();
             var num = partes[1].Trim();
             var piso = int.TryParse(partes[2].Trim(), out var pisoVal) ? pisoVal : 1;
-            var precio = decimal.TryParse(partes[3].Trim(), out var precioVal) ? precioVal : 0m;
             var cama = partes.Length > 4 ? partes[4].Trim() : "doble";
 
             Modelos.Habitaciones.Habitacion habitacion = tipo switch
             {
-                "ejecutiva" => new Modelos.Habitaciones.Ejecutiva(precio, cama, num),
-                "suite" => new Modelos.Habitaciones.Suite(precio, cama, num),
-                _ => new Modelos.Habitaciones.Sencilla(precio, cama, num)
+                "ejecutiva" => new Modelos.Habitaciones.Ejecutiva(num, cama, piso),
+                "suite" => new Modelos.Habitaciones.Suite(num, cama, piso),
+                _ => new Modelos.Habitaciones.Sencilla(num, cama, piso)
             };
 
             lista_habitaciones.Add(habitacion);

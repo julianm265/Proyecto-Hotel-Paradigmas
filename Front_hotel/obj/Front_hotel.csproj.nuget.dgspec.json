@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj": {}
+    "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
+    "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj",
         "projectName": "biblioteca_hotel",
-        "projectPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\obj\\",
+        "projectPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,7 +46,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -346,20 +346,20 @@
         }
       }
     },
-    "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj": {
+    "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
         "projectName": "Front_hotel",
-        "projectPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\Front_hotel\\obj\\",
+        "projectPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -376,8 +376,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
-                "projectPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\hola\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj"
+              "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
+                "projectPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj"
               }
             }
           }
@@ -392,7 +392,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -402,7 +402,7 @@
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.8, )",
+              "version": "[10.0.7, )",
               "autoReferenced": true
             },
             "MudBlazor": {
@@ -433,7 +433,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
