@@ -163,11 +163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
       "projectName": "Front_hotel",
-      "projectPath": "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
+      "projectPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\Front_hotel.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\Front_hotel\\obj\\",
+      "outputPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\Front_hotel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -187,11 +187,10 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
-              "projectPath": "C:\\Users\\andre\\Desktop\\definitivo - copia\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj"
+            "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj": {
+              "projectPath": "C:\\Users\\andre\\Desktop\\definitivo\\Proyecto-Hotel-Paradigmas\\biblioteca_hotel\\biblioteca_hotel.csproj"
             }
           }
         }
@@ -210,7 +209,6 @@
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.AspNetCore.App.Internal.Assets": {

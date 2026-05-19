@@ -902,6 +902,40 @@
       "noches": 3,
       "fecha_entrada": "0001-01-01T00:00:00",
       "fecha_salida": "0001-01-01T00:00:00"
+    },
+    {
+      "$id": "172",
+      "productos_consumidos": [
+        {
+          "$id": "173",
+          "$type": "biblioteca_hotel.Modelos.Productos.ProductoRestaurante, biblioteca_hotel",
+          "_nombre": "Cena Gourmet",
+          "costo": 60000.0
+        }
+      ],
+      "persona": {
+        "$ref": "13"
+      },
+      "es_colombiano": true,
+      "l_servicios_consumidos": [
+        {
+          "$id": "174",
+          "$type": "biblioteca_hotel.Modelos.Servicios.ServicioLavanderia, biblioteca_hotel",
+          "restaurante": {
+            "$id": "175"
+          },
+          "lavanderia": {
+            "$id": "176"
+          },
+          "costo": 26000.0,
+          "descripcion": "Lavado (2 prendas) y Planchado (2 prendas)"
+        }
+      ],
+      "costo_estancia": 0.0,
+      "habitacion": null,
+      "noches": 0,
+      "fecha_entrada": "0001-01-01T00:00:00",
+      "fecha_salida": "0001-01-01T00:00:00"
     }
   ],
   "<Carta>k__BackingField": []

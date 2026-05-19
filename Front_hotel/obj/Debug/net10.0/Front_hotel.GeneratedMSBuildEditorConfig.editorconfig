@@ -14,201 +14,201 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Front_hotel
 build_property.RootNamespace = Front_hotel
-build_property.ProjectDir = C:\Users\andre\Desktop\definitivo - copia\Proyecto-Hotel-Paradigmas\Front_hotel\
+build_property.ProjectDir = C:\Users\andre\Desktop\definitivo\Proyecto-Hotel-Paradigmas\Front_hotel\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\andre\Desktop\definitivo - copia\Proyecto-Hotel-Paradigmas\Front_hotel
+build_property.MSBuildProjectDirectory = C:\Users\andre\Desktop\definitivo\Proyecto-Hotel-Paradigmas\Front_hotel
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/App.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckIn/CheckInForm.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckIn/CheckInForm.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGVja0luXENoZWNrSW5Gb3JtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckOut/CheckOutForm.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckOut/CheckOutForm.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGVja091dFxDaGVja091dEZvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckOut/ResumenFactura.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/CheckOut/ResumenFactura.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGVja091dFxSZXN1bWVuRmFjdHVyYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Configuracion/ReglasNegocio.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Configuracion/ReglasNegocio.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25maWd1cmFjaW9uXFJlZ2xhc05lZ29jaW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Configuracion/RegrasNegocio.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Configuracion/RegrasNegocio.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25maWd1cmFjaW9uXFJlZ3Jhc05lZ29jaW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Counter.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Dashboard.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Error.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Facturacion/DetalleFactura.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Facturacion/DetalleFactura.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xGYWN0dXJhY2lvblxEZXRhbGxlRmFjdHVyYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Facturacion/ListaFacturas.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Facturacion/ListaFacturas.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xGYWN0dXJhY2lvblxMaXN0YUZhY3R1cmFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/AsignarMinibar.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/AsignarMinibar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGFjaW9uZXNcQXNpZ25hck1pbmliYXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/DetalleHabitacion.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/DetalleHabitacion.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGFjaW9uZXNcRGV0YWxsZUhhYml0YWNpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/ListaHabitaciones.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Habitaciones/ListaHabitaciones.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGFjaW9uZXNcTGlzdGFIYWJpdGFjaW9uZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Importacion/ImportarDatos.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Importacion/ImportarDatos.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbXBvcnRhY2lvblxJbXBvcnRhckRhdG9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/NotFound.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Personas/FormPersona.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Personas/FormPersona.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJzb25hc1xGb3JtUGVyc29uYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Personas/ListaPersonas.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Personas/ListaPersonas.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJzb25hc1xMaXN0YVBlcnNvbmFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/DetalleReserva.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/DetalleReserva.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXNlcnZhc1xEZXRhbGxlUmVzZXJ2YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/ListaReservas.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/ListaReservas.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXNlcnZhc1xMaXN0YVJlc2VydmFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/NuevaReserva.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Reservas/NuevaReserva.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXNlcnZhc1xOdWV2YVJlc2VydmEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Index.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJ2aWNpb3NcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Lavanderia.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Lavanderia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJ2aWNpb3NcTGF2YW5kZXJpYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Minibar.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Minibar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJ2aWNpb3NcTWluaWJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Restaurante.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Servicios/Restaurante.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXJ2aWNpb3NcUmVzdGF1cmFudGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Weather.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Routes.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/ConfirmDialog.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/ConfirmDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcQ29uZmlybURpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/EstadoBadge.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/EstadoBadge.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcRXN0YWRvQmFkZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/InfoCard.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/InfoCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcSW5mb0NhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/LoadingOverlay.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/LoadingOverlay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcTG9hZGluZ092ZXJsYXkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/NotificationHub.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/NotificationHub.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcTm90aWZpY2F0aW9uSHViLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/NotificationPanel.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/NotificationPanel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcTm90aWZpY2F0aW9uUGFuZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/PrecioDisplay.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/PrecioDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcUHJlY2lvRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/StatCard.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/StatCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcU3RhdENhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/ToastStack.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Shared/ToastStack.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVG9hc3RTdGFjay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/_Imports.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/MainLayout.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-lxrumqz8rf
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/NavMenu.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-vjwva25r63
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/ReconnectModal.razor]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7j95ljognl
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Home/Index.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Home/Privacy.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/Error.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/_ViewImports.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/_ViewStart.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Desktop/definitivo - copia/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/_Layout.cshtml]
+[C:/Users/andre/Desktop/definitivo/Proyecto-Hotel-Paradigmas/Front_hotel/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tzeqz2s4og
